@@ -1,4 +1,4 @@
 # zuggled
 
 # Tech stack:
-Flutter, firebase
+Flutter, firebase, text1
