@@ -1,4 +1,4 @@
 # zuggled
 
 # Tech stack:
-Flutter text 2 changed, firebase
+Text1 tejas
