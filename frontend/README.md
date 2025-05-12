@@ -12,7 +12,8 @@ flutter pub get
 --->Make sure a device/emulator is connected:
     flutter devices
 --->Then run the app:
-    flutter run
+    flutter run 
+
 
 
 🧪 Run Tests (Optional)
