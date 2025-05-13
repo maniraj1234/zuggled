@@ -11,8 +11,10 @@ flutter pub get
 ▶️ Run the App
 --->Make sure a device/emulator is connected:
     flutter devices
+
 --->Then run the app:
     flutter run 
+    
 --->If you want to run the project in firebase studio then run the app:
     flutter run --no-enable-impeller
 
