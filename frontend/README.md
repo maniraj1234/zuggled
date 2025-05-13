@@ -13,6 +13,8 @@ flutter pub get
     flutter devices
 --->Then run the app:
     flutter run 
+--->If you want to run the project in firebase studio then run the app:
+    flutter run --no-enable-impeller
 
 
 
