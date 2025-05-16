@@ -6,7 +6,7 @@ import 'package:stream_video_flutter/stream_video_flutter.dart';
 class CallScreen extends StatefulWidget {
   final Call call;
 
-  const CallScreen({Key? key, required this.call}) : super(key: key);
+  const CallScreen({super.key, required this.call});
 
   @override
   State<CallScreen> createState() => _CallScreenState();

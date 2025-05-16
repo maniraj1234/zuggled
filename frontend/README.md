@@ -13,6 +13,10 @@ flutter pub get
 --->Make sure a device/emulator is connected:
     flutter devices
 
+---> To open Emulators:
+    In MAC: cmd + shift + p : Flutter Emulators : choose the emulator
+
+
 --->Then run the app:
     flutter run 
 
