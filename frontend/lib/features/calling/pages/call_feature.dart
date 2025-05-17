@@ -13,6 +13,13 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  String callID = "CallID";
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,27 +28,51 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: ElevatedButton(
-          child: const Text('Create Call'),
-          onPressed: () async {
-            try {
-              var call = StreamVideo.instance.makeCall(
-                callType: StreamCallType(),
-                id: 'AqfgQAV2ChJh',
-              );
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: EdgeInsets.fromLTRB(26, 0, 36, 0),
+              child: TextField(
+                onChanged:
+                    (value) => setState(() {
+                      callID = value;
+                    }),
 
-              await call.getOrCreate();
-
-              // Created ahead
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => CallScreen(call: call)),
-              );
-            } catch (e) {
-              debugPrint('Error joining or creating call: $e');
-              debugPrint(e.toString());
-            }
-          },
+                decoration: InputDecoration(
+                  hintText: "Call ID",
+                  hintStyle: TextStyle(
+                    color: Theme.of(context).colorScheme.outline,
+                  ),
+                  border: OutlineInputBorder(),
+                ),
+              ),
+            ),
+            SizedBox(height: 48),
+            ElevatedButton(
+              child: const Text('Create Call'),
+              onPressed: () async {
+                try {
+                  var call = StreamVideo.instance.makeCall(
+                    callType: StreamCallType.defaultType(),
+                    id: callID,
+                  );
+                  await call.getOrCreate();
+                  // Created ahead
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => CallScreen(call: call),
+                    ),
+                  );
+                } catch (e) {
+                  debugPrint('Error joining or creating call: $e');
+                  debugPrint(e.toString());
+                }
+              },
+            ),
+          ],
         ),
       ),
     );
