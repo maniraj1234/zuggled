@@ -1,4 +1,13 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:go_router/go_router.dart';
+
+///**Onboarding Screen**
+///
+/// This is then first screen that users see when they open the app.
+/// Provides a series of onboarding pages that introduce the app's features.
+/// Presents swipable [pageView] pages
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -8,42 +17,67 @@ class OnboardingScreen extends StatefulWidget {
 }
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
+  /// A list of onboarding content, each containing an image path, title, and subtitle.
+  List<Map<String, String>> _onboardingData = [];
+
+  /// Controls the onboarding [PageView] to by switch pages.
   final PageController _pageController = PageController();
+
+  /// Tracks the currently visible onboarding page.
   int _currentPage = 0;
 
-  ///onboarding screen data
-  final List<Map<String, String>> _onboardingData = [
-    {
-      'image': 'lib/assets/images/img1.png',
-      'title': 'Find Your Match',
-      'subtitle': 'Discover people who share your interests and values.',
-    },
-    {
-      'image': 'lib/assets/images/img2.png',
-      'title': 'Chat & Connect',
-      'subtitle': 'Have meaningful conversations and build connections.',
-    },
-    {
-      'image': 'lib/assets/images/img3.png',
-      'title': 'Video Call made easy',
-      'subtitle': 'Take the next step and meet face-to-face from anywhere',
-    },
-  ];
+  @override
+  void initState() {
+    super.initState();
+    _loadOnboardingItems();
+  }
 
-  ///Navigate to the login page on the last page
+  /// Loads onboarding data from a JSON file located in `lib/assets/json/`.
+  ///
+  /// Each item in the JSON is expected to have `image`, `title`, and `subtitle` keys.
+  /// updates the state with the loaded data.
+  Future<void> _loadOnboardingItems() async {
+    final String jsonString = await rootBundle.loadString(
+      'lib/assets/json/onboarding_data.json',
+    );
+    //convert the json string to a list of maps
+    final List<dynamic> jsonList = json.decode(jsonString);
+    setState(() {
+      _onboardingData =
+          jsonList
+              .map<Map<String, String>>(
+                (item) => {
+                  "image": item['image'] ?? '',
+                  "title": item['title'] ?? '',
+                  "subtitle": item['subtitle'] ?? '',
+                },
+              )
+              .toList();
+    });
+  }
+
+  /// Navigates to the next onboarding page, or to login if on the last page.
   void _nextPage() {
+    //navigates to next page if current page is not the last page
     if (_currentPage < _onboardingData.length - 1) {
       _pageController.nextPage(
         duration: const Duration(milliseconds: 300),
         curve: Curves.easeInOut,
       );
-    } else {
-      Navigator.pushReplacementNamed(context, '/login');
+    }
+    //if Current Page is last page then navigate to login page.
+    else {
+      context.go('/login');
     }
   }
 
-  ///Builds the indicator for the onboarding screen
-
+  ///Builds a dot indicator for the current onboarding page.
+  ///
+  ///returns [AnimatedContainer] which serves as a page indicator (dot)
+  ///
+  /// The [isActive] parameter determines whether the dot is currently selected:
+  /// - If `true`, the dot appears larger and in pink.
+  /// - If `false`, the dot appears smaller and grey.
   Widget _buildIndicator(bool isActive) {
     return AnimatedContainer(
       duration: const Duration(milliseconds: 300),
@@ -68,9 +102,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               controller: _pageController,
               itemCount: _onboardingData.length,
               onPageChanged: (index) {
+                //updates the current page index
                 setState(() => _currentPage = index);
               },
               itemBuilder: (context, index) {
+                //current onboarding screen data
                 final data = _onboardingData[index];
                 return Padding(
                   padding: const EdgeInsets.all(24.0),
@@ -104,6 +140,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
+            //generates a row of dot indicator progress for page view
             children: List.generate(
               _onboardingData.length,
               (index) => _buildIndicator(index == _currentPage),
@@ -123,8 +160,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 ),
               ),
               child: Center(
-                ///change the text on the last page
-                ///to 'Get Started' and navigate to the login page
+                //Change the text from GetStarted to Next on the last PageView
                 child: Text(
                   _currentPage == _onboardingData.length - 1
                       ? 'Get Started'

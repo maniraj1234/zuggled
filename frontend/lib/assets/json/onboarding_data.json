@@ -1,0 +1,17 @@
+[
+    {
+        "image": "lib/assets/images/onboarding/onboarding_chat.png",
+        "title": "Find Your Match",
+        "subtitle": "Discover people who share your interests and values."
+    },
+    {
+        "image": "lib/assets/images/onboarding/onboarding_connect.png",
+        "title": "Chat & Connect",
+        "subtitle": "Have meaningful conversations and build connections."
+    },
+    {
+        "image": "lib/assets/images/onboarding/onboarding_video_call.png",
+        "title": "Video Call made easy",
+        "subtitle": "Take the next step and meet face-to-face from anywhere"
+    }
+]
