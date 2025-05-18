@@ -17,30 +17,12 @@ class CallScreen extends StatefulWidget {
   State<CallScreen> createState() => _CallScreenState();
 }
 
-class _CallScreenState extends State<CallScreen> {
-  void createCall() async {
-    try {
-      // Create or reference a call session by ID.
-      // `StreamVideo.instance.makeCall` returns a call controller
-      // which you can use to join or set up the call.
-      var call = StreamVideo.instance.makeCall(
-        callType: StreamCallType(),
-        id: 'AqfgQAV2ChJh',
-      );
+class _MyHomePageState extends State<MyHomePage> {
+  String callID = "CallID";
 
-      // Ensure the call exists server‑side (creates it if needed),
-      // and fetch its metadata.
-      await call.getOrCreate();
-
-      // Navigate to the live call UI, passing the call controller.
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => CallStreamScreen(call: call)),
-      );
-    } catch (e) {
-      // Log any errors during call creation/joining.
-      debugPrint('Error joining or creating call: $e');
-    }
+  @override
+  void initState() {
+    super.initState();
   }
 
   @override
@@ -57,9 +39,51 @@ class _CallScreenState extends State<CallScreen> {
 
       /// The body contains a single centered button to start the call.
       body: Center(
-        child: ElevatedButton(
-          child: const Text('Create Call'),
-          onPressed: createCall,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: EdgeInsets.fromLTRB(26, 0, 36, 0),
+              child: TextField(
+                onChanged:
+                    (value) => setState(() {
+                      callID = value;
+                    }),
+
+                decoration: InputDecoration(
+                  hintText: "Call ID",
+                  hintStyle: TextStyle(
+                    color: Theme.of(context).colorScheme.outline,
+                  ),
+                  border: OutlineInputBorder(),
+                ),
+              ),
+            ),
+            SizedBox(height: 48),
+            ElevatedButton(
+              child: const Text('Create Call'),
+              onPressed: () async {
+                try {
+                  var call = StreamVideo.instance.makeCall(
+                    callType: StreamCallType.defaultType(),
+                    id: callID,
+                  );
+                  await call.getOrCreate();
+                  // Created ahead
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => CallScreen(call: call),
+                    ),
+                  );
+                } catch (e) {
+                  debugPrint('Error joining or creating call: $e');
+                  debugPrint(e.toString());
+                }
+              },
+            ),
+          ],
         ),
       ),
     );
