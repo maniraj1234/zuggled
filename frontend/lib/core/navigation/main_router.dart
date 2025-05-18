@@ -13,8 +13,6 @@ import 'package:frontend/core/navigation/nav_error_handler.dart';
 ///   routerConfig: router,
 /// );
 /// ```
-///
-//
 final GoRouter mainRouter = GoRouter(
   /// [debugLogDiagnostics] set to true for showing debug logs
   debugLogDiagnostics: true,
@@ -37,3 +35,4 @@ final GoRouter mainRouter = GoRouter(
     return NavErrorHandler.navErrorHandler(context, state);
   },
 );
+//TODO: Modify the initial route when splash screen is implemented.

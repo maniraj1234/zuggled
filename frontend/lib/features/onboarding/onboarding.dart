@@ -8,14 +8,12 @@ import 'package:go_router/go_router.dart';
 /// This is then first screen that users see when they open the app.
 /// Provides a series of onboarding pages that introduce the app's features.
 /// Presents swipable [pageView] pages
-
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
 
   @override
   State<OnboardingScreen> createState() => _OnboardingScreenState();
 }
-
 class _OnboardingScreenState extends State<OnboardingScreen> {
   /// A list of onboarding content, each containing an image path, title, and subtitle.
   List<Map<String, String>> _onboardingData = [];
