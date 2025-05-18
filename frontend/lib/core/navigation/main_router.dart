@@ -1,3 +1,4 @@
+import 'package:frontend/features/calling/pages/call_feature.dart';
 import 'package:frontend/features/onboarding/onboarding.dart';
 import 'package:go_router/go_router.dart';
 import 'package:frontend/core/navigation/nav_error_handler.dart';
@@ -26,7 +27,13 @@ final GoRouter mainRouter = GoRouter(
   ///
   /// - [`OnboardingScreen`] serves as the main view (for testing purposes).
   /// - Additional screens can be added here for modular navigation.
-  routes: [GoRoute(path: '/', builder: (context, state) => OnboardingScreen())],
+  routes: [
+    GoRoute(path: '/', builder: (context, state) => OnboardingScreen()),
+    GoRoute(
+      path: '/call_screen',
+      builder: (context, state) => CallScreen(title: "call home screen"),
+    ),
+  ],
 
   /// **Error Handling**
   ///

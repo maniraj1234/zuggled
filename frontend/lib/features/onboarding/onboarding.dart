@@ -14,6 +14,7 @@ class OnboardingScreen extends StatefulWidget {
   @override
   State<OnboardingScreen> createState() => _OnboardingScreenState();
 }
+
 class _OnboardingScreenState extends State<OnboardingScreen> {
   /// A list of onboarding content, each containing an image path, title, and subtitle.
   List<Map<String, String>> _onboardingData = [];
@@ -65,7 +66,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     }
     //if Current Page is last page then navigate to login page.
     else {
-      context.go('/login');
+      context.go('/call_screen');
     }
   }
 
