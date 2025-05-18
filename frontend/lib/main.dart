@@ -10,5 +10,5 @@ void main() async {
   await dotenv.load(fileName: "lib/core/config/.env");
 
   ///[AppRoot] is the entry component of the application
-  runApp(AppRoot());
+  runApp(AppRoot()); 
 }
