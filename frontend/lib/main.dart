@@ -7,6 +7,8 @@ void main() async {
 
   // Right after creation client connects to the backend and authenticates the user.
   // You can set `options: StreamVideoOptions(autoConnect: false)` if you want to disable auto-connect.
+
+  // #TODO: change the secret & store in vault.
   final client = StreamVideo(
     'mmhfdzb5evj2',
     user: User.regular(userId: 'Aurra_Sing', role: 'admin', name: 'John Doe'),
@@ -17,10 +19,12 @@ void main() async {
   runApp(const MyApp());
 }
 
+// Rendering the HomeScreen of the Calling Feature.
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
+  // This widget is the root of the application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -28,7 +32,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const CallScreen(title: 'Flutter Demo Home Page'),
     );
   }
 }
