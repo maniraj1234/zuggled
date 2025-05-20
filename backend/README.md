@@ -21,7 +21,9 @@ npm run dev
 Create a `.env` file at 'backend/config/'
 
 ### **5️⃣ Configure Base URL in Frontend**
+
 In your Flutter project, update the API base URL to point to your backend server:
-open `.env` file located at `lib/core/config/`. Set the `BASE_URL` to your local IP address or deployed server URL. For example:
+- open `.env` file located at `lib/core/config/`. 
+- Set the `BASE_URL` to your local IP address or deployed server URL. For example:
 ```env
 BASE_URL=http://192.168.1.100:3000
