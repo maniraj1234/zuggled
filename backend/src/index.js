@@ -31,4 +31,4 @@ app.use(errorHandler);
 app.listen(env.port, () => {
     console.log(`server running on port ${env.port}, running in ${env.node_env} mode`);
     logger.info('server running on port ' + env.port);
-}); 
+});
