@@ -8,19 +8,34 @@ git clone https://github.com/maniraj1234/zugg
 cd backend
 npm install
 ```
-### **2️⃣ Run the Server**
-Start the server using:
-```sh
-npm start
-```
-### **3️⃣ Run in Development Mode (Auto-restart on File Changes)**
+
+### **2️⃣ Run in Development Mode (Auto-restart on File Changes)**
 ```sh
 npm run dev
 ```
-### **4️⃣ Environment Variables**
+
+### **3️⃣ Run the Server**
+1. Build the project:
+- compiles Typescript source code (.ts) code to Javascript (.js) which is placed at build/ directory.
+```sh
+npm run build
+```
+2. Start the complied server using:
+```sh
+npm start
+```
+
+### **4️⃣ Linting**
+This project uses ESLint for maintaining code quality.
+Check for linting errors and issues:
+```sh
+npm run lint
+```
+
+### **5️⃣ Environment Variables**
 Create a `.env` file at 'backend/config/'
 
-### **5️⃣ Configure Base URL in Frontend**
+### **6️⃣ Configure Base URL in Frontend**
 
 In your Flutter project, update the API base URL to point to your backend server:
 - open `.env` file located at `lib/core/config/`. 
