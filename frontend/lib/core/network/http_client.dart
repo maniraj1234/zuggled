@@ -10,8 +10,8 @@ class HttpService {
     BaseOptions(
       // The base URL for all API requests, loaded from environment variables.
       baseUrl: dotenv.env['BASE_URL']!, // Use env or config file
-      connectTimeout: Duration(seconds: 10),
-      receiveTimeout: Duration(seconds: 10),
+      connectTimeout: Duration(seconds: 240),
+      receiveTimeout: Duration(seconds: 240),
     ),
   );
 

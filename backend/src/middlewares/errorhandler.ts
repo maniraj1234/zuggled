@@ -5,11 +5,14 @@
  * - Logs error messages and stack traces using Winston.
  * - Sends a JSON response with error message and status code.
  */
-const logger = require('../../utils/logger.js');
-const errorHandler = (err, req, res, next) => {
+import { AppError } from '../types/errors';
+import logger from '../utils/logger';
+import { Request, Response, NextFunction } from 'express';
+const errorHandler = (err: AppError, req: Request, res: Response, _next: NextFunction) => {
     // Log error message and stack trace
     logger.error(err.message, { stack: err.stack });
     res.status(err.status || 500).json({ error: err.message || 'Internal Server Error' });
 };
 
-module.exports = errorHandler;
+export default errorHandler;
+

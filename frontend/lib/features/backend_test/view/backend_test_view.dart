@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/features/backend_test/data/message_service.dart';
 import 'package:frontend/features/backend_test/model/message_model.dart';
+
 /// A UI screen that test
-///  
+///
 /// This widget fetches a message from the backend using [MessageService]
 /// and displays the result once available.Only for testing purposes.
 class NetworkPage extends StatelessWidget {
@@ -15,7 +16,7 @@ class NetworkPage extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(title: Text('Network Test')),
         body: FutureBuilder<MessageModel>(
-          future: service.getMessage(),// Fetch message from the backend
+          future: service.getMessage(), // Fetch message from the backend
           // Use the MessageService to fetch the message
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {

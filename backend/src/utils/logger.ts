@@ -12,8 +12,8 @@
  *  logger.error('Error message');
  */
 
-const winston = require('winston');
-const path = require('path');
+import winston from 'winston';
+import path from 'path';
 
 // Define log format with timestamp and stack trace support
 const logFormat = winston.format.combine(
@@ -50,4 +50,4 @@ const logger = winston.createLogger({
     ]
 });
 
-module.exports = logger;
+export default logger;
