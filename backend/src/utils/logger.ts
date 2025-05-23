@@ -17,37 +17,37 @@ import path from 'path';
 
 // Define log format with timestamp and stack trace support
 const logFormat = winston.format.combine(
-    winston.format.timestamp(),
-    winston.format.errors({ stack: true }),
-    winston.format.json()
+  winston.format.timestamp(),
+  winston.format.errors({ stack: true }),
+  winston.format.json(),
 );
 
 // Create Winston logger instance
 const logger = winston.createLogger({
-    level: 'info', // Capture info, warn, error (in order of severity)
-    format: logFormat,
-    transports: [
-        // Console output for all logs
-        new winston.transports.Console(),
+  level: 'info', // Capture info, warn, error (in order of severity)
+  format: logFormat,
+  transports: [
+    // Console output for all logs
+    new winston.transports.Console(),
 
-        // File output for info logs
-        new winston.transports.File({
-            filename: path.join('logs', 'info.log'),
-            level: 'info'
-        }),
+    // File output for info logs
+    new winston.transports.File({
+      filename: path.join('logs', 'info.log'),
+      level: 'info',
+    }),
 
-        // File output for warning logs
-        new winston.transports.File({
-            filename: path.join('logs', 'warn.log'),
-            level: 'warn'
-        }),
+    // File output for warning logs
+    new winston.transports.File({
+      filename: path.join('logs', 'warn.log'),
+      level: 'warn',
+    }),
 
-        // File output for error logs
-        new winston.transports.File({
-            filename: path.join('logs', 'error.log'),
-            level: 'error'
-        })
-    ]
+    // File output for error logs
+    new winston.transports.File({
+      filename: path.join('logs', 'error.log'),
+      level: 'error',
+    }),
+  ],
 });
 
 export default logger;

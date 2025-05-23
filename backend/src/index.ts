@@ -22,7 +22,7 @@ app.use(cors());
 // Parse incoming JSON payloads
 app.use(express.json());
 
-// mounts main routes to root 
+// mounts main routes to root
 app.use('/', mainRoutes);
 
 // Global error handling middleware (placed after all routes)
@@ -33,6 +33,6 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-    logger.info('server running on port ' + PORT);
-    logger.info('Swagger UI available at http://localhost:' + PORT + '/api-docs');
+  logger.info('server running on port ' + PORT);
+  logger.info('Swagger UI available at http://localhost:' + PORT + '/api-docs');
 });
