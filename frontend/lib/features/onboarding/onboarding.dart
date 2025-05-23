@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:go_router/go_router.dart';
+import 'package:frontend/features/backend_test/view/backend_test_view.dart';
 
 ///**Onboarding Screen**
 ///
@@ -66,7 +66,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     }
     //if Current Page is last page then navigate to login page.
     else {
-      context.go('/call_screen');
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) {
+            return NetworkPage();
+          },
+        ),
+      );
     }
   }
 
