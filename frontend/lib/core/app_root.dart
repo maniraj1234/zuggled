@@ -16,7 +16,11 @@ class AppRoot extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (_) => AuthBloc(authService: AuthService())..add(InitEvent()),
-      child: MaterialApp.router(routerConfig: mainRouter),
+      child: MaterialApp.router(
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(brightness: Brightness.light),
+        routerConfig: mainRouter,
+      ),
     );
   }
 }

@@ -44,6 +44,7 @@ dependencies:
   firebase_auth: ^5.5.4
   firebase_core: ^3.13.1
   flutter_bloc: ^9.1.1
+  animations: ^2.0.11
 
 dev_dependencies:
   flutter_test:
@@ -74,7 +75,7 @@ flutter:
   assets:
     - lib/assets/images/
     - lib/assets/images/onboarding/
-    - lib/core/config/.env
+    - lib/core/config/template.env
     - lib/assets/json/onboarding_data.json
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -1,5 +1,11 @@
+import 'package:frontend/core/navigation/root_nav_screen.dart';
 import 'package:frontend/features/calling/pages/call_feature.dart';
 import 'package:frontend/features/onboarding/onboarding.dart';
+import 'package:frontend/views/coins_screen.dart';
+import 'package:frontend/views/history_screen.dart';
+import 'package:frontend/views/home_screen.dart';
+import 'package:frontend/views/settings_screen.dart';
+import 'package:frontend/widgets/transition_page.dart';
 import 'package:go_router/go_router.dart';
 import 'package:frontend/core/navigation/nav_error_handler.dart';
 
@@ -21,14 +27,45 @@ final GoRouter mainRouter = GoRouter(
   /// **Initial Route**
   ///
   /// Defines the default screen to show when the app starts.
-  initialLocation: '/',
+  initialLocation: '/home',
 
   /// **Application Routes**
   ///
   /// - [`OnboardingScreen`] serves as the main view (for testing purposes).
   /// - Additional screens can be added here for modular navigation.
   routes: [
-    GoRoute(path: '/', builder: (context, state) => OnboardingScreen()),
+    //TODO:Change HomeScreen to OnboardingScreen()
+    ShellRoute(
+      pageBuilder:
+          (context, state, child) =>
+              NoTransitionPage(child: RootNavScreen(child: child)),
+      routes: [
+        GoRoute(
+          path: '/home',
+          pageBuilder:
+              (context, state) =>
+                  TransitionPage(child: HomeScreen(), state: state),
+        ),
+        GoRoute(
+          path: '/history',
+          pageBuilder:
+              (context, state) =>
+                  TransitionPage(child: HistoryScreen(), state: state),
+        ),
+        GoRoute(
+          path: '/coins',
+          pageBuilder:
+              (context, state) =>
+                  TransitionPage(child: CoinsScreen(), state: state),
+        ),
+        GoRoute(
+          path: '/settings',
+          pageBuilder:
+              (context, state) =>
+                  TransitionPage(child: SettingsScreen(), state: state),
+        ),
+      ],
+    ),
     GoRoute(
       path: '/call_screen',
       builder: (context, state) => CallScreen(title: "call home screen"),
