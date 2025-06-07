@@ -7,6 +7,8 @@ import 'package:frontend/core/app_root.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+
+  // This is to make status bar adjust according to app's theme.
   SystemChrome.setSystemUIOverlayStyle(
     SystemUiOverlayStyle(
       statusBarColor: Colors.black, // Example color

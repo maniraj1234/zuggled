@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+// TODO: Implement HistoryScreen
+/// HistoryScreen used to show previoud history of calls
 class HistoryScreen extends StatefulWidget {
   const HistoryScreen({super.key});
 

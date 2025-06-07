@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// A base class for ProfileCards shown in homescreen's feed.
 class UserProfile {
   UserProfile({
     required this.username,
@@ -15,6 +16,8 @@ class UserProfile {
   final String profilePicture;
 }
 
+/// A UI Card to display information of single User.
+/// To be used in HomeScreen
 class ProfileCard extends StatefulWidget {
   const ProfileCard({super.key, required this.profile});
   final UserProfile profile;
