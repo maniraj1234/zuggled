@@ -33,8 +33,9 @@ android {
 
     buildTypes {
         release {
-            //isMinifyEnabled = false
-            //isShrinkResources = false
+            // TODO: Fix issues when making release builds with Minify Enabled
+            isMinifyEnabled = false
+            isShrinkResources = false
             //proguardFiles(
                 // Default file with automatically generated optimization rules.
             //    getDefaultProguardFile("proguard-android-optimize.txt")
