@@ -78,12 +78,14 @@ class _CallScreenState extends State<CallScreen> {
                     id: callID,
                   );
                   await call.getOrCreate();
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => CallStreamScreen(call: call),
-                    ),
-                  );
+                  if (context.mounted) {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => CallStreamScreen(call: call),
+                      ),
+                    );
+                  }
                 } catch (e) {
                   debugPrint('Error joining or creating call: $e');
                 }

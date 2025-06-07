@@ -5,6 +5,7 @@
 list(APPEND FLUTTER_PLUGIN_LIST
   battery_plus
   connectivity_plus
+  firebase_auth
   firebase_core
   permission_handler_windows
   stream_webrtc_flutter

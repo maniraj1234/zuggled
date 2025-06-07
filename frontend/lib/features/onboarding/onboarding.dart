@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:frontend/features/backend_test/view/backend_test_view.dart';
+import 'package:frontend/features/auth_test/view/login.dart';
 
 ///**Onboarding Screen**
 ///
@@ -70,7 +70,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         context,
         MaterialPageRoute(
           builder: (context) {
-            return NetworkPage();
+            return LoginPage();
           },
         ),
       );
