@@ -1,6 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/widgets/bottom_nav_bar.dart';
 
+/// This Screen is Root Screen which will contain
+/// NavigationBar and Other Screens so NavigationBar can be persistant across navigation.
+/// Idea of Navigation Tree:
+/// ├─/(RootScreen) with a navigation bar
+/// │ ├─/home (HomeScreen)
+/// │ ├─/history (HistoryScreen)
+/// │ ├─/coins (CoinsScreen)
+/// │ └─/settings (SettingsScreen)
+/// └─/other screens outside root scrrens
+
 class RootNavScreen extends StatefulWidget {
   const RootNavScreen({super.key, required this.child});
   final Widget child;

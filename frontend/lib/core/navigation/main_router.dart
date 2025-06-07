@@ -1,5 +1,6 @@
 import 'package:frontend/core/navigation/root_nav_screen.dart';
 import 'package:frontend/features/calling/pages/call_feature.dart';
+// ignore: unused_import
 import 'package:frontend/features/onboarding/onboarding.dart';
 import 'package:frontend/views/coins_screen.dart';
 import 'package:frontend/views/history_screen.dart';
@@ -35,6 +36,9 @@ final GoRouter mainRouter = GoRouter(
   /// - Additional screens can be added here for modular navigation.
   routes: [
     //TODO:Change HomeScreen to OnboardingScreen()
+    /// ShellRoute will be RootScreen and act as container for Other main screens like
+    /// HomeScreen, SettingScrren, HistoryScreen
+    /// and have a NavigationBar persistant across all these screens.
     ShellRoute(
       pageBuilder:
           (context, state, child) =>

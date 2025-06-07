@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/foundation.dart';
 
 class AuthService {
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
@@ -18,22 +19,29 @@ class AuthService {
     _phoneNumberBeingVerified = phoneNumber;
     try {
       await _firebaseAuth.verifyPhoneNumber(
-        
         phoneNumber: phoneNumber,
         verificationCompleted: (PhoneAuthCredential credential) {
-          print('AuthService: Auto-verification completed.');
+          if (kDebugMode) {
+            print('AuthService: Auto-verification completed.');
+          }
         },
         verificationFailed: (FirebaseAuthException e) {
-          print('AuthService Error: ${e.code} - ${e.message}');
+          if (kDebugMode) {
+            print('AuthService Error: ${e.code} - ${e.message}');
+          }
           throw Exception('OTP sending failed: ${e.message}');
         },
         codeSent: (String verificationId, int? resendToken) {
           _verificationId = verificationId;
-          print('OTP sent to $phoneNumber. ID: $verificationId');
+          if (kDebugMode) {
+            print('OTP sent to $phoneNumber. ID: $verificationId');
+          }
         },
         codeAutoRetrievalTimeout: (String verificationId) {
           _verificationId = verificationId;
-          print('Auto-retrieval timed out. ID: $verificationId');
+          if (kDebugMode) {
+            print('Auto-retrieval timed out. ID: $verificationId');
+          }
         },
         timeout: const Duration(seconds: 60),
       );
@@ -46,13 +54,10 @@ class AuthService {
   }
 
   Future<UserCredential> verifyOtp(String otp) async {
-    
     if (_verificationId == null) {
       throw Exception('No verification ID available. Please send OTP again.');
     }
-
     final credential = PhoneAuthProvider.credential(
-      
       verificationId: _verificationId!,
       smsCode: otp,
     );
