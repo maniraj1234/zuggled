@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+/// BottomNavBar, used as Bottom Navigation Bar in application
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
   @override
