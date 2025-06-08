@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/widgets/profile_card.dart';
 
+//TODO: Implement functionalites in HomeScreen
+/// HomeScreen, the home of application. It consists:
+/// 1. SearchBar
+/// 2. Favorites Screen Button
+/// 3. Account Screen Button
+/// 4. List of other user's profiles in feed
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 

@@ -44,24 +44,28 @@ final GoRouter mainRouter = GoRouter(
           (context, state, child) =>
               NoTransitionPage(child: RootNavScreen(child: child)),
       routes: [
+        /// HomeScreen
         GoRoute(
           path: '/home',
           pageBuilder:
               (context, state) =>
                   TransitionPage(child: HomeScreen(), state: state),
         ),
+
         GoRoute(
           path: '/history',
           pageBuilder:
               (context, state) =>
                   TransitionPage(child: HistoryScreen(), state: state),
         ),
+
         GoRoute(
           path: '/coins',
           pageBuilder:
               (context, state) =>
                   TransitionPage(child: CoinsScreen(), state: state),
         ),
+
         GoRoute(
           path: '/settings',
           pageBuilder:
@@ -70,6 +74,8 @@ final GoRouter mainRouter = GoRouter(
         ),
       ],
     ),
+    // TODO: Redesign Call Screen UI
+    /// CallScreen
     GoRoute(
       path: '/call_screen',
       builder: (context, state) => CallScreen(title: "call home screen"),
