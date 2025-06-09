@@ -1,7 +1,8 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:frontend/features/auth_test/view/login.dart';
+import 'package:go_router/go_router.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 ///**Onboarding Screen**
 ///
@@ -56,7 +57,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   }
 
   /// Navigates to the next onboarding page, or to login if on the last page.
-  void _nextPage() {
+  void _nextPage() async {
     //navigates to next page if current page is not the last page
     if (_currentPage < _onboardingData.length - 1) {
       _pageController.nextPage(
@@ -66,14 +67,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     }
     //if Current Page is last page then navigate to login page.
     else {
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) {
-            return LoginPage();
-          },
-        ),
-      );
+      /// Set First launch as false, so app will not show onBoardingScreen again.
+      SharedPreferences prefs = await SharedPreferences.getInstance();
+      prefs.setBool('isFirstLaunch', false);
+      if (mounted) {
+        context.go('/login');
+      }
     }
   }
 
@@ -91,7 +90,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       height: 8,
       width: isActive ? 24 : 8,
       decoration: BoxDecoration(
-        color: isActive ? Colors.pinkAccent : Colors.grey[300],
+        color:
+            isActive ? Theme.of(context).colorScheme.primary : Colors.grey[300],
         borderRadius: BorderRadius.circular(4),
       ),
     );
@@ -123,19 +123,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       const SizedBox(height: 40),
                       Text(
                         data['title']!,
-                        style: const TextStyle(
-                          fontSize: 26,
-                          fontWeight: FontWeight.bold,
-                        ),
+                        style: Theme.of(context).textTheme.headlineMedium,
                         textAlign: TextAlign.center,
                       ),
                       const SizedBox(height: 20),
                       Text(
                         data['subtitle']!,
-                        style: const TextStyle(
-                          fontSize: 16,
-                          color: Colors.grey,
-                        ),
+                        style: Theme.of(context).textTheme.bodyLarge,
                         textAlign: TextAlign.center,
                       ),
                     ],
@@ -155,15 +149,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           const SizedBox(height: 24),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 24),
-            child: ElevatedButton(
+            child: FilledButton(
               onPressed: _nextPage,
-              style: ElevatedButton.styleFrom(
-                foregroundColor: Colors.white,
-                backgroundColor: Colors.pinkAccent,
+              style: FilledButton.styleFrom(
                 padding: const EdgeInsets.symmetric(vertical: 16),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
-                ),
               ),
               child: Center(
                 //Change the text from GetStarted to Next on the last PageView
