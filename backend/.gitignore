@@ -3,3 +3,4 @@ config/.env
 package-lock.json
 build/
 logs/
+config/firebaseConfig.json
