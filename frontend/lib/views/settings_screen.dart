@@ -1,0 +1,17 @@
+import 'package:flutter/material.dart';
+
+// TODO:Implement SettingsScreen
+/// SettingsScreen
+class SettingsScreen extends StatefulWidget {
+  const SettingsScreen({super.key});
+
+  @override
+  State<SettingsScreen> createState() => _SettingsScreenState();
+}
+
+class _SettingsScreenState extends State<SettingsScreen> {
+  @override
+  Widget build(BuildContext context) {
+    return const Text("Settings");
+  }
+}

@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:frontend/core/navigation/main_router.dart';
+import 'package:frontend/features/auth_test/auth_bloc/auth_bloc.dart';
+import 'package:frontend/features/auth_test/auth_bloc/auth_event.dart';
+import 'package:frontend/features/auth_test/data/auth_service.dart';
 
 class AppRoot extends StatelessWidget {
   const AppRoot({super.key});
@@ -10,6 +14,15 @@ class AppRoot extends StatelessWidget {
   ///[MaterialApp.router] is used to set up the main router for the app.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(routerConfig: mainRouter);
+    return BlocProvider(
+      create: (_) => AuthBloc(authService: AuthService())..add(InitEvent()),
+      child: MaterialApp.router(
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          brightness: Brightness.light,
+        ).copyWith(colorScheme: ColorScheme.fromSeed(seedColor: Colors.purple)),
+        routerConfig: mainRouter,
+      ),
+    );
   }
 }
