@@ -73,6 +73,7 @@ flutter:
     - lib/assets/images/onboarding/
     - lib/core/config/.env
     - lib/assets/json/onboarding_data.json
+    - lib/assets/images/core/zuggled-banner-image.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
