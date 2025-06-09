@@ -95,15 +95,7 @@ class _ProfileCardState extends State<ProfileCard> {
 
                     SizedBox(
                       height: 56,
-                      child: FilledButton.icon(
-                        style: ButtonStyle(
-                          foregroundColor: WidgetStatePropertyAll(
-                            Theme.of(context).colorScheme.onTertiaryContainer,
-                          ),
-                          backgroundColor: WidgetStatePropertyAll(
-                            Theme.of(context).colorScheme.tertiaryContainer,
-                          ),
-                        ),
+                      child: OutlinedButton.icon(
                         onPressed: () {},
                         icon: Icon(Icons.call_outlined, size: 24, weight: 800),
                         label: Text(
@@ -117,22 +109,29 @@ class _ProfileCardState extends State<ProfileCard> {
                       height: 56,
                       child: FilledButton.icon(
                         style: ButtonStyle(
+                          iconColor: WidgetStatePropertyAll(
+                            Theme.of(context).colorScheme.onPrimary,
+                          ),
                           foregroundColor: WidgetStatePropertyAll(
-                            Theme.of(context).colorScheme.onPrimaryContainer,
+                            Theme.of(context).colorScheme.onPrimary,
                           ),
                           backgroundColor: WidgetStatePropertyAll(
-                            Theme.of(context).colorScheme.primaryContainer,
+                            Theme.of(context).colorScheme.primary,
                           ),
                         ),
                         onPressed: () {},
                         icon: Icon(
-                          Icons.video_call_outlined,
+                          Icons.videocam_outlined,
                           size: 28,
                           weight: 800,
                         ),
                         label: Text(
                           "10/min",
-                          style: Theme.of(context).textTheme.titleMedium,
+                          style: Theme.of(
+                            context,
+                          ).textTheme.titleMedium?.copyWith(
+                            color: Theme.of(context).colorScheme.onPrimary,
+                          ),
                         ),
                       ),
                     ),

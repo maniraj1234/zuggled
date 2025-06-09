@@ -28,50 +28,95 @@ class _HomeScreenState extends State<HomeScreen> {
               Expanded(
                 child: SizedBox(
                   height: 56,
-                  child: FilledButton.tonalIcon(
-                    icon: Icon(Icons.search, size: 24),
-                    onPressed: () {},
-                    label: const Text("Search Zuggled"),
-                    style: ButtonStyle(
-                      alignment: Alignment.centerLeft,
-                      textStyle: WidgetStatePropertyAll(
-                        TextStyle(fontSize: 16),
-                      ),
-                      foregroundColor: WidgetStatePropertyAll(
-                        Theme.of(context).colorScheme.onSurfaceVariant,
-                      ),
-                      backgroundColor: WidgetStatePropertyAll(
-                        Theme.of(context).colorScheme.surfaceContainer,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(100),
+                    child: Material(
+                      color: Theme.of(context).colorScheme.surfaceContainerHigh,
+                      child: InkWell(
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(
+                            horizontal: 4,
+                            vertical: 4,
+                          ),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              SizedBox.square(
+                                dimension: 48,
+                                child: Icon(Icons.search, size: 24),
+                              ),
+                              Expanded(
+                                child: Text(
+                                  "Search Zuggled",
+                                  style: Theme.of(
+                                    context,
+                                  ).textTheme.bodyLarge?.copyWith(
+                                    color:
+                                        Theme.of(
+                                          context,
+                                        ).colorScheme.onSurfaceVariant,
+                                  ),
+                                ),
+                              ),
+                              SizedBox(width: 8),
+                              SizedBox(
+                                height: 40,
+                                child: FilledButton.tonal(
+                                  style: ButtonStyle(
+                                    padding: WidgetStatePropertyAll(
+                                      EdgeInsets.symmetric(
+                                        horizontal: 12,
+                                        vertical: 8,
+                                      ),
+                                    ),
+                                    backgroundColor: WidgetStatePropertyAll(
+                                      Theme.of(context).colorScheme.surface,
+                                    ),
+                                  ),
+                                  onPressed: () {},
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      Icon(Icons.paid_outlined, size: 24),
+                                      SizedBox(width: 8),
+                                      Text(
+                                        "235",
+                                        style:
+                                            Theme.of(
+                                              context,
+                                            ).textTheme.titleMedium,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              SizedBox.square(
+                                dimension: 52,
+                                child: Center(
+                                  child: SizedBox.square(
+                                    dimension: 36,
+                                    child: IconButton.filledTonal(
+                                      padding: EdgeInsets.zero,
+                                      constraints: BoxConstraints(),
+                                      onPressed: () {},
+                                      icon: Image.asset(
+                                        "lib/assets/images/user_pfp_test.png",
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        onTap: () {},
                       ),
                     ),
                   ),
                 ),
               ),
+
               SizedBox(width: 8),
-              SizedBox(
-                height: 46,
-                width: 46,
-                child: IconButton.filledTonal(
-                  style: ButtonStyle(
-                    backgroundColor: WidgetStatePropertyAll(
-                      Theme.of(context).colorScheme.surfaceContainer,
-                    ),
-                  ),
-                  onPressed: () {},
-                  icon: Icon(Icons.favorite_outline),
-                ),
-              ),
-              SizedBox(width: 8),
-              SizedBox(
-                height: 40,
-                width: 40,
-                child: IconButton.filledTonal(
-                  padding: EdgeInsets.zero,
-                  constraints: BoxConstraints(),
-                  onPressed: () {},
-                  icon: Image.asset("lib/assets/images/user_pfp_test.png"),
-                ),
-              ),
             ],
           ),
         ),
@@ -101,7 +146,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 SizedBox(height: 12),
                 ProfileCard(
                   profile: UserProfile(
-                    username: "carla_charms",
+                    username: "Carla_Ch4rms",
                     userid: "user_001",
                     interests: [
                       "Music",
@@ -120,9 +165,27 @@ class _HomeScreenState extends State<HomeScreen> {
                   profile: UserProfile(
                     username: "art_lover",
                     userid: "user_002",
-                    interests: ["painting", "sculpture", "history"],
+                    interests: ["Painting", "Sculpture", "History"],
                     isFavorite: false,
                     profilePicture: "lib/assets/images/user_002.png",
+                  ),
+                ),
+                ProfileCard(
+                  profile: UserProfile(
+                    username: "music.kitten",
+                    userid: "user_003",
+                    interests: ["Guitar", "Concerts", "Songwriting"],
+                    isFavorite: false,
+                    profilePicture: "lib/assets/images/user_003.png",
+                  ),
+                ),
+                ProfileCard(
+                  profile: UserProfile(
+                    username: "itsAlia",
+                    userid: "user_004",
+                    interests: ["Gaming", "Books", "Adventure", "Science"],
+                    isFavorite: false,
+                    profilePicture: "lib/assets/images/user_004.png",
                   ),
                 ),
               ],

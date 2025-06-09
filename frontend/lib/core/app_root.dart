@@ -18,7 +18,9 @@ class AppRoot extends StatelessWidget {
       create: (_) => AuthBloc(authService: AuthService())..add(InitEvent()),
       child: MaterialApp.router(
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(brightness: Brightness.light),
+        theme: ThemeData(
+          brightness: Brightness.light,
+        ).copyWith(colorScheme: ColorScheme.fromSeed(seedColor: Colors.purple)),
         routerConfig: mainRouter,
       ),
     );
