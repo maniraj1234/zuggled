@@ -1,10 +1,8 @@
 import 'package:frontend/core/navigation/root_nav_screen.dart';
-import 'package:frontend/features/auth_test/view/login.dart';
-import 'package:frontend/features/Authentication/presentation/pages/signin1.dart';
-import 'package:frontend/features/Authentication/presentation/pages/signin2.dart';
+import 'package:frontend/views/login_screen.dart';
 import 'package:frontend/features/calling/pages/call_feature.dart';
 // ignore: unused_import
-import 'package:frontend/features/onboarding/onboarding.dart';
+import 'package:frontend/views/onboarding.dart';
 import 'package:frontend/views/coins_screen.dart';
 import 'package:frontend/views/history_screen.dart';
 import 'package:frontend/views/home_screen.dart';
@@ -44,6 +42,8 @@ final GoRouter mainRouter = GoRouter(
     SharedPreferences prefs = await SharedPreferences.getInstance();
     if (prefs.getBool('isFirstLaunch') ?? true) {
       return '/onBoarding';
+    } else if (!(prefs.getBool('isLoggedIn') ?? false)) {
+      return '/login';
     } else {
       return '/home';
     }
@@ -59,7 +59,6 @@ final GoRouter mainRouter = GoRouter(
   /// - [`OnboardingScreen`] serves as the main view (for testing purposes).
   /// - Additional screens can be added here for modular navigation.
   routes: [
-    //TODO:Change HomeScreen to OnboardingScreen()
     /// ShellRoute will be RootScreen and act as container for Other main screens like
     /// HomeScreen, SettingScrren, HistoryScreen
     /// and have a NavigationBar persistant across all these screens.
@@ -67,7 +66,7 @@ final GoRouter mainRouter = GoRouter(
       path: '/onBoarding',
       builder: (context, state) => OnboardingScreen(),
     ),
-    GoRoute(path: '/login', builder: (context, state) => LoginPage()),
+    GoRoute(path: '/login', builder: (context, state) => LoginScreen()),
     ShellRoute(
       pageBuilder:
           (context, state, child) =>
@@ -105,8 +104,8 @@ final GoRouter mainRouter = GoRouter(
     ),
     // TODO: Redesign Call Screen UI
     /// CallScreen
-    GoRoute(path: '/', builder: (context, state) => SignIn1()),
-    GoRoute(path: '/signin2', builder: (context, state) => SignIn2()),
+    GoRoute(path: '/', builder: (context, state) => LoginScreen()),
+
     GoRoute(
       path: '/call_screen',
       builder: (context, state) => CallScreen(title: "call home screen"),
