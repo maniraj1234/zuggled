@@ -19,6 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return CustomScrollView(
       slivers: [
+        SliverToBoxAdapter(child: SizedBox(height: 12)),
         SliverAppBar(
           forceMaterialTransparency: true,
           floating: true,

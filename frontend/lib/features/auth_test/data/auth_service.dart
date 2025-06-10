@@ -2,6 +2,13 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 
 class AuthService {
+  /// This will give an instance of AuthService
+  /// So we don't need to create a new one everytime
+  static AuthService get instance {
+    AuthService authService = AuthService();
+    return authService;
+  }
+
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
   String? _verificationId; // Stores the verification ID received from Firebase
   String? _phoneNumberBeingVerified; // Stores the phone number being verified
