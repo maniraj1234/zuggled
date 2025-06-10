@@ -216,7 +216,9 @@ class _LoginWidgetState extends State<LoginWidget> {
         ),
         const SizedBox(height: 24),
         AuthButton(
-          onPressed: () {},
+          onPressed: () {
+            context.go('/signup');
+          },
           title: 'Sign Up',
           backgroundColor:
               Theme.of(context).colorScheme.surfaceContainerHighest,

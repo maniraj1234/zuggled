@@ -8,6 +8,7 @@ import 'package:frontend/views/coins_screen.dart';
 import 'package:frontend/views/history_screen.dart';
 import 'package:frontend/views/home_screen.dart';
 import 'package:frontend/views/settings_screen.dart';
+import 'package:frontend/views/sign_up_screen.dart';
 import 'package:frontend/widgets/transition_page.dart';
 import 'package:go_router/go_router.dart';
 import 'package:frontend/core/navigation/nav_error_handler.dart';
@@ -69,6 +70,7 @@ final GoRouter mainRouter = GoRouter(
       builder: (context, state) => OnboardingScreen(),
     ),
     GoRoute(path: '/login', builder: (context, state) => LoginScreen()),
+    GoRoute(path: '/signup', builder: (context, state) => SignUpScreen()),
     ShellRoute(
       pageBuilder:
           (context, state, child) =>
