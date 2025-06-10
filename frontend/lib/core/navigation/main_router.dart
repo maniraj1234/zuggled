@@ -45,10 +45,8 @@ final GoRouter mainRouter = GoRouter(
     if (prefs.getBool('isFirstLaunch') ?? true) {
       return '/onBoarding';
     } else if (!isLoggedIn) {
-      print("NO");
       return '/login';
     } else {
-      print("YES");
       return '/home';
     }
   },

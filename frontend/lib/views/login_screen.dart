@@ -37,10 +37,12 @@ class _LoginScreenState extends State<LoginScreen>
       var res = await authService.verifyOtp(_otpverifController.text);
       SharedPreferences prefs = await SharedPreferences.getInstance();
       prefs.setString('user_verification_id', res.credential.toString());
-      print("CREDS");
-      print(res.credential.toString());
       _showSnackBar("Login successful");
-      context.go('/home');
+      if (mounted) {
+        context.go('/home');
+      } else {
+        _showSnackBar("Something went wrong");
+      }
     } on FirebaseAuthException catch (e) {
       if (e.code == 'invalid-verification-code') {
         _otpverifController.clear();
@@ -75,7 +77,6 @@ class _LoginScreenState extends State<LoginScreen>
       child: OTPVerificationWidget(
         controller: _otpverifController,
         onLoginPress: () async {
-          print("NOOOOO");
           if (_otpverifController.text.length != 6) {
             _showSnackBar("Enter a 6 Digit OTP");
             return;
