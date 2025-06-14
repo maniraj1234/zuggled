@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/features/backend_test/data/message_service.dart';
-import 'package:frontend/features/backend_test/model/message_model.dart';
+import 'package:frontend/services/backend_test/data/message_service.dart';
+import 'package:frontend/services/backend_test/model/message_model.dart';
 
 /// A UI screen that test
 ///

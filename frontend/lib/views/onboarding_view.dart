@@ -4,19 +4,19 @@ import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-///**Onboarding Screen**
+///**Onboarding View**
 ///
 /// This is then first screen that users see when they open the app.
 /// Provides a series of onboarding pages that introduce the app's features.
 /// Presents swipable [pageView] pages
-class OnboardingScreen extends StatefulWidget {
-  const OnboardingScreen({super.key});
+class OnboardingView extends StatefulWidget {
+  const OnboardingView({super.key});
 
   @override
-  State<OnboardingScreen> createState() => _OnboardingScreenState();
+  State<OnboardingView> createState() => _OnboardingViewState();
 }
 
-class _OnboardingScreenState extends State<OnboardingScreen> {
+class _OnboardingViewState extends State<OnboardingView> {
   /// A list of onboarding content, each containing an image path, title, and subtitle.
   List<Map<String, String>> _onboardingData = [];
 
@@ -67,7 +67,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     }
     //if Current Page is last page then navigate to login page.
     else {
-      /// Set First launch as false, so app will not show onBoardingScreen again.
+      /// Set First launch as false, so app will not show onBoardingView again.
       SharedPreferences prefs = await SharedPreferences.getInstance();
       prefs.setBool('isFirstLaunch', false);
       if (mounted) {

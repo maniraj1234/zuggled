@@ -1,5 +1,5 @@
 import 'package:frontend/core/network/http_client.dart';
-import 'package:frontend/features/backend_test/model/message_model.dart';
+import 'package:frontend/services/backend_test/model/message_model.dart';
 import 'package:http_status_code/http_status_code.dart';
 
 /// This service class is responsible for fetching data from the backend API.

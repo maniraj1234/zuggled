@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/features/calling/pages/call_screen.dart';
+import 'package:frontend/services/calling/pages/call_screen.dart';
 import 'package:stream_video/stream_video.dart';
 
 /// A screen that allows the user to initiate or join a video call.

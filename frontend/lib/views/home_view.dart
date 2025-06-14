@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/widgets/profile_card.dart';
 
-//TODO: Implement functionalites in HomeScreen
-/// HomeScreen, the home of application. It consists:
+//TODO: Implement functionalites in HomeView
+/// HomeView, the home of application. It consists:
 /// 1. SearchBar
-/// 2. Favorites Screen Button
-/// 3. Account Screen Button
+/// 2. Favorites View Button
+/// 3. Account View Button
 /// 4. List of other user's profiles in feed
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class HomeView extends StatefulWidget {
+  const HomeView({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<HomeView> createState() => _HomeViewState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(

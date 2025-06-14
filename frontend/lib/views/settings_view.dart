@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/features/auth_test/data/auth_service.dart';
+import 'package:frontend/constants/route_names.dart';
+import 'package:frontend/services/auth_service/auth_service.dart';
 import 'package:go_router/go_router.dart';
 
-// TODO:Implement SettingsScreen
-/// SettingsScreen
-class SettingsScreen extends StatefulWidget {
-  const SettingsScreen({super.key});
+// TODO:Implement SettingsView
+/// SettingsView
+class SettingsView extends StatefulWidget {
+  const SettingsView({super.key});
 
   @override
-  State<SettingsScreen> createState() => _SettingsScreenState();
+  State<SettingsView> createState() => _SettingsViewState();
 }
 
-class _SettingsScreenState extends State<SettingsScreen> {
+class _SettingsViewState extends State<SettingsView> {
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
@@ -27,12 +28,12 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   leading: const Icon(Icons.logout_outlined),
                   title: const Text("Logout"),
                   onTap: () async {
-                    var auth = AuthService.instance;
+                    var auth = AuthService();
                     auth.signOut();
                     ScaffoldMessenger.of(
                       context,
                     ).showSnackBar(SnackBar(content: const Text("Signed Out")));
-                    context.go('/login');
+                    context.goNamed(RouteNames.login);
                   },
                 ),
               ],
