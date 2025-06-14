@@ -33,13 +33,13 @@ android {
 
     buildTypes {
         release {
-            // TODO: Fix issues when making release builds with Minify Enabled
-            isMinifyEnabled = false
-            isShrinkResources = false
-            //proguardFiles(
-                // Default file with automatically generated optimization rules.
-            //    getDefaultProguardFile("proguard-android-optimize.txt")
-            //)
+            isMinifyEnabled = true
+            isShrinkResources = true
+
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
             // TODO: Add your own signing config for the release build.
             // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig = signingConfigs.getByName("debug")

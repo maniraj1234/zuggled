@@ -46,6 +46,8 @@ dependencies:
   flutter_bloc: ^9.1.1
   animations: ^2.0.11
   shared_preferences: ^2.5.3
+  flutter_animate: ^4.5.2
+  provider: ^6.1.5
 
 dev_dependencies:
   flutter_test:
@@ -78,6 +80,7 @@ flutter:
     - lib/assets/images/onboarding/
     - lib/core/config/template.env
     - lib/assets/json/onboarding_data.json
+    - lib/assets/images/core/zuggled-banner-image.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
