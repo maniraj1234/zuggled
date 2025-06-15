@@ -44,7 +44,8 @@ final GoRouter mainRouter = GoRouter(
     bool isLoggedIn = await AuthService().isLoggedIn();
     if (prefs.getBool('isFirstLaunch') ?? true) {
       return '/onBoarding';
-    } else if (!isLoggedIn) {
+    }
+    if (!isLoggedIn) {
       return '/login';
     } else {
       return '/home';

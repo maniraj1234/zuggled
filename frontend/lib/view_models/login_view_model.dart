@@ -7,6 +7,10 @@ import 'package:frontend/services/auth_service/auth_service.dart';
 import 'package:frontend/services/navigation/navigation_service.dart';
 import 'package:frontend/widgets/login_sub_views.dart';
 
+/// Constants
+const int LOGIN_WIDGET = 0;
+const int OTP_WIDGET = 1;
+
 class LoginViewModel extends ChangeNotifier {
   LoginViewModel(this._navService);
 
@@ -21,7 +25,7 @@ class LoginViewModel extends ChangeNotifier {
   /// Controller for OTP TextField
   final TextEditingController otpverifController = TextEditingController();
 
-  int animateWidgetIndex = 0;
+  int animateWidgetIndex = LOGIN_WIDGET;
 
   /// Login Widget, shown first, asks for phone number
   late Widget loginWidget = LoginWidget(
@@ -31,7 +35,7 @@ class LoginViewModel extends ChangeNotifier {
       if (phoneNumberController.text != "") {
         sendOTPLoginHandle();
       }
-      animateWidgetIndex = 1;
+      animateWidgetIndex = OTP_WIDGET;
       notifyListeners();
     },
   );
@@ -40,7 +44,7 @@ class LoginViewModel extends ChangeNotifier {
   /// If OTP is verified, Signin user and go to HomeScreen
   late Widget otpVerifWidget = BackButtonListener(
     onBackButtonPressed: () async {
-      animateWidgetIndex = 0;
+      animateWidgetIndex = LOGIN_WIDGET;
       notifyListeners();
       return true;
     },
@@ -55,11 +59,11 @@ class LoginViewModel extends ChangeNotifier {
   final AuthService authService = AuthService();
 
   /// SnackBar Template
-  void _showSnackBar(BuildContext context, String message) {
-    ScaffoldMessenger.of(
-      context,
-    ).showSnackBar(SnackBar(content: Text(message)));
-  }
+  // void _showSnackBar(BuildContext context, String message) {
+  //   ScaffoldMessenger.of(
+  //     context,
+  //   ).showSnackBar(SnackBar(content: Text(message)));
+  // }
 
   /// Send OTP handle for Login Button on Login Widget
   void sendOTPLoginHandle() {
