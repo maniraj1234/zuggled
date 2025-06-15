@@ -1,4 +1,5 @@
 import 'package:flutter/foundation.dart';
+import 'package:frontend/constants/navigation_index.dart';
 import 'package:frontend/constants/route_names.dart';
 import 'package:frontend/services/navigation/navigation_service.dart';
 
@@ -14,13 +15,13 @@ class ShellViewModel extends ChangeNotifier {
   void changeDestination(int index) {
     _selectedIndex = index;
     switch (index) {
-      case 0:
+      case NavigationIndex.CONSUMER_HOME:
         _navService.go(RouteNames.consumerHome);
-      case 1:
+      case NavigationIndex.CALL_HISTORY:
         _navService.go(RouteNames.callHistory);
-      case 2:
+      case NavigationIndex.COIN_STORE:
         _navService.go(RouteNames.coinStore);
-      case 3:
+      case NavigationIndex.SETTINGS:
         _navService.go(RouteNames.settings);
     }
     notifyListeners();
