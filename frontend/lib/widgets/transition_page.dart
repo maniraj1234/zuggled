@@ -9,7 +9,7 @@ class TransitionPage extends CustomTransitionPage {
   TransitionPage({required super.child, required this.state})
     : super(
         key: state.pageKey,
-        transitionDuration: Durations.short4,
+        transitionDuration: Durations.medium3,
         reverseTransitionDuration: Durations.short1,
         transitionsBuilder:
             (context, animation, secondaryAnimation, child) =>

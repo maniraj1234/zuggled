@@ -1,5 +1,6 @@
 import 'package:frontend/constants/route_names.dart';
 import 'package:frontend/services/navigation/navigation_service.dart';
+import 'package:frontend/view_models/home_view_model.dart';
 import 'package:frontend/view_models/login_view_model.dart';
 import 'package:frontend/view_models/shell_view_model.dart';
 import 'package:frontend/view_models/sign_up_view_model.dart';
@@ -105,8 +106,13 @@ final GoRouter mainRouter = GoRouter(
           path: '/home',
           name: RouteNames.consumerHome,
           pageBuilder:
-              (context, state) =>
-                  TransitionPage(child: HomeView(), state: state),
+              (context, state) => TransitionPage(
+                child: ChangeNotifierProvider<HomeViewModel>(
+                  create: (context) => HomeViewModel(),
+                  child: HomeView(),
+                ),
+                state: state,
+              ),
         ),
 
         GoRoute(
