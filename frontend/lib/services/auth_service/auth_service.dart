@@ -4,9 +4,15 @@ import 'package:flutter/foundation.dart';
 class AuthService {
   /// This will give an instance of AuthService
   /// So we don't need to create a new one everytime
-  static AuthService get instance {
-    AuthService authService = AuthService();
-    return authService;
+  AuthService._();
+
+  /// Private singleton instance
+  static AuthService? _instance;
+
+  /// Get instance
+  factory AuthService() {
+    _instance = AuthService._();
+    return _instance!;
   }
 
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
