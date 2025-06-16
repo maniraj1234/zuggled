@@ -16,7 +16,7 @@
     ],
     "isLiked": false,
     "videoCallAvailable": true,
-    "audioCallAvailable": false
+    "audioCallAvailable": true
   },
   {
     "id": "user_002",
