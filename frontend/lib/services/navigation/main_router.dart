@@ -1,8 +1,11 @@
 import 'package:frontend/constants/route_names.dart';
 import 'package:frontend/services/navigation/navigation_service.dart';
+import 'package:frontend/view_models/home_view_model.dart';
 import 'package:frontend/view_models/login_view_model.dart';
+import 'package:frontend/view_models/search_screen_view_model.dart';
 import 'package:frontend/view_models/shell_view_model.dart';
 import 'package:frontend/view_models/sign_up_view_model.dart';
+import 'package:frontend/views/search_screen_view.dart';
 import 'package:frontend/views/shell_view.dart';
 import 'package:frontend/services/auth_service/auth_service.dart';
 import 'package:frontend/views/login_view.dart';
@@ -104,9 +107,11 @@ final GoRouter mainRouter = GoRouter(
         GoRoute(
           path: '/home',
           name: RouteNames.consumerHome,
-          pageBuilder:
-              (context, state) =>
-                  TransitionPage(child: HomeView(), state: state),
+          builder:
+              (context, state) => ChangeNotifierProvider<HomeViewModel>(
+                create: (_) => HomeViewModel(context.read<NavigationService>()),
+                child: HomeView(),
+              ),
         ),
 
         GoRoute(
@@ -115,6 +120,19 @@ final GoRouter mainRouter = GoRouter(
           pageBuilder:
               (context, state) =>
                   TransitionPage(child: HistoryView(), state: state),
+        ),
+
+        GoRoute(
+          path: '/search_screen',
+          name: RouteNames.searchScreen,
+          builder:
+              (context, state) => ChangeNotifierProvider<SearchScreenViewModel>(
+                create:
+                    (_) => SearchScreenViewModel(
+                      context.read<NavigationService>(),
+                    ),
+                child: SearchScreenView(),
+              ),
         ),
 
         GoRoute(
