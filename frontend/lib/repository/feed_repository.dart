@@ -3,7 +3,8 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:frontend/models/creator.dart';
 
-/// This class acts as abstraction between ViewModel and Firestore service
+/// This class acts as abstraction between ViewModel and other
+/// Database/Backend services for Feed in Customer [HomeScreen]
 class FeedRepository {
   /// Get single instance of [FeedRepository]
   FeedRepository._();
