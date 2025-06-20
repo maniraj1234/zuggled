@@ -123,19 +123,6 @@ final GoRouter mainRouter = GoRouter(
         ),
 
         GoRoute(
-          path: '/search_screen',
-          name: RouteNames.searchScreen,
-          builder:
-              (context, state) => ChangeNotifierProvider<SearchScreenViewModel>(
-                create:
-                    (_) => SearchScreenViewModel(
-                      context.read<NavigationService>(),
-                    ),
-                child: SearchScreenView(),
-              ),
-        ),
-
-        GoRoute(
           name: RouteNames.coinStore,
           path: '/coin_store',
           pageBuilder:
@@ -152,6 +139,22 @@ final GoRouter mainRouter = GoRouter(
         ),
       ],
     ),
+
+    GoRoute(
+      path: '/search_screen',
+      name: RouteNames.searchScreen,
+      pageBuilder:
+          (context, state) => TransitionPage(
+            child: ChangeNotifierProvider<SearchScreenViewModel>(
+              create:
+                  (_) =>
+                      SearchScreenViewModel(context.read<NavigationService>()),
+              child: SearchScreenView(),
+            ),
+            state: state,
+          ),
+    ),
+
     // TODO: Redesign Call View UI
     /// CallView
     GoRoute(path: '/', builder: (context, state) => LoginView()),

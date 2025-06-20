@@ -25,22 +25,17 @@ class SearchTextField extends StatelessWidget {
         ),
         // The prefixIcon has been removed from here.
         hintText: 'Search for people',
-        hintStyle: TextStyle(fontSize: 18, color: Colors.black54),
-        enabledBorder: UnderlineInputBorder(
-          borderSide: BorderSide(
-            color: Theme.of(context).dividerColor,
-            width: 2.0,
-          ),
-        ),
+        hintStyle: Theme.of(context).textTheme.bodyLarge,
+        enabledBorder: UnderlineInputBorder(),
         focusedBorder: UnderlineInputBorder(
           borderSide: BorderSide(
-            color: Theme.of(context).dividerColor,
-            width: 2.0,
+            color: Theme.of(context).colorScheme.primary,
+            width: 2.4,
           ),
         ),
         border: UnderlineInputBorder(
           borderSide: BorderSide(
-            color: Theme.of(context).dividerColor,
+            color: Theme.of(context).colorScheme.outline,
             width: 2.0,
           ),
         ),
