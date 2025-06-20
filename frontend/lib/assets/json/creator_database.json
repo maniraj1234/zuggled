@@ -1,0 +1,1793 @@
+{
+  "users": {
+    "user_r7y3f": {
+      "userName": "ali_marie_fx",
+      "gender": "female",
+      "bio": "Passionate coder and avid reader. Always expanding my horizons in tech and literature.",
+      "profilePicture": {
+        "id": "placeholder",
+        "url": "lib/assets/images/placeholder.png"
+      },
+      "interests": [
+        "coding",
+        "reading",
+        "hiking",
+        "sci-fi"
+      ],
+      "videoCallAvailable": true,
+      "audioCallAvailable": true,
+      "phoneNumber": "+869876543210",
+      "coins": 543,
+      "total_earnings": 2530,
+      "callHistory": {
+        "4e7b4bfd-cc71-4b9c-8e35-0b469b0ddf2d": {
+          "callID": "4e7b4bfd-cc71-4b9c-8e35-0b469b0ddf2d",
+          "participantId": "user_m_1",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-03-09T12:00:00Z",
+          "durationSeconds": 360
+        },
+        "f6e9cd79-ee73-453e-bbc2-c68c874effcb": {
+          "callID": "f6e9cd79-ee73-453e-bbc2-c68c874effcb",
+          "participantId": "user_m_8",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-06-08T17:00:00Z",
+          "durationSeconds": 500
+        },
+        "f23f4911-4b56-449e-bdc9-61da58c88cef": {
+          "callID": "f23f4911-4b56-449e-bdc9-61da58c88cef",
+          "participantId": "user_m_8",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-06-14T20:15:00Z",
+          "durationSeconds": 380
+        },
+        "10b40c7e-d3d3-42fc-b7a3-b71992542fc4": {
+          "callID": "10b40c7e-d3d3-42fc-b7a3-b71992542fc4",
+          "participantId": "user_m_13",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-06-15T21:00:00Z",
+          "durationSeconds": 380
+        },
+        "042f1bd2-bc55-4534-88ee-6e6ed4705cb6": {
+          "callID": "042f1bd2-bc55-4534-88ee-6e6ed4705cb6",
+          "participantId": "user_m_15",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-06-16T12:00:00Z",
+          "durationSeconds": 200
+        },
+        "28c548e4-d951-4f2f-aaaa-d1ec85a85b69": {
+          "callID": "28c548e4-d951-4f2f-aaaa-d1ec85a85b69",
+          "participantId": "user_m_16",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-03-25T11:20:00Z",
+          "durationSeconds": 270
+        },
+        "632f1869-57ab-41a8-831e-8b10a14e632a": {
+          "callID": "632f1869-57ab-41a8-831e-8b10a14e632a",
+          "participantId": "user_m_16",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-05-24T16:00:00Z",
+          "durationSeconds": 480
+        }
+      }
+    },
+    "user_p9a2h": {
+      "userName": "brea.bakes.n.pics",
+      "gender": "female",
+      "bio": "Loves photography and baking. Capturing sweet moments and creating delicious treats!",
+      "profilePicture": {
+        "id": "placeholder",
+        "url": "lib/assets/images/placeholder.png"
+      },
+      "interests": [
+        "photography",
+        "baking",
+        "travel"
+      ],
+      "videoCallAvailable": true,
+      "audioCallAvailable": true,
+      "phoneNumber": "+18765432109",
+      "coins": 128,
+      "total_earnings": 910,
+      "callHistory": {
+        "b907157b-6f20-47e7-b21c-04817280dddd": {
+          "callID": "b907157b-6f20-47e7-b21c-04817280dddd",
+          "participantId": "user_m_1",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-06-03T18:45:10Z",
+          "durationSeconds": 245
+        },
+        "277b3d1b-56f5-4b4d-98eb-a0e7dd5198f5": {
+          "callID": "277b3d1b-56f5-4b4d-98eb-a0e7dd5198f5",
+          "participantId": "user_m_3",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-20T09:00:00Z",
+          "durationSeconds": 180
+        },
+        "42934f29-d5bd-4635-a5e4-61e1b36be40d": {
+          "callID": "42934f29-d5bd-4635-a5e4-61e1b36be40d",
+          "participantId": "user_m_10",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-06-11T16:00:00Z",
+          "durationSeconds": 150
+        },
+        "78abc1dc-82e7-4c9d-887f-02a877a56034": {
+          "callID": "78abc1dc-82e7-4c9d-887f-02a877a56034",
+          "participantId": "user_m_17",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-05-01T15:00:00Z",
+          "durationSeconds": 400
+        },
+        "db287b6e-fc12-4625-833b-79151333fe14": {
+          "callID": "db287b6e-fc12-4625-833b-79151333fe14",
+          "participantId": "user_m_17",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-03-25T11:00:00Z",
+          "durationSeconds": 270
+        },
+        "f5e9e049-79e2-40fd-8330-98a639757b60": {
+          "callID": "f5e9e049-79e2-40fd-8330-98a639757b60",
+          "participantId": "user_m_17",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-06-13T20:00:00Z",
+          "durationSeconds": 380
+        },
+        "5045dc5e-1cd4-46fb-96ff-e5eb2d20998a": {
+          "callID": "5045dc5e-1cd4-46fb-96ff-e5eb2d20998a",
+          "participantId": "user_m_17",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-20T11:00:00Z",
+          "durationSeconds": 290
+        },
+        "8f9c5ef9-e9a9-408a-b28a-e31aaa41375c": {
+          "callID": "8f9c5ef9-e9a9-408a-b28a-e31aaa41375c",
+          "participantId": "user_m_18",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-06-01T14:00:00Z",
+          "durationSeconds": 400
+        },
+        "d452d2a7-072a-4293-abdd-af6666587bfc": {
+          "callID": "d452d2a7-072a-4293-abdd-af6666587bfc",
+          "participantId": "user_m_18",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-05-20T15:00:00Z",
+          "durationSeconds": 420
+        },
+        "5f8be45c-d936-4ca6-9a59-727eb595847d": {
+          "callID": "5f8be45c-d936-4ca6-9a59-727eb595847d",
+          "participantId": "user_m_18",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-05-22T19:00:00Z",
+          "durationSeconds": 480
+        }
+      }
+    },
+    "user_m1s0l": {
+      "userName": "kris_melodies",
+      "gender": "female",
+      "bio": "Musician and foodie. Exploring new sounds and tastes around the world.",
+      "profilePicture": {
+        "id": "placeholder",
+        "url": "lib/assets/images/placeholder.png"
+      },
+      "interests": [
+        "music",
+        "cooking",
+        "gaming"
+      ],
+      "videoCallAvailable": true,
+      "audioCallAvailable": true,
+      "phoneNumber": "+497654321098",
+      "coins": 876,
+      "total_earnings": 1780,
+      "callHistory": {
+        "183c3040-d819-43fc-b676-d8f1cad87ffe": {
+          "callID": "183c3040-d819-43fc-b676-d8f1cad87ffe",
+          "participantId": "user_m_5",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-03-25T09:00:00Z",
+          "durationSeconds": 210
+        },
+        "9c770b76-63a3-4511-941a-dd2a8713b11a": {
+          "callID": "9c770b76-63a3-4511-941a-dd2a8713b11a",
+          "participantId": "user_m_7",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-20T14:30:00Z",
+          "durationSeconds": 180
+        },
+        "f2110b68-7fcf-4ab5-8d57-7dbba7be0cc8": {
+          "callID": "f2110b68-7fcf-4ab5-8d57-7dbba7be0cc8",
+          "participantId": "user_m_7",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-04T12:00:00Z",
+          "durationSeconds": 160
+        },
+        "c5e5d538-1165-4f9d-83f2-e496ba91b19a": {
+          "callID": "c5e5d538-1165-4f9d-83f2-e496ba91b19a",
+          "participantId": "user_m_7",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-24T11:00:00Z",
+          "durationSeconds": 290
+        },
+        "26d7b81e-312d-422c-aec2-a1a3689892fe": {
+          "callID": "26d7b81e-312d-422c-aec2-a1a3689892fe",
+          "participantId": "user_m_12",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-06-14T20:15:00Z",
+          "durationSeconds": 90
+        },
+        "d8951ce9-f717-4562-b01c-17b047c63525": {
+          "callID": "d8951ce9-f717-4562-b01c-17b047c63525",
+          "participantId": "user_m_12",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-06-03T18:00:00Z",
+          "durationSeconds": 500
+        },
+        "af44f656-0007-4853-ac19-6082aa28cc9b": {
+          "callID": "af44f656-0007-4853-ac19-6082aa28cc9b",
+          "participantId": "user_m_12",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-06T09:30:00Z",
+          "durationSeconds": 160
+        },
+        "05e97946-992a-4fc1-a076-6c620ce0a180": {
+          "callID": "05e97946-992a-4fc1-a076-6c620ce0a180",
+          "participantId": "user_m_12",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-05-22T19:00:00Z",
+          "durationSeconds": 480
+        },
+        "f7c8a86d-a3b6-4232-b7c1-6f8348be11ef": {
+          "callID": "f7c8a86d-a3b6-4232-b7c1-6f8348be11ef",
+          "participantId": "user_m_15",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-10T14:30:00Z",
+          "durationSeconds": 180
+        },
+        "c6035f51-3cda-48c2-b18e-234e166cff58": {
+          "callID": "c6035f51-3cda-48c2-b18e-234e166cff58",
+          "participantId": "user_m_15",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-06T09:30:00Z",
+          "durationSeconds": 160
+        },
+        "ccab0c36-c9f8-449d-af1f-88d8a00cec4e": {
+          "callID": "ccab0c36-c9f8-449d-af1f-88d8a00cec4e",
+          "participantId": "user_m_15",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-28T10:00:00Z",
+          "durationSeconds": 290
+        },
+        "0d4d570b-ebaa-457e-a69b-ac1b2c6c56ec": {
+          "callID": "0d4d570b-ebaa-457e-a69b-ac1b2c6c56ec",
+          "participantId": "user_m_18",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-10T16:00:00Z",
+          "durationSeconds": 200
+        },
+        "cb454079-f254-439a-99b5-750569341629": {
+          "callID": "cb454079-f254-439a-99b5-750569341629",
+          "participantId": "user_m_18",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-06T09:30:00Z",
+          "durationSeconds": 160
+        },
+        "77e43ec3-e4db-4b77-a4ac-8a1770296993": {
+          "callID": "77e43ec3-e4db-4b77-a4ac-8a1770296993",
+          "participantId": "user_m_18",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-28T10:00:00Z",
+          "durationSeconds": 290
+        }
+      }
+    },
+    "user_x4c8v": {
+      "userName": "diana.active",
+      "gender": "female",
+      "bio": "Dedicated to fitness and well-being. Finding my zen through yoga and active living.",
+      "profilePicture": {
+        "id": "placeholder",
+        "url": "lib/assets/images/placeholder.png"
+      },
+      "interests": [
+        "fitness",
+        "yoga",
+        "meditation"
+      ],
+      "videoCallAvailable": true,
+      "audioCallAvailable": true,
+      "phoneNumber": "+616543210987",
+      "coins": 0,
+      "total_earnings": 9400,
+      "callHistory": {
+        "ccdb6984-64ad-40ff-ac7d-046d2d1669c0": {
+          "callID": "ccdb6984-64ad-40ff-ac7d-046d2d1669c0",
+          "participantId": "user_m_9",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-05-28T09:30:00Z",
+          "durationSeconds": 150
+        },
+        "34ad0343-6e5c-43c8-b7fb-2dc5c8beb3b7": {
+          "callID": "34ad0343-6e5c-43c8-b7fb-2dc5c8beb3b7",
+          "participantId": "user_m_9",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-06-11T16:30:00Z",
+          "durationSeconds": 500
+        },
+        "34971cc3-86c7-470e-8533-0ca50e0c130c": {
+          "callID": "34971cc3-86c7-470e-8533-0ca50e0c130c",
+          "participantId": "user_m_9",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-03T12:00:00Z",
+          "durationSeconds": 160
+        },
+        "929d2d5b-9832-4638-9436-17531e840b05": {
+          "callID": "929d2d5b-9832-4638-9436-17531e840b05",
+          "participantId": "user_m_9",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-05-21T15:00:00Z",
+          "durationSeconds": 480
+        },
+        "84042d18-4ffb-4f5a-90fd-97cb7ce4152f": {
+          "callID": "84042d18-4ffb-4f5a-90fd-97cb7ce4152f",
+          "participantId": "user_m_13",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-20T13:00:00Z",
+          "durationSeconds": 290
+        },
+        "2923d1b0-07d5-422b-8cd3-791943c0a4b5": {
+          "callID": "2923d1b0-07d5-422b-8cd3-791943c0a4b5",
+          "participantId": "user_m_19",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-05-01T10:00:00Z",
+          "durationSeconds": 450
+        },
+        "ce674675-08c6-46f2-9b12-11f4a68dc251": {
+          "callID": "ce674675-08c6-46f2-9b12-11f4a68dc251",
+          "participantId": "user_m_19",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-03-25T11:00:00Z",
+          "durationSeconds": 270
+        },
+        "a68721f7-e6a3-467f-8dfe-efa4915e542f": {
+          "callID": "a68721f7-e6a3-467f-8dfe-efa4915e542f",
+          "participantId": "user_m_19",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-06-12T16:00:00Z",
+          "durationSeconds": 380
+        },
+        "7b41a6c9-1ca6-4c01-b226-8a134fd9a35a": {
+          "callID": "7b41a6c9-1ca6-4c01-b226-8a134fd9a35a",
+          "participantId": "user_m_19",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-28T10:00:00Z",
+          "durationSeconds": 290
+        }
+      }
+    },
+    "user_q2z6d": {
+      "userName": "ella.explorer",
+      "gender": "female",
+      "bio": "Adventure seeker and tech enthusiast. Always ready for the next big thrill and innovation.",
+      "profilePicture": {
+        "id": "placeholder",
+        "url": "lib/assets/images/placeholder.png"
+      },
+      "interests": [
+        "adventure sports",
+        "technology",
+        "movies",
+        "gadgets"
+      ],
+      "videoCallAvailable": true,
+      "audioCallAvailable": true,
+      "phoneNumber": "+449987654321",
+      "coins": 910,
+      "total_earnings": 7960,
+      "callHistory": {
+        "22a346fe-7e6f-4bf6-81a4-8af26310aa90": {
+          "callID": "22a346fe-7e6f-4bf6-81a4-8af26310aa90",
+          "participantId": "user_m_2",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-10T10:00:00Z",
+          "durationSeconds": 150
+        },
+        "5d90dfea-0992-451d-98bb-02e46750d692": {
+          "callID": "5d90dfea-0992-451d-98bb-02e46750d692",
+          "participantId": "user_m_3",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-05-05T11:15:00Z",
+          "durationSeconds": 330
+        },
+        "3207bb3c-727f-4a75-96e8-07068136610f": {
+          "callID": "3207bb3c-727f-4a75-96e8-07068136610f",
+          "participantId": "user_m_14",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-05-03T11:00:00Z",
+          "durationSeconds": 450
+        },
+        "f547ebe0-201b-40c7-89fd-b098956f644d": {
+          "callID": "f547ebe0-201b-40c7-89fd-b098956f644d",
+          "participantId": "user_m_14",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-05-20T16:00:00Z",
+          "durationSeconds": 420
+        },
+        "1c49e359-a575-421a-999d-bd07ceeaaf48": {
+          "callID": "1c49e359-a575-421a-999d-bd07ceeaaf48",
+          "participantId": "user_m_14",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-05-27T10:00:00Z",
+          "durationSeconds": 480
+        },
+        "d0e2dcef-1487-4ebe-95a7-79335cd07ef8": {
+          "callID": "d0e2dcef-1487-4ebe-95a7-79335cd07ef8",
+          "participantId": "user_m_17",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-10T10:30:00Z",
+          "durationSeconds": 180
+        },
+        "c94a06b8-02a7-4593-aac4-7c84a0961e74": {
+          "callID": "c94a06b8-02a7-4593-aac4-7c84a0961e74",
+          "participantId": "user_m_17",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-05-20T16:00:00Z",
+          "durationSeconds": 420
+        },
+        "8b0e2578-6adf-469d-8ffc-9b728e300173": {
+          "callID": "8b0e2578-6adf-469d-8ffc-9b728e300173",
+          "participantId": "user_m_17",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-03-31T08:00:00Z",
+          "durationSeconds": 210
+        }
+      }
+    },
+    "user_w5n1k": {
+      "userName": "faye_nature_art",
+      "gender": "female",
+      "bio": "Artist and nature lover. Finding inspiration in the beauty of the outdoors.",
+      "profilePicture": {
+        "id": "placeholder",
+        "url": "lib/assets/images/placeholder.png"
+      },
+      "interests": [
+        "painting",
+        "gardening",
+        "nature walks",
+        "drawing"
+      ],
+      "videoCallAvailable": false,
+      "audioCallAvailable": true,
+      "phoneNumber": "+278876543210",
+      "coins": 305,
+      "total_earnings": 3310,
+      "callHistory": {
+        "f540d89d-00bd-4f9d-b721-744fe77b722c": {
+          "callID": "f540d89d-00bd-4f9d-b721-744fe77b722c",
+          "participantId": "user_m_2",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-06-07T18:45:10Z",
+          "durationSeconds": 400
+        },
+        "a211ae24-082d-4d46-bbb4-2d23460a0b26": {
+          "callID": "a211ae24-082d-4d46-bbb4-2d23460a0b26",
+          "participantId": "user_m_3",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-03T20:00:00Z",
+          "durationSeconds": 160
+        },
+        "da287bff-a555-4ab6-833b-c94ba7d990fe": {
+          "callID": "da287bff-a555-4ab6-833b-c94ba7d990fe",
+          "participantId": "user_m_6",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-03-25T11:45:00Z",
+          "durationSeconds": 270
+        },
+        "0976b961-6ae5-45b7-9053-1d3da12d3087": {
+          "callID": "0976b961-6ae5-45b7-9053-1d3da12d3087",
+          "participantId": "user_m_8",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-15T09:30:00Z",
+          "durationSeconds": 180
+        },
+        "55417e71-9aec-4b2f-90ab-b2fc36cfae0f": {
+          "callID": "55417e71-9aec-4b2f-90ab-b2fc36cfae0f",
+          "participantId": "user_m_8",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-09T13:00:00Z",
+          "durationSeconds": 160
+        },
+        "4ceb7808-36fc-44c7-8d9f-4a34cc341808": {
+          "callID": "4ceb7808-36fc-44c7-8d9f-4a34cc341808",
+          "participantId": "user_m_8",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-11T16:00:00Z",
+          "durationSeconds": 290
+        },
+        "622eb835-7951-43da-9a0d-fe1ca52deaaf": {
+          "callID": "622eb835-7951-43da-9a0d-fe1ca52deaaf",
+          "participantId": "user_m_11",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-06-09T18:00:00Z",
+          "durationSeconds": 500
+        }
+      }
+    },
+    "user_h8j7b": {
+      "userName": "gigi_strategist",
+      "gender": "female",
+      "bio": "Strategy game master. Always up for a challenge and a good puzzle.",
+      "profilePicture": {
+        "id": "placeholder",
+        "url": "lib/assets/images/placeholder.png"
+      },
+      "interests": [
+        "board games",
+        "strategy",
+        "history",
+        "puzzles"
+      ],
+      "videoCallAvailable": true,
+      "audioCallAvailable": false,
+      "phoneNumber": "+917765432109",
+      "coins": 77,
+      "total_earnings": 1780,
+      "callHistory": {
+        "de8ba6d9-2936-4b37-a685-780114004f4c": {
+          "callID": "de8ba6d9-2936-4b37-a685-780114004f4c",
+          "participantId": "user_m_4",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-01T09:15:00Z",
+          "durationSeconds": 220
+        },
+        "26af21c6-5c34-44e8-beee-04903f6cbfee": {
+          "callID": "26af21c6-5c34-44e8-beee-04903f6cbfee",
+          "participantId": "user_m_4",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-07T13:10:00Z",
+          "durationSeconds": 280
+        },
+        "cf6999e4-8e22-465a-b3ab-d098ff8763e2": {
+          "callID": "cf6999e4-8e22-465a-b3ab-d098ff8763e2",
+          "participantId": "user_m_4",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-19T10:45:00Z",
+          "durationSeconds": 250
+        }
+      }
+    },
+    "user_k6e9f": {
+      "userName": "hannah_inkwell",
+      "gender": "female",
+      "bio": "Bookworm and aspiring writer. Fuelled by coffee and good stories.",
+      "profilePicture": {
+        "id": "placeholder",
+        "url": "lib/assets/images/placeholder.png"
+      },
+      "interests": [
+        "writing",
+        "literature",
+        "coffee",
+        "poetry"
+      ],
+      "videoCallAvailable": true,
+      "audioCallAvailable": true,
+      "phoneNumber": "+816654321098",
+      "coins": 621,
+      "total_earnings": 7790,
+      "callHistory": {
+        "0144595f-6bd3-4757-a209-80de87a0508d": {
+          "callID": "0144595f-6bd3-4757-a209-80de87a0508d",
+          "participantId": "user_m_1",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-05-25T21:40:00Z",
+          "durationSeconds": 200
+        },
+        "643b6588-c150-4144-8a00-13dfa0c915a2": {
+          "callID": "643b6588-c150-4144-8a00-13dfa0c915a2",
+          "participantId": "user_m_3",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-06-10T14:30:00Z",
+          "durationSeconds": 240
+        },
+        "ec39bcdd-eb24-4df5-b8b7-aafe3878af50": {
+          "callID": "ec39bcdd-eb24-4df5-b8b7-aafe3878af50",
+          "participantId": "user_m_9",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-18T11:00:00Z",
+          "durationSeconds": 200
+        },
+        "9eaf6ad0-51db-4f1b-969d-30f4be449ac2": {
+          "callID": "9eaf6ad0-51db-4f1b-969d-30f4be449ac2",
+          "participantId": "user_m_9",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-05-29T10:00:00Z",
+          "durationSeconds": 420
+        },
+        "f4fd94b8-bf81-4bda-89e3-4665f3415085": {
+          "callID": "f4fd94b8-bf81-4bda-89e3-4665f3415085",
+          "participantId": "user_m_9",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-03-24T09:15:00Z",
+          "durationSeconds": 210
+        },
+        "c27d7475-afed-41ba-8ead-6cd573278385": {
+          "callID": "c27d7475-afed-41ba-8ead-6cd573278385",
+          "participantId": "user_m_13",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-05-25T17:00:00Z",
+          "durationSeconds": 480
+        },
+        "5fe90dc5-c7a0-4be3-aaf5-72b9e9200e77": {
+          "callID": "5fe90dc5-c7a0-4be3-aaf5-72b9e9200e77",
+          "participantId": "user_m_19",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-06-08T22:00:00Z",
+          "durationSeconds": 200
+        },
+        "fb83caaa-5676-4204-a91b-30ef604c335c": {
+          "callID": "fb83caaa-5676-4204-a91b-30ef604c335c",
+          "participantId": "user_m_19",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-06-07T18:00:00Z",
+          "durationSeconds": 500
+        },
+        "cba2918c-698d-4a29-8301-6b1ffc603f63": {
+          "callID": "cba2918c-698d-4a29-8301-6b1ffc603f63",
+          "participantId": "user_m_19",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-06T09:30:00Z",
+          "durationSeconds": 160
+        },
+        "42b77815-e92e-4a78-a120-0c60b496ed20": {
+          "callID": "42b77815-e92e-4a78-a120-0c60b496ed20",
+          "participantId": "user_m_19",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-05-22T19:00:00Z",
+          "durationSeconds": 480
+        }
+      }
+    },
+    "user_t0u4i": {
+      "userName": "ivy_stargazer",
+      "gender": "female",
+      "bio": "Space enthusiast and amateur astronomer. Dreaming among the stars.",
+      "profilePicture": {
+        "id": "placeholder",
+        "url": "lib/assets/images/placeholder.png"
+      },
+      "interests": [
+        "astronomy",
+        "sci-fi movies",
+        "space exploration",
+        "documentaries"
+      ],
+      "videoCallAvailable": true,
+      "audioCallAvailable": true,
+      "phoneNumber": "+559123456789",
+      "coins": 1,
+      "total_earnings": 8340,
+      "callHistory": {
+        "bae7ebd7-e23b-4559-977a-ebb6bae31f15": {
+          "callID": "bae7ebd7-e23b-4559-977a-ebb6bae31f15",
+          "participantId": "user_m_4",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-05-12T11:30:00Z",
+          "durationSeconds": 400
+        },
+        "e6b1a243-ab5a-4550-8b13-20416e539a51": {
+          "callID": "e6b1a243-ab5a-4550-8b13-20416e539a51",
+          "participantId": "user_m_4",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-05-25T10:00:00Z",
+          "durationSeconds": 520
+        },
+        "c693d69e-23a7-499f-af77-c4da5207a68a": {
+          "callID": "c693d69e-23a7-499f-af77-c4da5207a68a",
+          "participantId": "user_m_4",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-05-30T16:00:00Z",
+          "durationSeconds": 300
+        },
+        "0c415f70-98f8-4784-8b7b-74fca9ca7f4f": {
+          "callID": "0c415f70-98f8-4784-8b7b-74fca9ca7f4f",
+          "participantId": "user_m_18",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-06-07T09:45:00Z",
+          "durationSeconds": 500
+        },
+        "6878025f-42f4-4ff9-85a9-4735800c0fde": {
+          "callID": "6878025f-42f4-4ff9-85a9-4735800c0fde",
+          "participantId": "user_m_18",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-06-12T16:00:00Z",
+          "durationSeconds": 380
+        }
+      }
+    },
+    "user_b3d5g": {
+      "userName": "jade.glam.designs",
+      "gender": "female",
+      "bio": "Fashion designer and vintage collector. Passionate about style and timeless pieces.",
+      "profilePicture": {
+        "id": "placeholder",
+        "url": "lib/assets/images/placeholder.png"
+      },
+      "interests": [
+        "fashion",
+        "vintage",
+        "design",
+        "thrifting"
+      ],
+      "videoCallAvailable": true,
+      "audioCallAvailable": true,
+      "phoneNumber": "+18234567890",
+      "coins": 489,
+      "total_earnings": 2840,
+      "callHistory": {
+        "fbb1ec90-aae5-479c-8339-51fb5d7142e6": {
+          "callID": "fbb1ec90-aae5-479c-8339-51fb5d7142e6",
+          "participantId": "user_m_14",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-10T14:30:00Z",
+          "durationSeconds": 200
+        },
+        "59d34c80-71b6-42ce-bd11-6fcdd1633b50": {
+          "callID": "59d34c80-71b6-42ce-bd11-6fcdd1633b50",
+          "participantId": "user_m_14",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-06T12:00:00Z",
+          "durationSeconds": 160
+        },
+        "1a663877-2f66-4bed-bd7d-8397feae37d8": {
+          "callID": "1a663877-2f66-4bed-bd7d-8397feae37d8",
+          "participantId": "user_m_14",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-20T11:00:00Z",
+          "durationSeconds": 290
+        },
+        "9fa51b0e-fdc2-469b-acdd-ff837a95ef8e": {
+          "callID": "9fa51b0e-fdc2-469b-acdd-ff837a95ef8e",
+          "participantId": "user_m_20",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-06-15T19:00:00Z",
+          "durationSeconds": 50
+        },
+        "5c22442d-e727-480c-a574-010dc5b43552": {
+          "callID": "5c22442d-e727-480c-a574-010dc5b43552",
+          "participantId": "user_m_20",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-03-25T11:00:00Z",
+          "durationSeconds": 270
+        },
+        "771b2ec0-b2e2-4d9a-85d9-4d259e166b52": {
+          "callID": "771b2ec0-b2e2-4d9a-85d9-4d259e166b52",
+          "participantId": "user_m_20",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-03-27T08:00:00Z",
+          "durationSeconds": 210
+        }
+      }
+    },
+    "user_a7s2x": {
+      "userName": "kayla_code_queen",
+      "gender": "female",
+      "bio": "Software engineer, loves open source. Building and learning, one line of code at a time.",
+      "profilePicture": {
+        "id": "placeholder",
+        "url": "lib/assets/images/placeholder.png"
+      },
+      "interests": [
+        "open source",
+        "software development",
+        "linux",
+        "web design"
+      ],
+      "videoCallAvailable": true,
+      "audioCallAvailable": true,
+      "phoneNumber": "+497345678901",
+      "coins": 732,
+      "total_earnings": 6590,
+      "callHistory": {
+        "79b99e54-7a94-455e-9bfa-d137e01dba8f": {
+          "callID": "79b99e54-7a94-455e-9bfa-d137e01dba8f",
+          "participantId": "user_m_1",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-06-12T10:30:15Z",
+          "durationSeconds": 320
+        },
+        "28cbeb0a-fc11-45b6-a5aa-f26f64bc6ca7": {
+          "callID": "28cbeb0a-fc11-45b6-a5aa-f26f64bc6ca7",
+          "participantId": "user_m_3",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-03-29T11:00:00Z",
+          "durationSeconds": 210
+        },
+        "6e388a6c-6e95-4781-8f4b-bc257a37571e": {
+          "callID": "6e388a6c-6e95-4781-8f4b-bc257a37571e",
+          "participantId": "user_m_4",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-06-08T17:00:00Z",
+          "durationSeconds": 180
+        },
+        "18c32d64-592e-4e25-8824-9e09f7c9d3c5": {
+          "callID": "18c32d64-592e-4e25-8824-9e09f7c9d3c5",
+          "participantId": "user_m_4",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-03-20T17:00:00Z",
+          "durationSeconds": 150
+        },
+        "9553cebb-c30f-443d-ad07-20c259b0596c": {
+          "callID": "9553cebb-c30f-443d-ad07-20c259b0596c",
+          "participantId": "user_m_4",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-03-15T08:30:00Z",
+          "durationSeconds": 190
+        },
+        "5d909bb4-7d65-42f0-9eaf-9cd35ee300c4": {
+          "callID": "5d909bb4-7d65-42f0-9eaf-9cd35ee300c4",
+          "participantId": "user_m_6",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-08T16:10:00Z",
+          "durationSeconds": 160
+        },
+        "7847c465-23e9-4ea6-8ba5-9c0d8d1e59b7": {
+          "callID": "7847c465-23e9-4ea6-8ba5-9c0d8d1e59b7",
+          "participantId": "user_m_11",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-05-17T14:00:00Z",
+          "durationSeconds": 420
+        },
+        "4c0ec308-ebbf-4b62-9874-34f01c0abfcd": {
+          "callID": "4c0ec308-ebbf-4b62-9874-34f01c0abfcd",
+          "participantId": "user_m_16",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-06-05T15:30:00Z",
+          "durationSeconds": 400
+        },
+        "520e039d-8213-4604-9d81-00906c73ce4b": {
+          "callID": "520e039d-8213-4604-9d81-00906c73ce4b",
+          "participantId": "user_m_16",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-05-18T10:00:00Z",
+          "durationSeconds": 420
+        },
+        "1aeae1e3-6009-428f-bd92-cebb17925070": {
+          "callID": "1aeae1e3-6009-428f-bd92-cebb17925070",
+          "participantId": "user_m_16",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-18T12:30:00Z",
+          "durationSeconds": 290
+        }
+      }
+    },
+    "user_e0r6p": {
+      "userName": "luna.animaladvocate",
+      "gender": "female",
+      "bio": "Passionate about animal welfare and protecting our planet's creatures.",
+      "profilePicture": {
+        "id": "placeholder",
+        "url": "lib/assets/images/placeholder.png"
+      },
+      "interests": [
+        "animals",
+        "volunteering",
+        "nature",
+        "conservation"
+      ],
+      "videoCallAvailable": true,
+      "audioCallAvailable": true,
+      "phoneNumber": "+616456789012",
+      "coins": 0,
+      "total_earnings": 2980,
+      "callHistory": {
+        "bff4e5fe-defb-4192-87c6-37cf3ce2ac6a": {
+          "callID": "bff4e5fe-defb-4192-87c6-37cf3ce2ac6a",
+          "participantId": "user_m_1",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-05T11:05:20Z",
+          "durationSeconds": 90
+        },
+        "6508f0e2-b413-4966-844c-e83e5c560af4": {
+          "callID": "6508f0e2-b413-4966-844c-e83e5c560af4",
+          "participantId": "user_m_3",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-05-11T09:10:00Z",
+          "durationSeconds": 480
+        },
+        "8518b794-6c7a-4877-9113-9d6c41bf3a6b": {
+          "callID": "8518b794-6c7a-4877-9113-9d6c41bf3a6b",
+          "participantId": "user_m_6",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-06-01T09:00:00Z",
+          "durationSeconds": 240
+        },
+        "2d5f6d4c-3d28-45e7-886a-93e2f6636e8d": {
+          "callID": "2d5f6d4c-3d28-45e7-886a-93e2f6636e8d",
+          "participantId": "user_m_6",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-06-12T20:30:00Z",
+          "durationSeconds": 380
+        },
+        "87d51405-c7ed-4373-bfec-54fafdbf132b": {
+          "callID": "87d51405-c7ed-4373-bfec-54fafdbf132b",
+          "participantId": "user_m_11",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-08T11:15:00Z",
+          "durationSeconds": 160
+        },
+        "8f1592eb-6f8f-4dfb-ab51-e2fed69d4e49": {
+          "callID": "8f1592eb-6f8f-4dfb-ab51-e2fed69d4e49",
+          "participantId": "user_m_13",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-12T16:00:00Z",
+          "durationSeconds": 180
+        },
+        "a998fb58-5ca5-4f33-8c6a-cd6728ae6323": {
+          "callID": "a998fb58-5ca5-4f33-8c6a-cd6728ae6323",
+          "participantId": "user_m_14",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-06-09T18:00:00Z",
+          "durationSeconds": 500
+        },
+        "5357e822-e9ad-4698-9e77-59eb87c34a0e": {
+          "callID": "5357e822-e9ad-4698-9e77-59eb87c34a0e",
+          "participantId": "user_m_14",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-06-13T20:00:00Z",
+          "durationSeconds": 380
+        }
+      }
+    },
+    "user_c9v4w": {
+      "userName": "maya_sports_gal",
+      "gender": "female",
+      "bio": "Sports fanatic and car enthusiast. Always up for a game or a drive!",
+      "profilePicture": {
+        "id": "placeholder",
+        "url": "lib/assets/images/placeholder.png"
+      },
+      "interests": [
+        "sports",
+        "cars",
+        "racing",
+        "athletics"
+      ],
+      "videoCallAvailable": false,
+      "audioCallAvailable": false,
+      "phoneNumber": "+449567890123",
+      "coins": 256,
+      "total_earnings": 4540,
+      "callHistory": {
+        "67b2e192-2411-4d45-aec0-ca54125e2bba": {
+          "callID": "67b2e192-2411-4d45-aec0-ca54125e2bba",
+          "participantId": "user_m_1",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-03-01T14:30:00Z",
+          "durationSeconds": 180
+        },
+        "62263ac2-dcd1-4012-8b17-0b50a5d6971d": {
+          "callID": "62263ac2-dcd1-4012-8b17-0b50a5d6971d",
+          "participantId": "user_m_3",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-06-01T16:20:00Z",
+          "durationSeconds": 500
+        },
+        "84a55001-5e50-4056-96d6-1d8091fc1179": {
+          "callID": "84a55001-5e50-4056-96d6-1d8091fc1179",
+          "participantId": "user_m_6",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-12T10:00:00Z",
+          "durationSeconds": 180
+        },
+        "5ce738d5-d669-4220-b000-98ce013c8bdd": {
+          "callID": "5ce738d5-d669-4220-b000-98ce013c8bdd",
+          "participantId": "user_m_11",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-05-11T16:00:00Z",
+          "durationSeconds": 450
+        },
+        "94595b2f-6481-4130-8bb2-2f5df28819a4": {
+          "callID": "94595b2f-6481-4130-8bb2-2f5df28819a4",
+          "participantId": "user_m_17",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-06-10T11:00:00Z",
+          "durationSeconds": 280
+        },
+        "618798cc-e94b-4924-816f-117a2923ed1a": {
+          "callID": "618798cc-e94b-4924-816f-117a2923ed1a",
+          "participantId": "user_m_17",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-06-08T19:00:00Z",
+          "durationSeconds": 500
+        },
+        "bef13ae0-b536-4dcf-ab71-a7b1274e35e0": {
+          "callID": "bef13ae0-b536-4dcf-ab71-a7b1274e35e0",
+          "participantId": "user_m_17",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-06T09:30:00Z",
+          "durationSeconds": 160
+        },
+        "7626e115-e156-4e58-9139-6ea541d422c5": {
+          "callID": "7626e115-e156-4e58-9139-6ea541d422c5",
+          "participantId": "user_m_17",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-05-27T10:00:00Z",
+          "durationSeconds": 480
+        }
+      }
+    },
+    "user_z1x3y": {
+      "userName": "nova.beats.n.flicks",
+      "gender": "female",
+      "bio": "Enjoys discovering new music and independent films. Always looking for unique sounds and stories.",
+      "profilePicture": {
+        "id": "placeholder",
+        "url": "lib/assets/images/placeholder.png"
+      },
+      "interests": [
+        "music discovery",
+        "indie films",
+        "concerts",
+        "film festivals"
+      ],
+      "videoCallAvailable": true,
+      "audioCallAvailable": true,
+      "phoneNumber": "+278678901234",
+      "coins": 999,
+      "total_earnings": 9480,
+      "callHistory": {
+        "fb4a2943-7e5e-4770-ab0a-34a970681120": {
+          "callID": "fb4a2943-7e5e-4770-ab0a-34a970681120",
+          "participantId": "user_m_1",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-03-17T08:08:08Z",
+          "durationSeconds": 480
+        },
+        "825cdc45-4c54-4aa8-a781-15ec74e465a2": {
+          "callID": "825cdc45-4c54-4aa8-a781-15ec74e465a2",
+          "participantId": "user_m_2",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-03-22T08:00:00Z",
+          "durationSeconds": 120
+        },
+        "feb314aa-1e4d-4e4d-ba7a-2dd950a84a6c": {
+          "callID": "feb314aa-1e4d-4e4d-ba7a-2dd950a84a6c",
+          "participantId": "user_m_3",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-06-08T17:55:00Z",
+          "durationSeconds": 380
+        },
+        "8862db6e-d315-4ab7-8194-1cdb44249844": {
+          "callID": "8862db6e-d315-4ab7-8194-1cdb44249844",
+          "participantId": "user_m_5",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-06-13T13:13:00Z",
+          "durationSeconds": 300
+        },
+        "7de1f353-5046-42d3-9198-2f97ae5de49e": {
+          "callID": "7de1f353-5046-42d3-9198-2f97ae5de49e",
+          "participantId": "user_m_6",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-05-19T14:00:00Z",
+          "durationSeconds": 420
+        },
+        "fc0a1bbe-d674-4261-8121-914ae1d2fdbc": {
+          "callID": "fc0a1bbe-d674-4261-8121-914ae1d2fdbc",
+          "participantId": "user_m_7",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-05-15T11:00:00Z",
+          "durationSeconds": 400
+        },
+        "4514168e-971d-4733-a118-27bfca4ae01d": {
+          "callID": "4514168e-971d-4733-a118-27bfca4ae01d",
+          "participantId": "user_m_7",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-05-28T10:00:00Z",
+          "durationSeconds": 420
+        },
+        "244a9af0-6f16-47d6-a492-2f1af42a97f4": {
+          "callID": "244a9af0-6f16-47d6-a492-2f1af42a97f4",
+          "participantId": "user_m_7",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-05-20T17:00:00Z",
+          "durationSeconds": 480
+        },
+        "bd74998f-f3a4-4351-ab9a-103a627c2419": {
+          "callID": "bd74998f-f3a4-4351-ab9a-103a627c2419",
+          "participantId": "user_m_11",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-03-24T10:30:00Z",
+          "durationSeconds": 270
+        },
+        "f93091f6-3927-49ba-b273-b22d037d9930": {
+          "callID": "f93091f6-3927-49ba-b273-b22d037d9930",
+          "participantId": "user_m_16",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-06-01T14:00:00Z",
+          "durationSeconds": 500
+        },
+        "4ed008bb-8a3d-42dc-b534-72e842c4dc1a": {
+          "callID": "4ed008bb-8a3d-42dc-b534-72e842c4dc1a",
+          "participantId": "user_m_16",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-03-29T10:00:00Z",
+          "durationSeconds": 210
+        }
+      }
+    },
+    "user_f6g8j": {
+      "userName": "olivia_collects",
+      "gender": "female",
+      "bio": "Gamer and collector of vintage comics. My passions are pixelated and printed!",
+      "profilePicture": {
+        "id": "placeholder",
+        "url": "lib/assets/images/placeholder.png"
+      },
+      "interests": [
+        "gaming",
+        "comic books",
+        "collectibles",
+        "retro games"
+      ],
+      "videoCallAvailable": true,
+      "audioCallAvailable": true,
+      "phoneNumber": "+917789012345",
+      "coins": 14,
+      "total_earnings": 3310,
+      "callHistory": {
+        "b7414dbf-43e0-4f58-bfa6-50c74a27f96f": {
+          "callID": "b7414dbf-43e0-4f58-bfa6-50c74a27f96f",
+          "participantId": "user_m_2",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-05-01T14:30:00Z",
+          "durationSeconds": 300
+        },
+        "b8a7902e-e444-4e15-b9d4-8bbf80315dc1": {
+          "callID": "b8a7902e-e444-4e15-b9d4-8bbf80315dc1",
+          "participantId": "user_m_3",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-05-18T10:30:00Z",
+          "durationSeconds": 420
+        },
+        "6abf304c-4cfe-4864-bc15-75777c61961e": {
+          "callID": "6abf304c-4cfe-4864-bc15-75777c61961e",
+          "participantId": "user_m_6",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-06-06T18:00:00Z",
+          "durationSeconds": 500
+        },
+        "0269a858-3e5c-45ed-beab-8c05a3da4d2f": {
+          "callID": "0269a858-3e5c-45ed-beab-8c05a3da4d2f",
+          "participantId": "user_m_11",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-06T09:00:00Z",
+          "durationSeconds": 180
+        },
+        "05af1d9e-93dc-4195-9655-750f425a3918": {
+          "callID": "05af1d9e-93dc-4195-9655-750f425a3918",
+          "participantId": "user_m_14",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-06-07T08:00:00Z",
+          "durationSeconds": 100
+        },
+        "1df22fc1-a16b-4a0f-b064-9db712e6fa37": {
+          "callID": "1df22fc1-a16b-4a0f-b064-9db712e6fa37",
+          "participantId": "user_m_14",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-03-25T09:00:00Z",
+          "durationSeconds": 270
+        },
+        "45abf1cb-3c72-40da-9a6e-e6afb9c22702": {
+          "callID": "45abf1cb-3c72-40da-9a6e-e6afb9c22702",
+          "participantId": "user_m_14",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-03-31T08:30:00Z",
+          "durationSeconds": 210
+        },
+        "e4e62254-803b-4ad8-a575-51708326a2c6": {
+          "callID": "e4e62254-803b-4ad8-a575-51708326a2c6",
+          "participantId": "user_m_16",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-05-22T17:00:00Z",
+          "durationSeconds": 300
+        },
+        "8a920f6f-c1c4-4a38-9e17-f83b9677d3b7": {
+          "callID": "8a920f6f-c1c4-4a38-9e17-f83b9677d3b7",
+          "participantId": "user_m_16",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-07T08:30:00Z",
+          "durationSeconds": 160
+        },
+        "c4ebc336-d419-464e-b139-dff775706612": {
+          "callID": "c4ebc336-d419-464e-b139-dff775706612",
+          "participantId": "user_m_18",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-05-29T10:00:00Z",
+          "durationSeconds": 150
+        },
+        "fb77eedd-26c0-4df9-b416-a6aed3e3731c": {
+          "callID": "fb77eedd-26c0-4df9-b416-a6aed3e3731c",
+          "participantId": "user_m_18",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-03-25T11:20:00Z",
+          "durationSeconds": 270
+        },
+        "3fb2ee12-5e81-47e6-9e0f-2ab207f57ab0": {
+          "callID": "3fb2ee12-5e81-47e6-9e0f-2ab207f57ab0",
+          "participantId": "user_m_18",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-03-27T08:00:00Z",
+          "durationSeconds": 210
+        }
+      }
+    },
+    "user_d2p0m": {
+      "userName": "piper.coder_girl",
+      "gender": "female",
+      "bio": "Software developer with a passion for open-source projects and continuous learning. Coding my way through life!",
+      "profilePicture": {
+        "id": "placeholder",
+        "url": "lib/assets/images/placeholder.png"
+      },
+      "interests": [
+        "programming",
+        "AI",
+        "gaming",
+        "cybersecurity"
+      ],
+      "videoCallAvailable": true,
+      "audioCallAvailable": true,
+      "phoneNumber": "+866890123456",
+      "coins": 789,
+      "total_earnings": 1000,
+      "callHistory": {
+        "4f0a3d75-eff1-4d56-9f97-903b602dfe7e": {
+          "callID": "4f0a3d75-eff1-4d56-9f97-903b602dfe7e",
+          "participantId": "user_m_2",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-25T11:30:15Z",
+          "durationSeconds": 280
+        },
+        "851b8eba-4e1e-4104-b368-491f5fd7b036": {
+          "callID": "851b8eba-4e1e-4104-b368-491f5fd7b036",
+          "participantId": "user_m_5",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-05-20T14:00:00Z",
+          "durationSeconds": 420
+        },
+        "7c0cdaae-c4df-41fd-9cd9-a226c7dba040": {
+          "callID": "7c0cdaae-c4df-41fd-9cd9-a226c7dba040",
+          "participantId": "user_m_10",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-06-07T18:00:00Z",
+          "durationSeconds": 500
+        },
+        "ce14dd42-1795-4d9b-b95d-d7630c087fd4": {
+          "callID": "ce14dd42-1795-4d9b-b95d-d7630c087fd4",
+          "participantId": "user_m_10",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-06-13T20:10:00Z",
+          "durationSeconds": 380
+        },
+        "64c43436-4256-4caf-ad83-d178f7e233c5": {
+          "callID": "64c43436-4256-4caf-ad83-d178f7e233c5",
+          "participantId": "user_m_20",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-05-02T10:00:00Z",
+          "durationSeconds": 400
+        },
+        "3d94b40d-5242-4da9-8321-c4f67fd6d17d": {
+          "callID": "3d94b40d-5242-4da9-8321-c4f67fd6d17d",
+          "participantId": "user_m_20",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-05-20T15:00:00Z",
+          "durationSeconds": 420
+        },
+        "249d7d76-a614-4bc1-9858-7b737e81088b": {
+          "callID": "249d7d76-a614-4bc1-9858-7b737e81088b",
+          "participantId": "user_m_20",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-05-22T19:00:00Z",
+          "durationSeconds": 480
+        }
+      }
+    },
+    "user_i5o7k": {
+      "userName": "queen_adventures",
+      "gender": "female",
+      "bio": "Avid traveler and nature photographer. Always looking for the next beautiful adventure.",
+      "profilePicture": {
+        "id": "placeholder",
+        "url": "lib/assets/images/placeholder.png"
+      },
+      "interests": [
+        "travel",
+        "photography",
+        "hiking",
+        "camping"
+      ],
+      "videoCallAvailable": true,
+      "audioCallAvailable": true,
+      "phoneNumber": "+19012345678",
+      "coins": 321,
+      "total_earnings": 2860,
+      "callHistory": {
+        "270eeca6-7b8c-42a3-b27f-4bfb5fba89a9": {
+          "callID": "270eeca6-7b8c-42a3-b27f-4bfb5fba89a9",
+          "participantId": "user_m_2",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-06-09T13:10:40Z",
+          "durationSeconds": 370
+        },
+        "852a798e-2e32-4623-98f7-5c311a922669": {
+          "callID": "852a798e-2e32-4623-98f7-5c311a922669",
+          "participantId": "user_m_5",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-05T18:30:00Z",
+          "durationSeconds": 160
+        },
+        "19470f59-8ed3-42df-b9b3-b24074ff264c": {
+          "callID": "19470f59-8ed3-42df-b9b3-b24074ff264c",
+          "participantId": "user_m_7",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-06-09T18:00:00Z",
+          "durationSeconds": 250
+        },
+        "7e22e8d4-68cb-4ab5-b1fc-50d9e6468570": {
+          "callID": "7e22e8d4-68cb-4ab5-b1fc-50d9e6468570",
+          "participantId": "user_m_7",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-03-10T09:00:00Z",
+          "durationSeconds": 270
+        },
+        "ab50c885-87b8-4be4-a294-85daffc977bd": {
+          "callID": "ab50c885-87b8-4be4-a294-85daffc977bd",
+          "participantId": "user_m_7",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-03-31T08:30:00Z",
+          "durationSeconds": 210
+        },
+        "3b6784d3-2d1f-495a-840f-6c3375dbba17": {
+          "callID": "3b6784d3-2d1f-495a-840f-6c3375dbba17",
+          "participantId": "user_m_10",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-03-20T11:20:00Z",
+          "durationSeconds": 270
+        },
+        "edeb2811-32f4-4cd4-a8a1-e2aca4ad418c": {
+          "callID": "edeb2811-32f4-4cd4-a8a1-e2aca4ad418c",
+          "participantId": "user_m_10",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-03-29T11:00:00Z",
+          "durationSeconds": 210
+        }
+      }
+    },
+    "user_g3h9l": {
+      "userName": "rachel.tech_chic",
+      "gender": "female",
+      "bio": "Tech enthusiast and gadget reviewer. Love all things digital and innovative.",
+      "profilePicture": {
+        "id": "placeholder",
+        "url": "lib/assets/images/placeholder.png"
+      },
+      "interests": [
+        "gadgets",
+        "tech reviews",
+        "futurism",
+        "DIY electronics"
+      ],
+      "videoCallAvailable": true,
+      "audioCallAvailable": false,
+      "phoneNumber": "+498123456789",
+      "coins": 0,
+      "total_earnings": 50,
+      "callHistory": {
+        "5e0b8ac9-3db9-4ba9-9738-57d91c0d69db": {
+          "callID": "5e0b8ac9-3db9-4ba9-9738-57d91c0d69db",
+          "participantId": "user_m_1",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-05-10T20:00:55Z",
+          "durationSeconds": 500
+        },
+        "376acec1-7bab-45f1-a29f-5b4f30cacda3": {
+          "callID": "376acec1-7bab-45f1-a29f-5b4f30cacda3",
+          "participantId": "user_m_2",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-06-15T09:10:00Z",
+          "durationSeconds": 210
+        },
+        "ac1b8943-cb4b-4a1e-982c-98393e747df8": {
+          "callID": "ac1b8943-cb4b-4a1e-982c-98393e747df8",
+          "participantId": "user_m_4",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-06-03T14:40:00Z",
+          "durationSeconds": 350
+        },
+        "a1e2a801-efdf-48fc-99c2-a9d3a1b3204f": {
+          "callID": "a1e2a801-efdf-48fc-99c2-a9d3a1b3204f",
+          "participantId": "user_m_4",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-06-11T19:20:00Z",
+          "durationSeconds": 450
+        },
+        "7c364b8b-5336-416f-b149-4715a4bb964d": {
+          "callID": "7c364b8b-5336-416f-b149-4715a4bb964d",
+          "participantId": "user_m_4",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-06-06T21:00:00Z",
+          "durationSeconds": 480
+        },
+        "7d43828b-a455-43e4-a091-3215ca366336": {
+          "callID": "7d43828b-a455-43e4-a091-3215ca366336",
+          "participantId": "user_m_6",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-20T17:45:00Z",
+          "durationSeconds": 290
+        },
+        "c2a83d96-8bd0-4fc7-8799-0104787830bb": {
+          "callID": "c2a83d96-8bd0-4fc7-8799-0104787830bb",
+          "participantId": "user_m_11",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-06-04T10:40:00Z",
+          "durationSeconds": 200
+        },
+        "022285be-919e-44e6-a35d-c71b02f255bb": {
+          "callID": "022285be-919e-44e6-a35d-c71b02f255bb",
+          "participantId": "user_m_11",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-05-23T16:45:00Z",
+          "durationSeconds": 480
+        },
+        "1183c0ed-a165-4103-838f-d6f4439a0678": {
+          "callID": "1183c0ed-a165-4103-838f-d6f4439a0678",
+          "participantId": "user_m_13",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-05-20T15:00:00Z",
+          "durationSeconds": 420
+        },
+        "1d6c7a64-9f63-4b97-b666-0fca7ab2aa25": {
+          "callID": "1d6c7a64-9f63-4b97-b666-0fca7ab2aa25",
+          "participantId": "user_m_16",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-10T09:00:00Z",
+          "durationSeconds": 150
+        },
+        "f1028321-7817-41b2-9bf3-93db7a967b88": {
+          "callID": "f1028321-7817-41b2-9bf3-93db7a967b88",
+          "participantId": "user_m_16",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-06-12T19:00:00Z",
+          "durationSeconds": 380
+        }
+      }
+    },
+    "user_j0e1n": {
+      "userName": "sara_artist",
+      "gender": "female",
+      "bio": "Digital artist creating immersive worlds through design and animation. My canvas is virtual!",
+      "profilePicture": {
+        "id": "placeholder",
+        "url": "lib/assets/images/placeholder.png"
+      },
+      "interests": [
+        "digital art",
+        "animation",
+        "illustration",
+        "fantasy"
+      ],
+      "videoCallAvailable": false,
+      "audioCallAvailable": true,
+      "phoneNumber": "+617234567890",
+      "coins": 500,
+      "total_earnings": 6120,
+      "callHistory": {
+        "34683ae6-b93f-40de-b4a5-fe2adac6ead4": {
+          "callID": "34683ae6-b93f-40de-b4a5-fe2adac6ead4",
+          "participantId": "user_m_1",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-28T19:20:30Z",
+          "durationSeconds": 270
+        },
+        "3385353f-2e27-4095-8dec-484dd8e867a0": {
+          "callID": "3385353f-2e27-4095-8dec-484dd8e867a0",
+          "participantId": "user_m_3",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-17T14:30:00Z",
+          "durationSeconds": 290
+        },
+        "d20d1edb-f681-43dd-8bec-fed1cc0da582": {
+          "callID": "d20d1edb-f681-43dd-8bec-fed1cc0da582",
+          "participantId": "user_m_5",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-05-01T10:00:00Z",
+          "durationSeconds": 450
+        },
+        "21f7a466-6082-4648-a967-a2769cff9a69": {
+          "callID": "21f7a466-6082-4648-a967-a2769cff9a69",
+          "participantId": "user_m_6",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-03-30T09:30:00Z",
+          "durationSeconds": 210
+        },
+        "e4b237fd-41cd-43f5-b0d3-9633ca546b0a": {
+          "callID": "e4b237fd-41cd-43f5-b0d3-9633ca546b0a",
+          "participantId": "user_m_8",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-06-02T11:00:00Z",
+          "durationSeconds": 300
+        },
+        "841e01d6-0031-4257-a9cd-694ff97ceaf4": {
+          "callID": "841e01d6-0031-4257-a9cd-694ff97ceaf4",
+          "participantId": "user_m_8",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-03-18T10:45:00Z",
+          "durationSeconds": 270
+        },
+        "63b3eaf0-2641-4b82-b868-b9c1523cb93f": {
+          "callID": "63b3eaf0-2641-4b82-b868-b9c1523cb93f",
+          "participantId": "user_m_8",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-02T08:00:00Z",
+          "durationSeconds": 210
+        },
+        "5b4c6c6b-d1dc-4c0f-91d4-3723e6a7af06": {
+          "callID": "5b4c6c6b-d1dc-4c0f-91d4-3723e6a7af06",
+          "participantId": "user_m_11",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-06-14T20:00:00Z",
+          "durationSeconds": 380
+        },
+        "5637bbce-ab6b-438d-8d5a-4967765a3b74": {
+          "callID": "5637bbce-ab6b-438d-8d5a-4967765a3b74",
+          "participantId": "user_m_13",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-06-11T18:00:00Z",
+          "durationSeconds": 500
+        },
+        "0f3db652-ed97-4c53-b2e0-2b614dc01acf": {
+          "callID": "0f3db652-ed97-4c53-b2e0-2b614dc01acf",
+          "participantId": "user_m_20",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-10T14:30:00Z",
+          "durationSeconds": 200
+        },
+        "56b10a4e-ba3b-44b6-bd07-6bba4c35c964": {
+          "callID": "56b10a4e-ba3b-44b6-bd07-6bba4c35c964",
+          "participantId": "user_m_20",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-06T09:30:00Z",
+          "durationSeconds": 160
+        },
+        "eb38c406-9a86-4319-8e2f-719252d45a8e": {
+          "callID": "eb38c406-9a86-4319-8e2f-719252d45a8e",
+          "participantId": "user_m_20",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-04-28T10:00:00Z",
+          "durationSeconds": 290
+        }
+      }
+    },
+    "user_u8v2q": {
+      "userName": "tina.fitness_queen",
+      "gender": "female",
+      "bio": "Fitness coach and sports fanatic. Believe in a healthy mind and body, inside and out.",
+      "profilePicture": {
+        "id": "placeholder",
+        "url": "lib/assets/images/placeholder.png"
+      },
+      "interests": [
+        "fitness",
+        "running",
+        "weightlifting",
+        "nutrition"
+      ],
+      "videoCallAvailable": true,
+      "audioCallAvailable": true,
+      "phoneNumber": "+446345678901",
+      "coins": 88,
+      "total_earnings": 10000,
+      "callHistory": {
+        "9ceb6efa-ac43-4008-b249-fb06bb45ea3d": {
+          "callID": "9ceb6efa-ac43-4008-b249-fb06bb45ea3d",
+          "participantId": "user_m_1",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-04-20T09:12:35Z",
+          "durationSeconds": 412
+        },
+        "2a9b4ed4-b447-44f3-bf8f-6a6cebd1a26f": {
+          "callID": "2a9b4ed4-b447-44f3-bf8f-6a6cebd1a26f",
+          "participantId": "user_m_3",
+          "callType": "audio",
+          "direction": "incoming",
+          "timestamp": "2025-03-12T13:45:00Z",
+          "durationSeconds": 270
+        },
+        "c1bf0996-718b-474e-bbbd-ec01c36b7664": {
+          "callID": "c1bf0996-718b-474e-bbbd-ec01c36b7664",
+          "participantId": "user_m_6",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-05-08T15:30:00Z",
+          "durationSeconds": 400
+        },
+        "a132c7f0-5dd6-4bfc-a016-8108e4a4e5ce": {
+          "callID": "a132c7f0-5dd6-4bfc-a016-8108e4a4e5ce",
+          "participantId": "user_m_13",
+          "callType": "video",
+          "direction": "incoming",
+          "timestamp": "2025-06-06T10:30:00Z",
+          "durationSeconds": 450
+        }
+      }
+    }
+  }
+}

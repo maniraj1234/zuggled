@@ -1,5 +1,6 @@
 // ignore_for_file: use_build_context_synchronou sly
 
+import 'package:country_code_picker/country_code_picker.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:frontend/constants/route_names.dart';
@@ -19,6 +20,18 @@ class LoginViewModel extends ChangeNotifier {
 
   late Size size;
 
+  /// Country Code for CountryCode widget
+  CountryCode countryCode = CountryCode.fromCountryCode(
+    // For testing purpose, we will use +1 Code
+    "US", // for +1
+    // uncomment the following for production
+    // WidgetsBinding.instance.platformDispatcher.locale.countryCode!,
+  );
+  void onCountryCodeChange(CountryCode code) {
+    countryCode = code;
+    notifyListeners();
+  }
+
   /// Controller for Phone Number TextField
   final TextEditingController phoneNumberController = TextEditingController();
 
@@ -28,17 +41,17 @@ class LoginViewModel extends ChangeNotifier {
   int animateWidgetIndex = LOGIN_WIDGET;
 
   /// Login Widget, shown first, asks for phone number
-  late Widget loginWidget = LoginWidget(
-    onSignUpPress: () => onSignUpPress(),
-    controller: phoneNumberController,
-    onLoginPressed: () {
-      if (phoneNumberController.text != "") {
-        sendOTPLoginHandle();
-      }
-      animateWidgetIndex = OTP_WIDGET;
-      notifyListeners();
-    },
-  );
+  late Widget loginWidget = LoginWidget();
+  void onLoinPress() {
+    if (phoneNumberController.text != "") {
+      /// TODO: Enable OTP for all mobile number
+      /// Tesing Mobile number: +10123456789
+      /// Testing OTP : 111111
+      authService.sendOtp(countryCode.dialCode! + phoneNumberController.text);
+    }
+    animateWidgetIndex = OTP_WIDGET;
+    notifyListeners();
+  }
 
   /// Widget for OTP verification, to verify OTP or resend it
   /// If OTP is verified, Signin user and go to HomeScreen
@@ -48,11 +61,7 @@ class LoginViewModel extends ChangeNotifier {
       notifyListeners();
       return true;
     },
-    child: OTPVerificationWidget(
-      onResendPress: () => resendOTPHandle(),
-      controller: otpverifController,
-      onLoginPress: () => otpLoginPress(),
-    ),
+    child: OTPVerificationWidget(),
   );
 
   /// AuthService Service Instance for Authorization
@@ -64,15 +73,6 @@ class LoginViewModel extends ChangeNotifier {
   //     context,
   //   ).showSnackBar(SnackBar(content: Text(message)));
   // }
-
-  /// Send OTP handle for Login Button on Login Widget
-  void sendOTPLoginHandle() {
-    /// TODO: Enable OTP for all mobile number
-    /// Tesing Mobile number: +10123456789
-
-    /// Testing OTP : 111111
-    authService.sendOtp(phoneNumberController.text);
-  }
 
   /// This is check if OTP entered is correct
   /// If Incorrect, it will show a Snackbar with error message

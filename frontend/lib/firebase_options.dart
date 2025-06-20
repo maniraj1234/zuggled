@@ -17,10 +17,8 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -28,15 +26,9 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for windows - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return windows;
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
@@ -48,7 +40,14 @@ class DefaultFirebaseOptions {
         );
     }
   }
-
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyBBbx0d-ouLgfHKOoFPZsr0N4v8UQPr2IE',
+    appId: '1:309430840411:web:dbdc70610d08011bf0a37e',
+    messagingSenderId: '309430840411',
+    projectId: 'zuggled',
+    authDomain: 'zuggled.firebaseapp.com',
+    storageBucket: 'zuggled.firebasestorage.app',
+  );
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyAu5WTVWRlUn8TStwfhuYs4W9-qNKv_Mas',
     appId: '1:309430840411:android:8e744e6e9f7476eff0a37e',
@@ -59,11 +58,28 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyCSUbpzx8QlR0NblfmIgX0KzJ2_Y8ecyOo',
-    appId: '1:309430840411:ios:320294fa07e0e4fff0a37e',
+    appId: '1:309430840411:ios:903fd08e60a7ddf1f0a37e',
     messagingSenderId: '309430840411',
     projectId: 'zuggled',
     storageBucket: 'zuggled.firebasestorage.app',
     iosBundleId: 'com.example.frontend',
   );
 
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyCSUbpzx8QlR0NblfmIgX0KzJ2_Y8ecyOo',
+    appId: '1:309430840411:ios:99b93857fc23860bf0a37e',
+    messagingSenderId: '309430840411',
+    projectId: 'zuggled',
+    storageBucket: 'zuggled.firebasestorage.app',
+    iosBundleId: 'com.zuggled',
+  );
+
+  static const FirebaseOptions windows = FirebaseOptions(
+    apiKey: 'AIzaSyBBbx0d-ouLgfHKOoFPZsr0N4v8UQPr2IE',
+    appId: '1:309430840411:web:255267313f05d86af0a37e',
+    messagingSenderId: '309430840411',
+    projectId: 'zuggled',
+    authDomain: 'zuggled.firebaseapp.com',
+    storageBucket: 'zuggled.firebasestorage.app',
+  );
 }

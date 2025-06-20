@@ -107,10 +107,13 @@ final GoRouter mainRouter = GoRouter(
         GoRoute(
           path: '/home',
           name: RouteNames.consumerHome,
-          builder:
-              (context, state) => ChangeNotifierProvider<HomeViewModel>(
-                create: (_) => HomeViewModel(context.read<NavigationService>()),
-                child: HomeView(),
+          pageBuilder:
+              (context, state) => TransitionPage(
+                child: ChangeNotifierProvider<HomeViewModel>(
+                  create: (context) => HomeViewModel(),
+                  child: HomeView(),
+                ),
+                state: state,
               ),
         ),
 
