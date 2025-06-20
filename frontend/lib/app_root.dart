@@ -1,4 +1,7 @@
+import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:frontend/constants/locales.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 
@@ -15,6 +18,13 @@ class AppRoot extends StatelessWidget {
     return Builder(
       builder:
           (context) => MaterialApp.router(
+            supportedLocales: locales,
+            localizationsDelegates: [
+              CountryLocalizations.delegate,
+              GlobalWidgetsLocalizations.delegate,
+              GlobalMaterialLocalizations.delegate,
+              GlobalCupertinoLocalizations.delegate,
+            ],
             debugShowCheckedModeBanner: false,
             themeMode: ThemeMode.system,
             darkTheme: ThemeData(

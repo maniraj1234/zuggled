@@ -1,23 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/models/creator.dart';
 
-/// A UI Card to display information of single Creator.
-/// To be used in HomeScreen
-class ProfileCard extends StatefulWidget {
+class ProfileCard extends StatelessWidget {
   const ProfileCard({super.key, required this.creator});
   final Creator creator;
-  @override
-  State<ProfileCard> createState() => _ProfileCardState();
-}
-
-class _ProfileCardState extends State<ProfileCard> {
-  late Creator creator;
-  @override
-  void initState() {
-    super.initState();
-    creator = widget.creator;
-  }
-
   @override
   Widget build(BuildContext context) {
     return Card(
