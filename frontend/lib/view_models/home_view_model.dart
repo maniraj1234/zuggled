@@ -1,8 +1,21 @@
+import 'dart:ui';
+import 'package:flutter/material.dart';
+import 'package:frontend/constants/route_names.dart';
+import 'package:frontend/services/navigation/navigation_service.dart';
 import 'package:flutter/foundation.dart';
 import 'package:frontend/models/creator.dart';
 import 'package:frontend/repository/feed_repository.dart';
 
 class HomeViewModel extends ChangeNotifier {
+  HomeViewModel(this._navService);
+
+  final NavigationService _navService;
+
+  late Size size;
+
+  void onSearchTap() {
+    _navService.push(RouteNames.searchScreen);
+    
   /// Private FeedRepository to handle Feed Data
   final FeedRepository _feedRepository = FeedRepository();
 

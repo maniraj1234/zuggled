@@ -17,6 +17,7 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
+
       return web;
     }
     switch (defaultTargetPlatform) {
@@ -39,7 +40,6 @@ class DefaultFirebaseOptions {
         );
     }
   }
-
   static const FirebaseOptions web = FirebaseOptions(
     apiKey: 'AIzaSyBBbx0d-ouLgfHKOoFPZsr0N4v8UQPr2IE',
     appId: '1:309430840411:web:dbdc70610d08011bf0a37e',
@@ -48,7 +48,6 @@ class DefaultFirebaseOptions {
     authDomain: 'zuggled.firebaseapp.com',
     storageBucket: 'zuggled.firebasestorage.app',
   );
-
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyAu5WTVWRlUn8TStwfhuYs4W9-qNKv_Mas',
     appId: '1:309430840411:android:8e744e6e9f7476eff0a37e',

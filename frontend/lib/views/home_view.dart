@@ -18,111 +18,126 @@ class HomeView extends StatefulWidget {
 
 class _HomeViewState extends State<HomeView> {
   @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    final viewModel = context.read<HomeViewModel>();
+    viewModel.size = MediaQuery.of(context).size;
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return CustomScrollView(
-      slivers: [
-        SliverToBoxAdapter(child: SizedBox(height: 12)),
-        SliverAppBar(
-          forceMaterialTransparency: true,
-          floating: true,
-          titleSpacing: 12,
-          title: Row(
-            children: [
-              Expanded(
-                child: SizedBox(
-                  height: 56,
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(100),
-                    child: Material(
-                      color: Theme.of(context).colorScheme.surfaceContainerHigh,
-                      child: InkWell(
-                        child: Padding(
-                          padding: EdgeInsets.symmetric(
-                            horizontal: 4,
-                            vertical: 4,
-                          ),
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              SizedBox.square(
-                                dimension: 48,
-                                child: Icon(Icons.search, size: 24),
+    return Consumer<HomeViewModel>(
+      builder: (context, viewModel, child) {
+        return CustomScrollView(
+          slivers: [
+            SliverToBoxAdapter(child: SizedBox(height: 12)),
+            SliverAppBar(
+              forceMaterialTransparency: true,
+              floating: true,
+              titleSpacing: 12,
+              title: Row(
+                children: [
+                  Expanded(
+                    child: SizedBox(
+                      height: 56,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(100),
+                        child: Material(
+                          color:
+                              Theme.of(
+                                context,
+                              ).colorScheme.surfaceContainerHigh,
+                          child: InkWell(
+                            child: Padding(
+                              padding: EdgeInsets.symmetric(
+                                horizontal: 4,
+                                vertical: 4,
                               ),
-                              Expanded(
-                                child: Text(
-                                  "Search Zuggled",
-                                  style: Theme.of(
-                                    context,
-                                  ).textTheme.bodyLarge?.copyWith(
-                                    color:
-                                        Theme.of(
+                              child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  SizedBox.square(
+                                    dimension: 48,
+                                    child: Icon(Icons.search, size: 24),
+                                  ),
+                                  Expanded(
+                                    child: InkWell(
+                                      onTap: viewModel.onSearchTap,
+                                      child: Text(
+                                        "Search Zuggled",
+                                        style: Theme.of(
                                           context,
-                                        ).colorScheme.onSurfaceVariant,
-                                  ),
-                                ),
-                              ),
-                              SizedBox(width: 8),
-                              SizedBox(
-                                height: 40,
-                                child: FilledButton.tonal(
-                                  style: ButtonStyle(
-                                    padding: WidgetStatePropertyAll(
-                                      EdgeInsets.symmetric(
-                                        horizontal: 12,
-                                        vertical: 8,
+                                        ).textTheme.bodyLarge?.copyWith(
+                                          color:
+                                              Theme.of(
+                                                context,
+                                              ).colorScheme.onSurfaceVariant,
+                                        ),
                                       ),
                                     ),
-                                    backgroundColor: WidgetStatePropertyAll(
-                                      Theme.of(context).colorScheme.surface,
-                                    ),
                                   ),
-                                  onPressed: () {},
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: [
-                                      Icon(Icons.paid_outlined, size: 24),
-                                      SizedBox(width: 8),
-                                      Text(
-                                        "235",
-                                        style:
-                                            Theme.of(
-                                              context,
-                                            ).textTheme.titleMedium,
+                                  SizedBox(width: 8),
+                                  SizedBox(
+                                    height: 40,
+                                    child: FilledButton.tonal(
+                                      style: ButtonStyle(
+                                        padding: WidgetStatePropertyAll(
+                                          EdgeInsets.symmetric(
+                                            horizontal: 12,
+                                            vertical: 8,
+                                          ),
+                                        ),
+                                        backgroundColor: WidgetStatePropertyAll(
+                                          Theme.of(context).colorScheme.surface,
+                                        ),
                                       ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              SizedBox.square(
-                                dimension: 52,
-                                child: Center(
-                                  child: SizedBox.square(
-                                    dimension: 36,
-                                    child: IconButton.filledTonal(
-                                      padding: EdgeInsets.zero,
-                                      constraints: BoxConstraints(),
                                       onPressed: () {},
-                                      icon: Image.asset(
-                                        "lib/assets/images/user_pfp_test.png",
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.min,
+                                        children: [
+                                          Icon(Icons.paid_outlined, size: 24),
+                                          SizedBox(width: 8),
+                                          Text(
+                                            "235",
+                                            style:
+                                                Theme.of(
+                                                  context,
+                                                ).textTheme.titleMedium,
+                                          ),
+                                        ],
                                       ),
                                     ),
                                   ),
-                                ),
+                                  SizedBox.square(
+                                    dimension: 52,
+                                    child: Center(
+                                      child: SizedBox.square(
+                                        dimension: 36,
+                                        child: IconButton.filledTonal(
+                                          padding: EdgeInsets.zero,
+                                          constraints: BoxConstraints(),
+                                          onPressed: () {},
+                                          icon: Image.asset(
+                                            "lib/assets/images/user_pfp_test.png",
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
                               ),
-                            ],
+                            ),
+                            onTap: () {},
                           ),
                         ),
-                        onTap: () {},
                       ),
                     ),
                   ),
-                ),
-              ),
 
-              SizedBox(width: 8),
-            ],
-          ),
-        ),
+                  SizedBox(width: 8),
+                ],
+              ),
+            ),
 
         SliverToBoxAdapter(
           child: Padding(
@@ -204,9 +219,9 @@ class _HomeViewState extends State<HomeView> {
                 ));
               },
             ),
-          ),
-        ),
-      ],
+          ],
+        );
+      },
     );
   }
 }

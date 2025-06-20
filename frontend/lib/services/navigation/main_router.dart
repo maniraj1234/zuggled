@@ -2,8 +2,10 @@ import 'package:frontend/constants/route_names.dart';
 import 'package:frontend/services/navigation/navigation_service.dart';
 import 'package:frontend/view_models/home_view_model.dart';
 import 'package:frontend/view_models/login_view_model.dart';
+import 'package:frontend/view_models/search_screen_view_model.dart';
 import 'package:frontend/view_models/shell_view_model.dart';
 import 'package:frontend/view_models/sign_up_view_model.dart';
+import 'package:frontend/views/search_screen_view.dart';
 import 'package:frontend/views/shell_view.dart';
 import 'package:frontend/services/auth_service/auth_service.dart';
 import 'package:frontend/views/login_view.dart';
@@ -140,6 +142,22 @@ final GoRouter mainRouter = GoRouter(
         ),
       ],
     ),
+
+    GoRoute(
+      path: '/search_screen',
+      name: RouteNames.searchScreen,
+      pageBuilder:
+          (context, state) => TransitionPage(
+            child: ChangeNotifierProvider<SearchScreenViewModel>(
+              create:
+                  (_) =>
+                      SearchScreenViewModel(context.read<NavigationService>()),
+              child: SearchScreenView(),
+            ),
+            state: state,
+          ),
+    ),
+
     // TODO: Redesign Call View UI
     /// CallView
     GoRoute(path: '/', builder: (context, state) => LoginView()),
