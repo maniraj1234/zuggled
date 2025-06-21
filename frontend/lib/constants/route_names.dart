@@ -8,5 +8,5 @@ class RouteNames {
   static const String coinStore = 'coinStore_page';
   static const String settings = 'settings_page';
   static const String callScreen = 'call_screen_page';
-  static const String searchScreen = 'search_screen_page';
+  static const String searchScreen = 'search_screen';
 }

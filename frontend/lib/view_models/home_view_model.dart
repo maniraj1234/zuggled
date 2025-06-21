@@ -15,7 +15,8 @@ class HomeViewModel extends ChangeNotifier {
 
   void onSearchTap() {
     _navService.push(RouteNames.searchScreen);
-    
+  }
+
   /// Private FeedRepository to handle Feed Data
   final FeedRepository _feedRepository = FeedRepository();
 

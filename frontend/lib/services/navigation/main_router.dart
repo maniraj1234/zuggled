@@ -110,7 +110,10 @@ final GoRouter mainRouter = GoRouter(
           pageBuilder:
               (context, state) => TransitionPage(
                 child: ChangeNotifierProvider<HomeViewModel>(
-                  create: (context) => HomeViewModel(),
+                  create:
+                      (context) => HomeViewModel(
+                        Provider.of<NavigationService>(context, listen: false),
+                      ),
                   child: HomeView(),
                 ),
                 state: state,
@@ -157,11 +160,10 @@ final GoRouter mainRouter = GoRouter(
             state: state,
           ),
     ),
+    GoRoute(path: '/', builder: (context, state) => LoginView()),
 
     // TODO: Redesign Call View UI
     /// CallView
-    GoRoute(path: '/', builder: (context, state) => LoginView()),
-
     GoRoute(
       name: RouteNames.callScreen,
       path: '/call_screen',
