@@ -1,8 +1,6 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:frontend/constants/route_names.dart';
 import 'package:frontend/services/navigation/navigation_service.dart';
-import 'package:flutter/foundation.dart';
 import 'package:frontend/models/creator.dart';
 import 'package:frontend/repository/feed_repository.dart';
 
