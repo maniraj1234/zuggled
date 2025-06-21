@@ -1,4 +1,4 @@
-// ignore_for_file: use_build_context_synchronou sly
+// ignore_for_file: constant_identifier_names
 
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:firebase_auth/firebase_auth.dart';

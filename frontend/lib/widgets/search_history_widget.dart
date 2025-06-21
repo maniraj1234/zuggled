@@ -19,7 +19,7 @@ class SearchHistoryList extends StatelessWidget {
             children: [
               Icon(
                 Icons.history,
-                color: colorScheme.onSurface.withOpacity(0.7),
+                color: colorScheme.onSurface.withValues(alpha: 0.7),
               ),
               const SizedBox(width: 16),
               Text(

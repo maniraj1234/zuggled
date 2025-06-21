@@ -35,7 +35,6 @@ class SearchScreenViewModel extends ChangeNotifier {
   }
 
   void onFilterTapped(String key) {
-    print('Filter tapped: $key');
     filters[key] = !filters[key]!;
     notifyListeners();
   }
