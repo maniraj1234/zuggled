@@ -1,38 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:frontend/models/creator.dart';
 
-/// A base class for ProfileCards shown in homescreen's feed.
-class UserProfile {
-  UserProfile({
-    required this.username,
-    required this.userid,
-    required this.interests,
-    required this.isFavorite,
-    required this.profilePicture,
-  });
-  final String username;
-  final String userid;
-  final List<String> interests;
-  bool isFavorite;
-  final String profilePicture;
-}
-
-/// A UI Card to display information of single User.
-/// To be used in HomeScreen
-class ProfileCard extends StatefulWidget {
-  const ProfileCard({super.key, required this.profile});
-  final UserProfile profile;
-  @override
-  State<ProfileCard> createState() => _ProfileCardState();
-}
-
-class _ProfileCardState extends State<ProfileCard> {
-  late UserProfile profile;
-  @override
-  void initState() {
-    super.initState();
-    profile = widget.profile;
-  }
-
+class ProfileCard extends StatelessWidget {
+  const ProfileCard({super.key, required this.creator});
+  final Creator creator;
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -43,7 +14,7 @@ class _ProfileCardState extends State<ProfileCard> {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: [
-          Image.asset(profile.profilePicture, fit: BoxFit.fitWidth),
+          Image.asset(creator.profilePicture.url, fit: BoxFit.fitWidth),
           Padding(
             padding: EdgeInsets.all(16),
             child: Column(
@@ -51,14 +22,14 @@ class _ProfileCardState extends State<ProfileCard> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  profile.username,
+                  creator.userName,
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
                 SizedBox(height: 8),
                 Wrap(
                   direction: Axis.horizontal,
                   children:
-                      profile.interests.map((item) {
+                      creator.interests.map((item) {
                         return Padding(
                           padding: EdgeInsets.only(right: 8),
                           child: Chip(
@@ -82,11 +53,12 @@ class _ProfileCardState extends State<ProfileCard> {
                       height: 56,
                       width: 56,
                       child: IconButton.filledTonal(
-                        isSelected: profile.isFavorite,
+                        isSelected: creator.isLiked,
                         onPressed: () {
-                          setState(() {
-                            profile.isFavorite = !profile.isFavorite;
-                          });
+                          /// TODO: Implement like button press handle
+                          // setState(() {
+                          // creator.isFavorite = !creator.isFavorite;
+                          // });
                         },
                         icon: Icon(Icons.favorite_outline, size: 24),
                         selectedIcon: Icon(Icons.favorite, size: 24),

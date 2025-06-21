@@ -30,7 +30,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  flutter_localizations:
+    sdk: flutter
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
@@ -48,6 +49,9 @@ dependencies:
   shared_preferences: ^2.5.3
   flutter_animate: ^4.5.2
   provider: ^6.1.5
+  cloud_firestore: ^5.6.9
+  intl_phone_number_input: ^0.7.4
+  country_code_picker: ^3.3.0
 
 dev_dependencies:
   flutter_test:
@@ -79,7 +83,7 @@ flutter:
     - lib/assets/images/
     - lib/assets/images/onboarding/
     - lib/core/config/template.env
-    - lib/assets/json/onboarding_data.json
+    - lib/assets/json/
     - lib/assets/images/core/zuggled-banner-image.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
