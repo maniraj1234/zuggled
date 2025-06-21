@@ -17,10 +17,7 @@ class SearchHistoryList extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 16.0),
           child: Row(
             children: [
-              Icon(
-                Icons.history,
-                color: colorScheme.onSurface.withOpacity(0.7),
-              ),
+              Icon(Icons.history, color: colorScheme.onSurface),
               const SizedBox(width: 16),
               Text(
                 history[index],
