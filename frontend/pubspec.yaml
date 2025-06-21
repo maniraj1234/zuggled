@@ -52,6 +52,7 @@ dependencies:
   cloud_firestore: ^5.6.9
   intl_phone_number_input: ^0.7.4
   country_code_picker: ^3.3.0
+  flutter_native_splash: ^2.4.6
 
 dev_dependencies:
   flutter_test:
@@ -66,6 +67,7 @@ dev_dependencies:
 
   flutter_launcher_icons: ^0.14.4
 
+# App Icon 
 flutter_launcher_icons:
   android: true # Or true to use default, or a specific filename like "ic_launcher"
   ios: true # Or a specific filename for iOS
@@ -76,6 +78,18 @@ flutter_launcher_icons:
   # adaptive_icon_foreground: "assets/images/app_icon_foreground.png" # Foreground image for Android adaptive icon (optional)
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
+
+# For custom native splash screen
+flutter_native_splash:
+  image: "lib/assets/images/icon/icon_rounded.png"
+  color: "#FFFFFF"
+  image_dark: "lib/assets/images/icon/icon_rounded.png"
+  color_dark: "#000000"
+  android: true
+  ios: true
+  android_12:
+    image: "lib/assets/images/icon/icon_rounded.png"
+    icon_background_color: "#FFFFFF"
 
 # The following section is specific to Flutter packages.
 flutter:
