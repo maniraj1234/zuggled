@@ -1,5 +1,6 @@
 import 'package:frontend/constants/route_names.dart';
 import 'package:frontend/services/navigation/navigation_service.dart';
+import 'package:frontend/view_models/call_history_view_model.dart';
 import 'package:frontend/view_models/login_view_model.dart';
 import 'package:frontend/view_models/shell_view_model.dart';
 import 'package:frontend/view_models/sign_up_view_model.dart';
@@ -110,13 +111,16 @@ final GoRouter mainRouter = GoRouter(
         ),
 
         GoRoute(
-          name: RouteNames.callHistory,
           path: '/call_history',
-          pageBuilder:
-              (context, state) =>
-                  TransitionPage(child: HistoryView(), state: state),
+          name: RouteNames.callHistory,
+          builder:
+              (context, state) => ChangeNotifierProvider<CallHistoryViewModel>(
+                create:
+                    (_) =>
+                        CallHistoryViewModel(context.read<NavigationService>()),
+                child: HistoryView(),
+              ),
         ),
-
         GoRoute(
           name: RouteNames.coinStore,
           path: '/coin_store',
