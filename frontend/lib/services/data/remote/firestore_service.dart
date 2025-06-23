@@ -4,7 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 /// Abstract class for universal Firestore service.
 /// This call will handle the direct interaction with FirebaseFirestore.
 /// This service operates on raw Map&lt;String, dynamic&gt; and DocumentSnapshot data.
-abstract class AbstractFirestoreService {
+abstract class IFirestoreService {
   /// Sets or updates a document in a specified collzzection.
   /// If [docId] is null or empty, Firestore generates one.
   /// [merge] determines if new data is merged with existing or overwrites.

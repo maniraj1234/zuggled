@@ -4,10 +4,7 @@
     "userName": "ali_marie_fx",
     "gender": "female",
     "bio": "Passionate coder and avid reader.",
-    "profilePicture": {
-      "id": "placeholder",
-      "url": "lib/assets/images/placeholder.png"
-    },
+    "profilePicture": "lib/assets/images/placeholder.png",
     "interests": [
       "coding",
       "reading",
@@ -23,10 +20,7 @@
     "userName": "brea.bakes.n.pics",
     "gender": "female",
     "bio": "Loves photography and baking.",
-    "profilePicture": {
-      "id": "placeholder",
-      "url": "lib/assets/images/placeholder.png"
-    },
+    "profilePicture": "lib/assets/images/placeholder.png",
     "interests": [
       "photography",
       "baking",
@@ -41,10 +35,7 @@
     "userName": "kris_melodies",
     "gender": "female",
     "bio": "Musician and foodie. Exploring new sounds and tastes.",
-    "profilePicture": {
-      "id": "placeholder",
-      "url": "lib/assets/images/placeholder.png"
-    },
+    "profilePicture": "lib/assets/images/placeholder.png",
     "interests": [
       "music",
       "cooking",
@@ -59,10 +50,7 @@
     "userName": "diana.active",
     "gender": "female",
     "bio": null,
-    "profilePicture": {
-      "id": "placeholder",
-      "url": "lib/assets/images/placeholder.png"
-    },
+    "profilePicture": "lib/assets/images/placeholder.png",
     "interests": [
       "fitness",
       "yoga"
@@ -76,10 +64,7 @@
     "userName": "ella.explorer",
     "gender": "female",
     "bio": "Adventure seeker and tech enthusiast.",
-    "profilePicture": {
-      "id": "placeholder",
-      "url": "lib/assets/images/placeholder.png"
-    },
+    "profilePicture": "lib/assets/images/placeholder.png",
     "interests": [
       "adventure sports",
       "technology",
@@ -94,10 +79,7 @@
     "userName": "faye_nature_art",
     "gender": "female",
     "bio": "Artist and nature lover.",
-    "profilePicture": {
-      "id": "placeholder",
-      "url": "lib/assets/images/placeholder.png"
-    },
+    "profilePicture": "lib/assets/images/placeholder.png",
     "interests": [
       "painting",
       "gardening",
@@ -112,10 +94,7 @@
     "userName": "gigi_strategist",
     "gender": "female",
     "bio": "Strategy game master. Always up for a challenge.",
-    "profilePicture": {
-      "id": "placeholder",
-      "url": "lib/assets/images/placeholder.png"
-    },
+    "profilePicture": "lib/assets/images/placeholder.png",
     "interests": [
       "board games",
       "strategy",
@@ -130,10 +109,7 @@
     "userName": "hannah_inkwell",
     "gender": "female",
     "bio": "Bookworm and aspiring writer.",
-    "profilePicture": {
-      "id": "placeholder",
-      "url": "lib/assets/images/placeholder.png"
-    },
+    "profilePicture": "lib/assets/images/placeholder.png",
     "interests": [
       "writing",
       "literature",
@@ -148,10 +124,7 @@
     "userName": "ivy_stargazer",
     "gender": "female",
     "bio": "Space enthusiast and amateur astronomer.",
-    "profilePicture": {
-      "id": "placeholder",
-      "url": "lib/assets/images/placeholder.png"
-    },
+    "profilePicture": "lib/assets/images/placeholder.png",
     "interests": [
       "astronomy",
       "sci-fi movies",
@@ -166,10 +139,7 @@
     "userName": "jade.glam.designs",
     "gender": "female",
     "bio": "Fashion designer and vintage collector.",
-    "profilePicture": {
-      "id": "placeholder",
-      "url": "lib/assets/images/placeholder.png"
-    },
+    "profilePicture": "lib/assets/images/placeholder.png",
     "interests": [
       "fashion",
       "vintage",
@@ -184,10 +154,7 @@
     "userName": "kayla_code_queen",
     "gender": "female",
     "bio": "Software engineer, loves open source.",
-    "profilePicture": {
-      "id": "placeholder",
-      "url": "lib/assets/images/placeholder.png"
-    },
+    "profilePicture": "lib/assets/images/placeholder.png",
     "interests": [
       "open source",
       "software development",
@@ -202,10 +169,7 @@
     "userName": "luna.animaladvocate",
     "gender": "female",
     "bio": "Passionate about animal welfare.",
-    "profilePicture": {
-      "id": "placeholder",
-      "url": "lib/assets/images/placeholder.png"
-    },
+    "profilePicture": "lib/assets/images/placeholder.png",
     "interests": [
       "animals",
       "volunteering",
@@ -220,10 +184,7 @@
     "userName": "maya_sports_gal",
     "gender": "female",
     "bio": null,
-    "profilePicture": {
-      "id": "placeholder",
-      "url": "lib/assets/images/placeholder.png"
-    },
+    "profilePicture": "lib/assets/images/placeholder.png",
     "interests": [
       "sports",
       "cars"
@@ -237,10 +198,7 @@
     "userName": "nova.beats.n.flicks",
     "gender": "female",
     "bio": "Enjoys discovering new music and independent films.",
-    "profilePicture": {
-      "id": "placeholder",
-      "url": "lib/assets/images/placeholder.png"
-    },
+    "profilePicture": "lib/assets/images/placeholder.png",
     "interests": [
       "music discovery",
       "indie films",
@@ -255,10 +213,7 @@
     "userName": "olivia_collects",
     "gender": "female",
     "bio": "Gamer and collector of vintage comics.",
-    "profilePicture": {
-      "id": "placeholder",
-      "url": "lib/assets/images/placeholder.png"
-    },
+    "profilePicture": "lib/assets/images/placeholder.png",
     "interests": [
       "gaming",
       "comic books",

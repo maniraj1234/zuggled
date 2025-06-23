@@ -14,7 +14,7 @@ class ProfileCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: [
-          Image.asset(creator.profilePicture.url, fit: BoxFit.fitWidth),
+          Image.asset(creator.profilePicture, fit: BoxFit.fitWidth),
           Padding(
             padding: EdgeInsets.all(16),
             child: Column(

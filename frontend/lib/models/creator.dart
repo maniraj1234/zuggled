@@ -1,5 +1,4 @@
 import 'package:frontend/constants/enums.dart';
-import 'package:frontend/models/avatar.dart';
 
 /// Represents a user profile for a Creator.
 class Creator {
@@ -7,7 +6,7 @@ class Creator {
   final String userName;
   final Gender gender;
   final String? bio;
-  final Avatar profilePicture;
+  final String profilePicture;
   final List<String> interests;
   final bool isLiked;
   final bool videoCallAvailable;
@@ -34,9 +33,7 @@ class Creator {
         (e) => e.toString() == 'Gender.${json['gender']}',
       ),
       bio: json['bio'] as String?,
-      profilePicture: Avatar.fromJson(
-        json['profilePicture'] as Map<String, dynamic>,
-      ),
+      profilePicture: json['profilePicture'] as String,
       interests:
           (json['interests'] as List<dynamic>)
               .map((e) => e.toString())
@@ -54,7 +51,7 @@ class Creator {
       'userName': userName,
       'gender': gender.toString().split('.').last,
       'bio': bio,
-      'profilePicture': profilePicture.toJson(),
+      'profilePicture': profilePicture,
       'interests': interests,
       'isLiked': isLiked,
       'videoCallAvailable': videoCallAvailable,
@@ -68,7 +65,7 @@ class Creator {
     String? userName,
     Gender? gender,
     String? bio,
-    Avatar? profilePicture,
+    String? profilePicture,
     List<String>? interests,
     bool? isLiked,
     bool? videoCallAvailable,

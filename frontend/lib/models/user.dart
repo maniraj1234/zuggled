@@ -1,11 +1,10 @@
 import 'package:frontend/constants/enums.dart';
-import 'package:frontend/models/avatar.dart';
 
 /// Represents a user's profile in the dating app.
 class User {
   final String userID;
   final String userName;
-  final Avatar avatar;
+  final String profilePicture;
   final String? bio;
   final Gender gender;
   final List<String> interests;
@@ -14,7 +13,7 @@ class User {
   User({
     required this.userID,
     required this.userName,
-    required this.avatar,
+    required this.profilePicture,
     this.bio,
     required this.gender,
     required this.interests,
@@ -26,7 +25,7 @@ class User {
     return User(
       userID: json['userID'] as String,
       userName: json['userName'] as String,
-      avatar: Avatar.fromJson(json['avatar'] as Map<String, dynamic>),
+      profilePicture: json['profilePicture'] as String,
       bio: json['bio'] as String?,
       gender: Gender.values.firstWhere(
         (e) => e.toString() == 'Gender.${json['gender']}',
@@ -44,7 +43,7 @@ class User {
     return {
       'userID': userID,
       'userName': userName,
-      'avatar': avatar.toJson(),
+      'profilePicture': profilePicture,
       'bio': bio,
       'gender': gender.toString().split('.').last,
       'interests': interests,
@@ -56,7 +55,7 @@ class User {
   User copyWith({
     String? userID,
     String? userName,
-    Avatar? avatar,
+    String? profilePicture,
     String? bio,
     Gender? gender,
     List<String>? interests,
@@ -65,7 +64,7 @@ class User {
     return User(
       userID: userID ?? this.userID,
       userName: userName ?? this.userName,
-      avatar: avatar ?? this.avatar,
+      profilePicture: profilePicture ?? this.profilePicture,
       bio: bio ?? this.bio,
       gender: gender ?? this.gender,
       interests: interests ?? this.interests,

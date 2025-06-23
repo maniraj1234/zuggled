@@ -171,50 +171,6 @@ class _HomeViewState extends State<HomeView> {
                         ...viewModel.feed.map(
                           (value) => ProfileCard(creator: value),
                         ),
-
-                        // ProfileCard(
-                        //   profile: UserProfile(
-                        //     username: "Carla_Ch4rms",
-                        //     userid: "user_001",
-                        //     interests: [
-                        //       "Music",
-                        //       "Books",
-                        //       "Photography",
-                        //       "Hiking",
-                        //       "Introvert",
-                        //     ],
-                        //     isFavorite: false,
-                        //     profilePicture: "lib/assets/images/user_001.png",
-                        //   ),
-                        // ),
-                        // SizedBox(height: 12),
-                        // ProfileCard(
-                        //   profile: UserProfile(
-                        //     username: "art_lover",
-                        //     userid: "user_002",
-                        //     interests: ["Painting", "Sculpture", "History"],
-                        //     isFavorite: false,
-                        //     profilePicture: "lib/assets/images/user_002.png",
-                        //   ),
-                        // ),
-                        // ProfileCard(
-                        //   profile: UserProfile(
-                        //     username: "music.kitten",
-                        //     userid: "user_003",
-                        //     interests: ["Guitar", "Concerts", "Songwriting"],
-                        //     isFavorite: false,
-                        //     profilePicture: "lib/assets/images/user_003.png",
-                        //   ),
-                        // ),
-                        // ProfileCard(
-                        //   profile: UserProfile(
-                        //     username: "itsAlia",
-                        //     userid: "user_004",
-                        //     interests: ["Gaming", "Books", "Adventure", "Science"],
-                        //     isFavorite: false,
-                        //     profilePicture: "lib/assets/images/user_004.png",
-                        //   ),
-                        // ),
                       ],
                     ));
                   },

@@ -1,10 +1,13 @@
 import 'package:frontend/constants/route_names.dart';
+import 'package:frontend/repository/user_repository.dart';
 import 'package:frontend/services/navigation/navigation_service.dart';
 import 'package:frontend/view_models/home_view_model.dart';
 import 'package:frontend/view_models/login_view_model.dart';
+import 'package:frontend/view_models/profile_view_model.dart';
 import 'package:frontend/view_models/search_screen_view_model.dart';
 import 'package:frontend/view_models/shell_view_model.dart';
 import 'package:frontend/view_models/sign_up_view_model.dart';
+import 'package:frontend/views/profile_view.dart';
 import 'package:frontend/views/search_screen_view.dart';
 import 'package:frontend/views/shell_view.dart';
 import 'package:frontend/services/auth_service/auth_service.dart';
@@ -145,7 +148,22 @@ final GoRouter mainRouter = GoRouter(
         ),
       ],
     ),
-
+    GoRoute(
+      name: RouteNames.profileScreen,
+      path: '/profile',
+      pageBuilder:
+          (context, state) => TransitionPage(
+            child: ChangeNotifierProvider<ProfileViewModel>(
+              create:
+                  (_) => ProfileViewModel(
+                    context.read<NavigationService>(),
+                    context.read<IUserRepository>(),
+                  ),
+              child: ProfileView(),
+            ),
+            state: state,
+          ),
+    ),
     GoRoute(
       path: '/search_screen',
       name: RouteNames.searchScreen,
