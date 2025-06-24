@@ -153,7 +153,7 @@ final GoRouter mainRouter = GoRouter(
       path: '/profile',
       pageBuilder:
           (context, state) => TransitionPage(
-            child: ChangeNotifierProvider<ProfileViewModel>(
+            child: ChangeNotifierProvider<IProfileViewModel>(
               create:
                   (_) => ProfileViewModel(
                     context.read<NavigationService>(),

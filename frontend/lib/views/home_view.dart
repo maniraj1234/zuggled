@@ -116,7 +116,7 @@ class _HomeViewState extends State<HomeView> {
                                         child: IconButton.filledTonal(
                                           padding: EdgeInsets.zero,
                                           constraints: BoxConstraints(),
-                                          onPressed: () {},
+                                          onPressed: viewModel.goToProfile,
                                           icon: Image.asset(
                                             "lib/assets/images/user_pfp_test.png",
                                           ),

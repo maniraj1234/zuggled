@@ -25,8 +25,12 @@ class MockUserLocalDataService implements IUserLocalDataService {
     return (User(
       userID: "user_m_1",
       userName: "alex_tech_wiz",
+      bio:
+          "Avid traveler and outdoor enthusiast. Always looking for the next mountain to climb or trail.",
       profilePicture: "lib/assets/images/placeholder.png",
       gender: Gender.male,
+      birthDate: DateTime(2002, 4, 23),
+      phoneNumber: "+866890123457",
       interests: ["coding", "AI", "gadgets", "cybersecurity"],
     ));
   }

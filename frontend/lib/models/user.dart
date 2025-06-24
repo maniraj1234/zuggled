@@ -5,19 +5,21 @@ class User {
   final String userID;
   final String userName;
   final String profilePicture;
-  final String? bio;
+  final String bio;
   final Gender gender;
   final List<String> interests;
-  final String? phoneNumber;
+  final String phoneNumber;
+  final DateTime birthDate;
 
   User({
     required this.userID,
     required this.userName,
     required this.profilePicture,
-    this.bio,
+    required this.bio,
     required this.gender,
     required this.interests,
-    this.phoneNumber,
+    required this.phoneNumber,
+    required this.birthDate,
   });
 
   /// Creates a [User] from a JSON map.
@@ -26,7 +28,7 @@ class User {
       userID: json['userID'] as String,
       userName: json['userName'] as String,
       profilePicture: json['profilePicture'] as String,
-      bio: json['bio'] as String?,
+      bio: json['bio'] as String,
       gender: Gender.values.firstWhere(
         (e) => e.toString() == 'Gender.${json['gender']}',
       ),
@@ -34,7 +36,8 @@ class User {
           (json['interests'] as List<dynamic>)
               .map((e) => e.toString())
               .toList(),
-      phoneNumber: json['phoneNumber'] as String?,
+      phoneNumber: json['phoneNumber'] as String,
+      birthDate: DateTime.parse(json['birthDate'] as String),
     );
   }
 
@@ -48,6 +51,7 @@ class User {
       'gender': gender.toString().split('.').last,
       'interests': interests,
       'phoneNumber': phoneNumber,
+      'birthDate': birthDate.toIso8601String().split('T')[0],
     };
   }
 
@@ -60,6 +64,7 @@ class User {
     Gender? gender,
     List<String>? interests,
     String? phoneNumber,
+    DateTime? birthDate,
   }) {
     return User(
       userID: userID ?? this.userID,
@@ -69,6 +74,18 @@ class User {
       gender: gender ?? this.gender,
       interests: interests ?? this.interests,
       phoneNumber: phoneNumber ?? this.phoneNumber,
+      birthDate: birthDate ?? this.birthDate,
     );
+  }
+
+  /// Calculates the current age of the user based on their birthDate.
+  int get age {
+    final now = DateTime.now();
+    int calculatedAge = now.year - birthDate.year;
+    if (now.month < birthDate.month ||
+        (now.month == birthDate.month && now.day < birthDate.day)) {
+      calculatedAge--;
+    }
+    return calculatedAge;
   }
 }

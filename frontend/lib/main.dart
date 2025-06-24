@@ -4,6 +4,9 @@ import 'package:flutter/services.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 // import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:frontend/app_root.dart';
+import 'package:frontend/repository/user_repository.dart';
+import 'package:frontend/services/data/local/user__local_data_service.dart';
+import 'package:frontend/services/data/remote/user_remote_data_service.dart';
 import 'package:frontend/services/navigation/main_router.dart';
 import 'package:frontend/services/navigation/navigation_service.dart';
 import 'package:go_router/go_router.dart';
@@ -36,6 +39,19 @@ void main() async {
         Provider<GoRouter>(create: (_) => mainRouter),
         Provider<NavigationService>(
           create: (context) => NavigationService(context.read<GoRouter>()),
+        ),
+        Provider<IUserLocalDataService>(
+          create: (_) => MockUserLocalDataService(),
+        ),
+        Provider<IUserRemoteDataService>(
+          create: (_) => MockUserRemoteDataService(),
+        ),
+        Provider<IUserRepository>(
+          create:
+              (context) => MockUserRepository(
+                context.read<IUserLocalDataService>(),
+                context.read<IUserRemoteDataService>(),
+              ),
         ),
       ],
       child:

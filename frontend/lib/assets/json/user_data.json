@@ -1,12 +1,10 @@
 {
     "userID": "user_xyz789uvw012",
     "userName": "MikeSmith23",
-    "avatar": {
-        "id": "avatar_002",
-        "url": "https://example.com/avatars/mikesmith_profile.jpg"
-    },
+    "profilePicture": "https://example.com/avatars/mikesmith_profile.jpg",
     "bio": "Software engineer by day, amateur musician by night. Always looking for new experiences and good company. Let's grab a drink!",
     "gender": "male",
+    "birthDate":"2002-03-23",
     "interests": [
         "coding",
         "music",

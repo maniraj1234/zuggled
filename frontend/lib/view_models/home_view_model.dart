@@ -34,4 +34,9 @@ class HomeViewModel extends ChangeNotifier {
     _isInitialized = true;
     notifyListeners();
   }
+
+  /// Navigate to User Profile Screen
+  void goToProfile() {
+    _navService.push(RouteNames.profileScreen);
+  }
 }
