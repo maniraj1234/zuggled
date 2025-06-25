@@ -1,8 +1,11 @@
 import 'package:frontend/constants/route_names.dart';
 import 'package:frontend/services/navigation/navigation_service.dart';
+import 'package:frontend/view_models/home_view_model.dart';
 import 'package:frontend/view_models/login_view_model.dart';
+import 'package:frontend/view_models/search_view_model.dart';
 import 'package:frontend/view_models/shell_view_model.dart';
 import 'package:frontend/view_models/sign_up_view_model.dart';
+import 'package:frontend/views/search_view.dart';
 import 'package:frontend/views/shell_view.dart';
 import 'package:frontend/services/auth_service/auth_service.dart';
 import 'package:frontend/views/login_view.dart';
@@ -105,8 +108,16 @@ final GoRouter mainRouter = GoRouter(
           path: '/home',
           name: RouteNames.consumerHome,
           pageBuilder:
-              (context, state) =>
-                  TransitionPage(child: HomeView(), state: state),
+              (context, state) => TransitionPage(
+                child: ChangeNotifierProvider<HomeViewModel>(
+                  create:
+                      (context) => HomeViewModel(
+                        Provider.of<NavigationService>(context, listen: false),
+                      ),
+                  child: HomeView(),
+                ),
+                state: state,
+              ),
         ),
 
         GoRoute(
@@ -134,10 +145,23 @@ final GoRouter mainRouter = GoRouter(
         ),
       ],
     ),
-    // TODO: Redesign Call View UI
-    /// CallView
+
+    GoRoute(
+      path: '/search_screen',
+      name: RouteNames.searchScreen,
+      pageBuilder:
+          (context, state) => TransitionPage(
+            child: ChangeNotifierProvider<SearchViewModel>(
+              create: (_) => SearchViewModel(context.read<NavigationService>()),
+              child: SearchView(),
+            ),
+            state: state,
+          ),
+    ),
     GoRoute(path: '/', builder: (context, state) => LoginView()),
 
+    // TODO: Redesign Call View UI
+    /// CallView
     GoRoute(
       name: RouteNames.callScreen,
       path: '/call_screen',

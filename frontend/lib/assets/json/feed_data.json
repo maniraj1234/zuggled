@@ -1,37 +1,271 @@
 [
   {
-    "username": "carla_charms",
-    "userid": "user_001",
-    "interests": ["programming", "hiking", "photography"],
-    "isFavorite": true,
-    "profilePicturePath": "lib/assets/images/user1.png"
+    "id": "user_001",
+    "userName": "ali_marie_fx",
+    "gender": "female",
+    "bio": "Passionate coder and avid reader.",
+    "profilePicture": {
+      "id": "placeholder",
+      "url": "lib/assets/images/placeholder.png"
+    },
+    "interests": [
+      "coding",
+      "reading",
+      "hiking",
+      "sci-fi"
+    ],
+    "isLiked": false,
+    "videoCallAvailable": true,
+    "audioCallAvailable": true
   },
   {
-    "username": "tech_wiz",
-    "userid": "user_002",
-    "interests": ["gadgets", "AI", "gaming"],
-    "isFavorite": false,
-    "profilePicturePath": "lib/assets/images/tech_wiz.png"
+    "id": "user_002",
+    "userName": "brea.bakes.n.pics",
+    "gender": "female",
+    "bio": "Loves photography and baking.",
+    "profilePicture": {
+      "id": "placeholder",
+      "url": "lib/assets/images/placeholder.png"
+    },
+    "interests": [
+      "photography",
+      "baking",
+      "travel"
+    ],
+    "isLiked": false,
+    "videoCallAvailable": true,
+    "audioCallAvailable": true
   },
   {
-    "username": "art_lover",
-    "userid": "user_003",
-    "interests": ["painting", "sculpture", "history"],
-    "isFavorite": true,
-    "profilePicturePath": "lib/assets/images/art_lover.jpeg"
+    "id": "user_003",
+    "userName": "kris_melodies",
+    "gender": "female",
+    "bio": "Musician and foodie. Exploring new sounds and tastes.",
+    "profilePicture": {
+      "id": "placeholder",
+      "url": "lib/assets/images/placeholder.png"
+    },
+    "interests": [
+      "music",
+      "cooking",
+      "gaming"
+    ],
+    "isLiked": false,
+    "videoCallAvailable": false,
+    "audioCallAvailable": true
   },
   {
-    "username": "music_maniac",
-    "userid": "user_004",
-    "interests": ["guitar", "concerts", "songwriting"],
-    "isFavorite": false,
-    "profilePicturePath": "lib/assets/images/music_maniac.webp"
+    "id": "user_004",
+    "userName": "diana.active",
+    "gender": "female",
+    "bio": null,
+    "profilePicture": {
+      "id": "placeholder",
+      "url": "lib/assets/images/placeholder.png"
+    },
+    "interests": [
+      "fitness",
+      "yoga"
+    ],
+    "isLiked": false,
+    "videoCallAvailable": true,
+    "audioCallAvailable": false
   },
   {
-    "username": "bookworm88",
-    "userid": "user_005",
-    "interests": ["fantasy", "sci-fi", "reading clubs"],
-    "isFavorite": true,
-    "profilePicturePath": "lib/assets/images/bookworm88.jpg"
+    "id": "user_005",
+    "userName": "ella.explorer",
+    "gender": "female",
+    "bio": "Adventure seeker and tech enthusiast.",
+    "profilePicture": {
+      "id": "placeholder",
+      "url": "lib/assets/images/placeholder.png"
+    },
+    "interests": [
+      "adventure sports",
+      "technology",
+      "movies"
+    ],
+    "isLiked": false,
+    "videoCallAvailable": true,
+    "audioCallAvailable": true
+  },
+  {
+    "id": "user_006",
+    "userName": "faye_nature_art",
+    "gender": "female",
+    "bio": "Artist and nature lover.",
+    "profilePicture": {
+      "id": "placeholder",
+      "url": "lib/assets/images/placeholder.png"
+    },
+    "interests": [
+      "painting",
+      "gardening",
+      "nature walks"
+    ],
+    "isLiked": false,
+    "videoCallAvailable": false,
+    "audioCallAvailable": true
+  },
+  {
+    "id": "user_007",
+    "userName": "gigi_strategist",
+    "gender": "female",
+    "bio": "Strategy game master. Always up for a challenge.",
+    "profilePicture": {
+      "id": "placeholder",
+      "url": "lib/assets/images/placeholder.png"
+    },
+    "interests": [
+      "board games",
+      "strategy",
+      "history"
+    ],
+    "isLiked": false,
+    "videoCallAvailable": true,
+    "audioCallAvailable": false
+  },
+  {
+    "id": "user_008",
+    "userName": "hannah_inkwell",
+    "gender": "female",
+    "bio": "Bookworm and aspiring writer.",
+    "profilePicture": {
+      "id": "placeholder",
+      "url": "lib/assets/images/placeholder.png"
+    },
+    "interests": [
+      "writing",
+      "literature",
+      "coffee"
+    ],
+    "isLiked": false,
+    "videoCallAvailable": false,
+    "audioCallAvailable": true
+  },
+  {
+    "id": "user_009",
+    "userName": "ivy_stargazer",
+    "gender": "female",
+    "bio": "Space enthusiast and amateur astronomer.",
+    "profilePicture": {
+      "id": "placeholder",
+      "url": "lib/assets/images/placeholder.png"
+    },
+    "interests": [
+      "astronomy",
+      "sci-fi movies",
+      "space exploration"
+    ],
+    "isLiked": false,
+    "videoCallAvailable": true,
+    "audioCallAvailable": true
+  },
+  {
+    "id": "user_010",
+    "userName": "jade.glam.designs",
+    "gender": "female",
+    "bio": "Fashion designer and vintage collector.",
+    "profilePicture": {
+      "id": "placeholder",
+      "url": "lib/assets/images/placeholder.png"
+    },
+    "interests": [
+      "fashion",
+      "vintage",
+      "design"
+    ],
+    "isLiked": false,
+    "videoCallAvailable": true,
+    "audioCallAvailable": false
+  },
+  {
+    "id": "user_011",
+    "userName": "kayla_code_queen",
+    "gender": "female",
+    "bio": "Software engineer, loves open source.",
+    "profilePicture": {
+      "id": "placeholder",
+      "url": "lib/assets/images/placeholder.png"
+    },
+    "interests": [
+      "open source",
+      "software development",
+      "linux"
+    ],
+    "isLiked": false,
+    "videoCallAvailable": true,
+    "audioCallAvailable": true
+  },
+  {
+    "id": "user_012",
+    "userName": "luna.animaladvocate",
+    "gender": "female",
+    "bio": "Passionate about animal welfare.",
+    "profilePicture": {
+      "id": "placeholder",
+      "url": "lib/assets/images/placeholder.png"
+    },
+    "interests": [
+      "animals",
+      "volunteering",
+      "nature"
+    ],
+    "isLiked": false,
+    "videoCallAvailable": false,
+    "audioCallAvailable": true
+  },
+  {
+    "id": "user_013",
+    "userName": "maya_sports_gal",
+    "gender": "female",
+    "bio": null,
+    "profilePicture": {
+      "id": "placeholder",
+      "url": "lib/assets/images/placeholder.png"
+    },
+    "interests": [
+      "sports",
+      "cars"
+    ],
+    "isLiked": false,
+    "videoCallAvailable": true,
+    "audioCallAvailable": false
+  },
+  {
+    "id": "user_014",
+    "userName": "nova.beats.n.flicks",
+    "gender": "female",
+    "bio": "Enjoys discovering new music and independent films.",
+    "profilePicture": {
+      "id": "placeholder",
+      "url": "lib/assets/images/placeholder.png"
+    },
+    "interests": [
+      "music discovery",
+      "indie films",
+      "concerts"
+    ],
+    "isLiked": false,
+    "videoCallAvailable": true,
+    "audioCallAvailable": true
+  },
+  {
+    "id": "user_015",
+    "userName": "olivia_collects",
+    "gender": "female",
+    "bio": "Gamer and collector of vintage comics.",
+    "profilePicture": {
+      "id": "placeholder",
+      "url": "lib/assets/images/placeholder.png"
+    },
+    "interests": [
+      "gaming",
+      "comic books",
+      "collectibles"
+    ],
+    "isLiked": false,
+    "videoCallAvailable": false,
+    "audioCallAvailable": false
   }
 ]
