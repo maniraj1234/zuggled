@@ -4,20 +4,9 @@ import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
 
-/// Default [FirebaseOptions] for use with your Firebase apps.
-///
-/// Example:
-/// ```dart
-/// import 'firebase_options.dart';
-/// // ...
-/// await Firebase.initializeApp(
-///   options: DefaultFirebaseOptions.currentPlatform,
-/// );
-/// ```
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-
       return web;
     }
     switch (defaultTargetPlatform) {
@@ -40,46 +29,52 @@ class DefaultFirebaseOptions {
         );
     }
   }
+
+  // Common values for all platforms
+  static const String _commonMessagingSenderId = '309430840411';
+  static const String _commonProjectId = 'zuggled';
+  static const String _commonStorageBucket = 'zuggled.firebasestorage.app';
+
   static const FirebaseOptions web = FirebaseOptions(
     apiKey: 'AIzaSyBBbx0d-ouLgfHKOoFPZsr0N4v8UQPr2IE',
     appId: '1:309430840411:web:dbdc70610d08011bf0a37e',
-    messagingSenderId: '309430840411',
-    projectId: 'zuggled',
+    messagingSenderId: _commonMessagingSenderId,
+    projectId: _commonProjectId,
     authDomain: 'zuggled.firebaseapp.com',
-    storageBucket: 'zuggled.firebasestorage.app',
+    storageBucket: _commonStorageBucket,
   );
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyAu5WTVWRlUn8TStwfhuYs4W9-qNKv_Mas',
     appId: '1:309430840411:android:8e744e6e9f7476eff0a37e',
-    messagingSenderId: '309430840411',
-    projectId: 'zuggled',
-    storageBucket: 'zuggled.firebasestorage.app',
+    messagingSenderId: _commonMessagingSenderId,
+    projectId: _commonProjectId,
+    storageBucket: _commonStorageBucket,
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyCSUbpzx8QlR0NblfmIgX0KzJ2_Y8ecyOo',
     appId: '1:309430840411:ios:903fd08e60a7ddf1f0a37e',
-    messagingSenderId: '309430840411',
-    projectId: 'zuggled',
-    storageBucket: 'zuggled.firebasestorage.app',
+    messagingSenderId: _commonMessagingSenderId,
+    projectId: _commonProjectId,
+    storageBucket: _commonStorageBucket,
     iosBundleId: 'com.example.frontend',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
     apiKey: 'AIzaSyCSUbpzx8QlR0NblfmIgX0KzJ2_Y8ecyOo',
     appId: '1:309430840411:ios:99b93857fc23860bf0a37e',
-    messagingSenderId: '309430840411',
-    projectId: 'zuggled',
-    storageBucket: 'zuggled.firebasestorage.app',
+    messagingSenderId: _commonMessagingSenderId,
+    projectId: _commonProjectId,
+    storageBucket: _commonStorageBucket,
     iosBundleId: 'com.zuggled',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
     apiKey: 'AIzaSyBBbx0d-ouLgfHKOoFPZsr0N4v8UQPr2IE',
     appId: '1:309430840411:web:255267313f05d86af0a37e',
-    messagingSenderId: '309430840411',
-    projectId: 'zuggled',
+    messagingSenderId: _commonMessagingSenderId,
+    projectId: _commonProjectId,
     authDomain: 'zuggled.firebaseapp.com',
-    storageBucket: 'zuggled.firebasestorage.app',
+    storageBucket: _commonStorageBucket,
   );
 }
