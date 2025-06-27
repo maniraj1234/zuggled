@@ -1,28 +1,23 @@
 #!/bin/bash
-
-# This script initializes Firebase, deploys Cloud Functions, Firestore rules, indexes, and storage rules,
+#run this script from the scripts directory only.
+# This script initializes Firebase, deploys Cloud Functions, Firestore rules, indexes, and storage rules.
 cd ..
 echo "🔍 Checking for Firebase CLI..."
 npm install -g firebase-tools
-
-echo "🔐 Logging into Firebase (skip if already logged in)..."
+echo "Logging into Firebase (skip if already logged in)..."
 firebase login || true
-
-# firebase use --add || echo "❗ You must select or create a Firebase project before proceeding."
-
-
-echo "📦 Installing function dependencies..."
+firebase use --add
+echo "Installing function dependencies..."
 cd functions
 npm install
-
 echo "🧹 Running lint check..."
-npm run lint || echo "⚠️ Lint issues found. Fix manually or run: npm run lint:fix"
-npm run lint:fix || echo "⚠️ Could not fix lint issues automatically. Please review them manually."
-npm run build ||   echo "❌ TypeScript build failed."
+npm run lint || echo "X---Lint issues found. Fix manually or run: npm run lint:fix"
+npm run lint:fix || echo "X---Could not fix lint issues automatically. Please review them manually."
+npm run build ||   echo "X----- TypeScript build failed."
 cd ..
 cd functions
 pause_for_review() {
-  echo "functions built successfully."
+  echo "    ***functions built successfully***"
   echo "############################################################################################"
   echo "------ All set! You can now run the Firebase emulator with: ------"
   echo ""
