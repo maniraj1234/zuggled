@@ -83,7 +83,8 @@ class LoginViewModel extends ChangeNotifier {
     try {
       await authService.verifyOtp(otpverifController.text);
       // _showSnackBar(context, "Login successful");
-      _navService.go(RouteNames.consumerHome);
+      // _navService.go(RouteNames.consumerHome);
+      _navService.go(RouteNames.networkTest);
     } on FirebaseAuthException catch (e) {
       if (e.code == 'invalid-verification-code') {
         otpverifController.clear();
