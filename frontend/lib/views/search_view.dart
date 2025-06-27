@@ -60,11 +60,7 @@ class _SearchViewState extends State<SearchView> {
                   ),
                   const SizedBox(height: 12.0),
                   Padding(
-                    padding: EdgeInsetsGeometry.only(
-                      top: 16,
-                      left: 16,
-                      bottom: 12,
-                    ),
+                    padding: EdgeInsets.only(top: 16, left: 16, bottom: 12),
                     child: const Text("Recent Searches"),
                   ),
 

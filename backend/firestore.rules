@@ -1,0 +1,25 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Rules for the 'customers' collection (male users)
+    match /customers/{customerId} {
+      // Anyone can read any customer profile
+      allow read: if true; // This is perfectly valid and means 'if true'
+
+      // Only an authenticated user can create, update, or delete
+      // a customer profile, AND their UID must match the customerId
+      allow write: if request.auth != null && request.auth.uid == customerId;
+    }
+
+    // Rules for the 'creators' collection (female users)
+    match /creators/{creatorId} {
+      // Anyone can read any creator profile
+      allow read: if true; // This is perfectly valid and means 'if true'
+
+      // Only an authenticated user can create, update, or delete
+      // a creator profile, AND their UID must match the creatorId
+      allow write: if request.auth != null && request.auth.uid == creatorId;
+    }
+  }
+}

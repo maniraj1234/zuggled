@@ -9,4 +9,6 @@ class RouteNames {
   static const String settings = 'settings_page';
   static const String callScreen = 'call_screen_page';
   static const String searchScreen = 'search_screen';
+  static const String networkTest= 'network_test_page';
+
 }

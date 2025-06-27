@@ -1,44 +1,76 @@
-# 🏗️ Backend 
-Uses Express.js for API handling. 
+# 🏗️ Backend – Firebase Cloud Functions (Express.js + TypeScript)
+
+**Zuggled** uses **Firebase Cloud Functions** and **Express.js** to serve APIs. It is written in **TypeScript** and deployed serverlessly using Firebase.
+
+---
 
 ### **1️⃣ Installation**
-Clone the repository and install dependencies:
+Clone the repository:
 ```sh
-git clone https://github.com/maniraj1234/zugg
-cd backend
+git clone https://github.com/maniraj1234/zuggled
+cd zuggled/backend/functions
 npm install
 ```
-
-### **2️⃣ Run in Development Mode (Auto-restart on File Changes)**
+Setting up firebase: 
 ```sh
-npm run dev
+npm install -g firebase-tools #install the firebase CLI
+firebase login #log into firebase
+firebase init #initialise and select the firebase project
 ```
 
-### **3️⃣ Run the Server**
-1. Build the project:
-- compiles Typescript source code (.ts) code to Javascript (.js) which is placed at build/ directory.
+### **⚙️2️⃣ Run in Development Mode (Local Emulator)**
+Use the Firebase emulator to test the functions locally:
+```sh
+npm run serve
+```
+This command runs firebase emulators:start and uses TypeScript in watch mode (tsc --watch).
+
+### **🔨3️⃣ Build the Functions**
+Before deploying, compile your TypeScript code:
 ```sh
 npm run build
 ```
-2. Start the complied server using:
+This places the output .js files in the lib/ directory.
+
+### **🚀4️⃣ Deploy to Firebase**
+To deploy your Cloud Functions to Firebase:
 ```sh
-npm start
+firebase deploy --only functions
+```
+Ensure your Firebase project is set with:
+```sh
+firebase use --add
 ```
 
-### **4️⃣ Linting**
-This project uses ESLint for maintaining code quality.
-Check for linting errors and issues:
+### **✅5️⃣ Linting**
+To maintain code quality, run:
 ```sh
-npm run lint
+npm run lint        # Check for issues
+npm run lint:fix    # Automatically fix fixable issues
 ```
 
-### **5️⃣ Environment Variables**
-Create a `.env` file at 'backend/config/'
+### **🌐6️⃣ Configure API Base URL in Flutter Frontend**
+In your Flutter app, update the API base URL:
 
-### **6️⃣ Configure Base URL in Frontend**
+1. Open: lib/core/config/.env
+2. Set your deployed function URL:
+```sh
+# For production (deployed function)
+BASE_URL=https://us-central1-your-project-id.cloudfunctions.net/api
 
-In your Flutter project, update the API base URL to point to your backend server:
-- open `.env` file located at `lib/core/config/`. 
-- Set the `BASE_URL` to your local IP address or deployed server URL. For example:
-```env
-BASE_URL=http://192.168.1.100:3000
+# For local testing with emulator
+BASE_URL=http://localhost:5001/your-project-id/us-central1/api
+```
+
+### **📜7️⃣ Development Scripts**
+Located in the scripts/ directory. Run them from that folder:
+1. setup.sh – One-time setup & local testing
+```sh
+./setup.sh
+```
+This installs Firebase tools, links the project, installs dependencies, builds the functions, and runs the emulator.
+2. deploy.sh – Build & deploy functions
+```sh
+./deploy.sh
+```
+Builds the functions and deploys them to Firebase Cloud Functions.

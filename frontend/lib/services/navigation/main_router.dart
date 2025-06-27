@@ -1,4 +1,5 @@
 import 'package:frontend/constants/route_names.dart';
+import 'package:frontend/services/backend_test/view/backend_test_view.dart';
 import 'package:frontend/services/navigation/navigation_service.dart';
 import 'package:frontend/view_models/home_view_model.dart';
 import 'package:frontend/view_models/login_view_model.dart';
@@ -166,6 +167,11 @@ final GoRouter mainRouter = GoRouter(
       name: RouteNames.callScreen,
       path: '/call_screen',
       builder: (context, state) => CallScreen(title: "call home screen"),
+    ),
+    GoRoute(
+      name: RouteNames.networkTest,
+      path: '/network_test',
+      builder: (context, state) => NetworkPage(),
     ),
   ],
 

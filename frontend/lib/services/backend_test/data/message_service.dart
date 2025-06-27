@@ -17,7 +17,7 @@ class MessageService {
   /// Throws an [Exception] if the request fails or returns any other status code.
   Future<MessageModel> getMessage() async {
     try {
-      final response = await httpService.client.get('/');
+      final response = await httpService.client.get('testapi');
       if (response.statusCode == StatusCode.OK) {
         // If the server returns a 200 OK response, parse the JSON
         return MessageModel.fromJson(response.data);
