@@ -14,7 +14,7 @@ npm install
 Setting up firebase: 
 ```sh
 npm install -g firebase-tools #install the firebase CLI
-firebase login 
+firebase login #log into firebase
 firebase init #initialise and select the firebase project
 ```
 
@@ -62,13 +62,15 @@ BASE_URL=https://us-central1-your-project-id.cloudfunctions.net/api
 BASE_URL=http://localhost:5001/your-project-id/us-central1/api
 ```
 
-### **Scripts for set-up and deploy**
-Make sure you are in Scripts directory before running these scripts
-1. set-up firebase and run the emulator: 
+### **📜7️⃣ Development Scripts**
+Located in the scripts/ directory. Run them from that folder:
+1. setup.sh – One-time setup & local testing
 ```sh
 ./setup.sh
 ```
-2. deploy the cloud functions: 
+This installs Firebase tools, links the project, installs dependencies, builds the functions, and runs the emulator.
+2. deploy.sh – Build & deploy functions
 ```sh
 ./deploy.sh
 ```
+Builds the functions and deploys them to Firebase Cloud Functions.
