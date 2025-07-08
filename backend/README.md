@@ -90,7 +90,7 @@ To run Firestore seeding locally, you need to authenticate using a Firebase Admi
 Use the provided shell script to run the seeder:
 
 ```sh
-bash scripts/seed.sh
+./seed.sh
 ```
 This script will compile and run seed.ts located at *functions/src/scripts/* directory
 Alternatively, you can run it manually
