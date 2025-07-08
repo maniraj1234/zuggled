@@ -1,5 +1,3 @@
-// functions/src/controllers/customer.controller.ts
-
 import { Request, Response } from 'express';
 import { Customer } from '../models/Customer';
 import { db } from '../config/firebase';
@@ -59,3 +57,5 @@ export const deleteCustomers = async (_req: Request, res: Response) => {
     res.status(500).json({ error: 'Failed to delete all customers' });
   }
 };
+
+// TODO: Implement updateCustomer function

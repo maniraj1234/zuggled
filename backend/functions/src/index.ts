@@ -4,11 +4,10 @@ import express from 'express';
 import creatorRoutes from './routes/creator.routes';
 import customerRoutes from './routes/customer.routes';
 
-// Start writing functions
-// https://firebase.google.com/docs/functions/typescript
 const app = express();
 
 app.use(express.json());
+
 app.use('/', creatorRoutes);
 app.use('/', customerRoutes);
 

@@ -2,6 +2,7 @@ import { Request, Response } from 'express';
 import { Creator } from '../models/Creator';
 import { db } from '../config/firebase';
 
+// CREATE
 export const createCreator = async (req: Request, res: Response) => {
   try {
     const creator = new Creator(req.body);
@@ -13,6 +14,7 @@ export const createCreator = async (req: Request, res: Response) => {
   }
 };
 
+// READ
 export const getCreators = async (_req: Request, res: Response) => {
   try {
     const snapshot = await db.collection('creators').get();
@@ -24,6 +26,7 @@ export const getCreators = async (_req: Request, res: Response) => {
   }
 };
 
+// DELETE ONE
 export const deleteCreator = async (req: Request, res: Response) => {
   const { id } = req.params;
   try {
@@ -38,6 +41,8 @@ export const deleteCreator = async (req: Request, res: Response) => {
     res.status(500).json({ error: 'Failed to delete creator' });
   }
 };
+
+// DELETE ALL
 export const deleteCreators = async (_req: Request, res: Response) => {
   try {
     const snapshot = await db.collection('creators').get();
@@ -52,3 +57,5 @@ export const deleteCreators = async (_req: Request, res: Response) => {
     res.status(500).json({ error: 'Failed to delete all creators' });
   }
 };
+
+// TODO: Implement updateCreator function
