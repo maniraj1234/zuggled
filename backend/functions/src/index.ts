@@ -8,14 +8,15 @@ const app = express();
 
 app.use(express.json());
 
+// Register creator and customer routes at the root path
 app.use('/', creatorRoutes);
 app.use('/', customerRoutes);
 
-// test endpoint
+// Test endpoint to verify API is working
 app.get('/testapi', (_req, res) => {
   logger.info('Test API called!');
   res.status(200).send({ message: 'Hello this is testapi!' });
 });
 
-// Export cloud function
+// Export the Express app as a Firebase HTTPS Cloud Function
 export const api = onRequest(app);

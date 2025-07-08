@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import { Customer } from '../models/Customer';
 import { db } from '../config/firebase';
 
-// CREATE
+// CREATE a new customer document in Firestore
 export const createCustomer = async (req: Request, res: Response) => {
   try {
     const customer = new Customer(req.body);
@@ -14,7 +14,7 @@ export const createCustomer = async (req: Request, res: Response) => {
   }
 };
 
-// READ
+// READ all customers from Firestore
 export const getCustomers = async (_req: Request, res: Response) => {
   try {
     const snapshot = await db.collection('customers').get();
@@ -26,7 +26,7 @@ export const getCustomers = async (_req: Request, res: Response) => {
   }
 };
 
-// DELETE ONE
+// DELETE a single customer by ID
 export const deleteCustomer = async (req: Request, res: Response) => {
   const { id } = req.params;
   try {
@@ -42,7 +42,7 @@ export const deleteCustomer = async (req: Request, res: Response) => {
   }
 };
 
-// DELETE ALL
+// DELETE all customers from Firestore
 export const deleteCustomers = async (_req: Request, res: Response) => {
   try {
     const snapshot = await db.collection('customers').get();

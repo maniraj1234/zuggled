@@ -1,17 +1,18 @@
-// functions/src/scripts/seed.ts
 import { db } from '../config/firebase';
 import { Creator } from '../models/Creator';
 import { Customer } from '../models/Customer';
 import { CallLog } from '../models/CallLog';
+// Import seed data from a JSON file
 import * as data from '../data/seedData.json';
 
 /**
- *
+ * seedData function
+ * This function seeds the Firestore database with sample data for creators, customers, and call logs.
  */
 async function seedData() {
   console.log('Seeding Firestore sample data...');
 
-  // Create creators
+  // Seed creators collection
   for (const c of data.creators) {
     const creator = new Creator({
       ...c,
@@ -21,7 +22,7 @@ async function seedData() {
     await db.collection('creators').add(creator.toJSON());
   }
 
-  // Create customers
+  // Seed customers collection
   for (const c of data.customers) {
     const customer = new Customer({
       ...c,
@@ -31,7 +32,7 @@ async function seedData() {
     await db.collection('customers').add(customer.toJSON());
   }
 
-  // Create call logs
+  // Seed call logs collection
   for (const c of data.callLogs) {
     const callLog = new CallLog({
       ...c,

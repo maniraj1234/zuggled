@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import { Creator } from '../models/Creator';
 import { db } from '../config/firebase';
 
-// CREATE
+// CREATE a new creator document in Firestore
 export const createCreator = async (req: Request, res: Response) => {
   try {
     const creator = new Creator(req.body);
@@ -14,7 +14,7 @@ export const createCreator = async (req: Request, res: Response) => {
   }
 };
 
-// READ
+// READ all creators from Firestore
 export const getCreators = async (_req: Request, res: Response) => {
   try {
     const snapshot = await db.collection('creators').get();
@@ -26,7 +26,7 @@ export const getCreators = async (_req: Request, res: Response) => {
   }
 };
 
-// DELETE ONE
+// DELETE a single creator by ID
 export const deleteCreator = async (req: Request, res: Response) => {
   const { id } = req.params;
   try {
@@ -42,7 +42,7 @@ export const deleteCreator = async (req: Request, res: Response) => {
   }
 };
 
-// DELETE ALL
+// DELETE all creators from Firestore
 export const deleteCreators = async (_req: Request, res: Response) => {
   try {
     const snapshot = await db.collection('creators').get();
