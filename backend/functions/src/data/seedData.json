@@ -1,0 +1,143 @@
+{
+    "creators": [
+        {
+            "userName": "creator_one",
+            "bio": "Musician and Vlogger",
+            "gender": "female",
+            "birthdate": "1990-04-01",
+            "profilePicture": "/uploads/creator1.jpg",
+            "interests": [
+                "music",
+                "travel"
+            ],
+            "phoneNumber": "+911111111111",
+            "coins": 100,
+            "audioCallAvailable": true,
+            "videoCallAvailable": false,
+            "total_earnings": 8000
+        },
+        {
+            "userName": "creator_two",
+            "bio": "Fitness Coach",
+            "gender": "female",
+            "birthdate": "1993-06-12",
+            "profilePicture": "/uploads/creator2.jpg",
+            "interests": [
+                "fitness",
+                "health"
+            ],
+            "phoneNumber": "+912222222222",
+            "coins": 300,
+            "audioCallAvailable": true,
+            "videoCallAvailable": true,
+            "total_earnings": 15000
+        },
+        {
+            "userName": "creator_three",
+            "bio": "Tech Enthusiast and Gamer",
+            "gender": "female",
+            "birthdate": "2000-02-28",
+            "profilePicture": "/uploads/creator3.jpg",
+            "interests": [
+                "music",
+                "travel"
+            ],
+            "phoneNumber": "+911111111111",
+            "coins": 100,
+            "audioCallAvailable": true,
+            "videoCallAvailable": false,
+            "total_earnings": 8000
+        },
+        {
+            "userName": "creator_four",
+            "bio": "Althete and Fitness Enthusiast",
+            "gender": "female",
+            "birthdate": "1995-08-20",
+            "profilePicture": "/uploads/creator4.jpg",
+            "interests": [
+                "fitness",
+                "health",
+                "sports"
+            ],
+            "phoneNumber": "+9123333333333",
+            "coins": 600,
+            "audioCallAvailable": true,
+            "videoCallAvailable": true,
+            "total_earnings": 10000
+        }
+    ],
+    "customers": [
+        {
+            "userName": "customer_one",
+            "bio": "Interested in music content",
+            "gender": "male",
+            "birthdate": "2000-01-15",
+            "profilePicture": "/uploads/customer1.jpg",
+            "interests": [
+                "music",
+                "vlogs"
+            ],
+            "phoneNumber": "+913333333333",
+            "coins": 50
+        },
+        {
+            "userName": "customer_two",
+            "bio": "Follows fitness creators",
+            "gender": "male",
+            "birthdate": "1998-07-22",
+            "profilePicture": "/uploads/customer2.jpg",
+            "interests": [
+                "fitness"
+            ],
+            "phoneNumber": "+914444444444",
+            "coins": 80
+        },
+        {
+            "userName": "customer_three",
+            "bio": "Interested in music content",
+            "gender": "male",
+            "birthdate": "2000-01-15",
+            "profilePicture": "/uploads/customer1.jpg",
+            "interests": [
+                "music",
+                "vlogs",
+                "gaming"
+            ],
+            "phoneNumber": "+914300000000",
+            "coins": 50
+        },
+        {
+            "userName": "customer_four",
+            "bio": "Follows fitness creators",
+            "gender": "male",
+            "birthdate": "2002-07-22",
+            "profilePicture": "/uploads/customer3.jpg",
+            "interests": [
+                "fitness",
+                "health"
+            ],
+            "phoneNumber": "+915233333333",
+            "coins": 80
+        }
+    ],
+    "callLogs": [
+        {
+            "callID": "call001",
+            "from": "customer_one",
+            "to": "creator_one",
+            "callType": "audio",
+            "direction": "outgoing",
+            "timestamp": "2025-07-07T10:00:00Z",
+            "durationSeconds": 300
+        },
+        {
+            "callID": "call002",
+            "from": "customer_two",
+            "to": "creator_two",
+            "callType": "video",
+            "direction": "incoming",
+            "timestamp": "2025-07-07T11:30:00Z",
+            "durationSeconds": 1200
+        }
+    ]
+}
