@@ -75,10 +75,10 @@ This installs Firebase tools, links the project, installs dependencies, builds t
 ```
 Builds the functions and deploys them to Firebase Cloud Functions.
 
-:
 
 ### **🌱8️⃣ Firestore Seeding for Sample Data**
 To populate Firestore with sample data (creators, customers, call logs), you can run the seed script locally using the Firebase Admin SDK and a service account.
+
 🔐 Step 1: Setup Service Account Key
 To run Firestore seeding locally, you need to authenticate using a Firebase Admin SDK key.
 1. Go to your Firebase console → Project settings → Service accounts
