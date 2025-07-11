@@ -1,4 +1,6 @@
 import 'package:frontend/constants/route_names.dart';
+import 'package:frontend/services/authentication/register_view.dart';
+import 'package:frontend/services/authentication/register_view_model.dart';
 import 'package:frontend/services/backend_test/view/backend_test_view.dart';
 import 'package:frontend/services/navigation/navigation_service.dart';
 import 'package:frontend/view_models/home_view_model.dart';
@@ -46,6 +48,7 @@ final GoRouter mainRouter = GoRouter(
     }
     SharedPreferences prefs = await SharedPreferences.getInstance();
     bool isLoggedIn = await AuthService().isLoggedIn();
+    //TODO:Check whether the user is customer or creator then navigate
     if (prefs.getBool('isFirstLaunch') ?? true) {
       return '/onBoarding';
     }
@@ -93,6 +96,17 @@ final GoRouter mainRouter = GoRouter(
             child: SignUpView(),
           ),
     ),
+    GoRoute(
+      path: '/register',
+      name: RouteNames.register,
+      builder:
+          (context, state) => ChangeNotifierProvider<RegisterViewModel>(
+            create:
+                (context) =>
+                    RegisterViewModel(context.read<NavigationService>()),
+            child: RegisterView(),
+          ),
+    ),
     ShellRoute(
       pageBuilder:
           (context, state, child) => NoTransitionPage(
@@ -104,6 +118,7 @@ final GoRouter mainRouter = GoRouter(
             ),
           ),
       routes: [
+        ///TODO:Update home route based on the current user role (implement dynamic routing)
         /// HomeView
         GoRoute(
           path: '/home',

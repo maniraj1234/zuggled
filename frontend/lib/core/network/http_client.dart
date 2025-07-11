@@ -1,30 +1,48 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:frontend/services/auth_service/auth_service.dart';
 
-/// HttpService uses [Dio] to handling HTTP requestis.
-///
-/// This class sets up the base URL, timeout durations, and logging interceptors.
-/// It allows reuse of dio instance for accessing dio instance accross the app.
 class HttpService {
-  final Dio _dio = Dio(
-    BaseOptions(
-      // The base URL for all API requests, loaded from environment variables.
-      baseUrl: dotenv.env['BASE_URL']!, // Use env or config file
-      connectTimeout: Duration(seconds: 240),
-      receiveTimeout: Duration(seconds: 240),
-    ),
-  );
+  static final HttpService _instance = HttpService._internal();
 
-  /// Constructor for [HttpService].
-  ///
-  /// This constructor initializes the Dio instance with base options and adds interceptors.
-  /// It sets up logging for all requests and responses.
-  HttpService() {
+  late final Dio _dio;
+
+  /// Private named constructor
+  HttpService._internal() {
+    _dio = Dio(
+      BaseOptions(
+        baseUrl: dotenv.env['BASE_URL']!,
+        connectTimeout: Duration(seconds: 240),
+        receiveTimeout: Duration(seconds: 240),
+        headers: {'Content-Type': 'application/json'},
+      ),
+    );
+
     _dio.interceptors.add(
-      LogInterceptor(responseBody: true),
-    ); // Add token, logs, etc.
+      InterceptorsWrapper(
+        onRequest: (options, handler) async {
+          final _token = await AuthService().getUserToken();
+
+          if (_token != null) {
+            options.headers['Authorization'] =
+                'Bearer $_token'; //pass token for each request
+          }
+          return handler.next(
+            options,
+          ); //optionally add exception routes via options.path
+        },
+      ),
+    );
+    _dio.interceptors.add(
+      LogInterceptor(
+        responseBody: true,
+      ), //logs the response body for each req, res from backend
+    );
   }
 
-  /// Returns the Dio instance.
+  /// Factory constructor to return the same instance
+  factory HttpService() => _instance;
+
+  /// Getter to access Dio client
   Dio get client => _dio;
 }

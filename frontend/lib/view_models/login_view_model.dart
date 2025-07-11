@@ -4,6 +4,7 @@ import 'package:country_code_picker/country_code_picker.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:frontend/constants/route_names.dart';
+import 'package:frontend/services/auth_service/auth_repository.dart';
 import 'package:frontend/services/auth_service/auth_service.dart';
 import 'package:frontend/services/navigation/navigation_service.dart';
 import 'package:frontend/widgets/login_sub_views.dart';
@@ -67,6 +68,9 @@ class LoginViewModel extends ChangeNotifier {
   /// AuthService Service Instance for Authorization
   final AuthService authService = AuthService();
 
+  ///AuthRepository instance for checking user registration
+  final AuthRepository _authRepository = AuthRepository();
+
   /// SnackBar Template
   // void _showSnackBar(BuildContext context, String message) {
   //   ScaffoldMessenger.of(
@@ -82,9 +86,24 @@ class LoginViewModel extends ChangeNotifier {
   void loginHandle() async {
     try {
       await authService.verifyOtp(otpverifController.text);
+      debugPrint("user id is :" + authService.currentUser!.uid);
       // _showSnackBar(context, "Login successful");
       // _navService.go(RouteNames.consumerHome);
-      _navService.go(RouteNames.networkTest);
+
+      //Navigate to Register page if user is not registered to take profile details.
+      //If user is already registerd, then navigate to HomeScreen
+      final [_isRegistered, _userType] =
+          await _authRepository.checkUserRegistration();
+      if (_isRegistered) {
+        if (_userType == "customer") {
+          _navService.go(RouteNames.consumerHome);
+          return;
+        } else if (_userType == "creator") {
+          _navService.go(RouteNames.creatorHome);
+          return;
+        }
+      }
+      _navService.go(RouteNames.register);
     } on FirebaseAuthException catch (e) {
       if (e.code == 'invalid-verification-code') {
         otpverifController.clear();

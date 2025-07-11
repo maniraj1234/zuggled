@@ -23,6 +23,10 @@ class AuthService {
   String? get phoneNumberBeingVerified => _phoneNumberBeingVerified;
   User? get currentUser => _firebaseAuth.currentUser;
 
+  Future<String?> getUserToken() async {
+    return await _firebaseAuth.currentUser?.getIdToken();
+  }
+
   Future<bool> isLoggedIn() async {
     final user = _firebaseAuth.currentUser;
     return user != null;
