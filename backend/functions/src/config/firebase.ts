@@ -9,9 +9,9 @@ if (!admin.apps.length) {
     admin.initializeApp({
       credential: admin.credential.cert(serviceAccount as admin.ServiceAccount),
     });
-    console.log('✅ Firebase initialized with service account');
+    logger.info.log('✅ Firebase initialized with service account');
   } catch (error) {
-    console.error('❌ Failed to initialize Firebase:', error);
+    logger.info.error('❌ Failed to initialize Firebase:', error);
     throw error;
   }
 }

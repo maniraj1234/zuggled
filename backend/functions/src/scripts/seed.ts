@@ -4,13 +4,14 @@ import { Customer } from '../models/Customer';
 import { CallLog } from '../models/CallLog';
 // Import seed data from a JSON file
 import * as data from '../data/seedData.json';
+import { logger } from 'firebase-functions';
 
 /**
  * seedData function
  * This function seeds the Firestore database with sample data for creators, customers, and call logs.
  */
 async function seedData() {
-  console.log('Seeding Firestore sample data...');
+  logger.info('Seeding Firestore sample data...');
 
   // Seed creators collection
   for (const c of data.creators) {
@@ -48,11 +49,11 @@ async function seedData() {
     await db.collection('calllogs').add(callLog.toJSON());
   }
 
-  console.log('***************Seeding complete**************');
+  logger.info('***************Seeding complete**************');
   process.exit(0);
 }
 
 seedData().catch((err) => {
-  console.error('Seeding failed! :', err);
+  logger.error('Seeding failed! :', err);
   process.exit(1);
 });

@@ -10,7 +10,7 @@ export const createCreator = async (req: Request, res: Response) => {
     const docRef = await db.collection('creators').add(creator.toJSON());
     res.status(201).json({ id: docRef.id, status: 'added' });
   } catch (error) {
-    console.error('Error creating creator:', error);
+    logger.error('Error creating creator:', error);
     res.status(500).json({ error: 'Failed to create creator' });
   }
 };
@@ -22,7 +22,7 @@ export const getCreators = async (_req: Request, res: Response) => {
     const data = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
     res.status(200).json(data);
   } catch (error) {
-    console.error('Error fetching creators:', error);
+    logger.error('Error fetching creators:', error);
     res.status(500).json({ error: 'Failed to fetch creators' });
   }
 };
@@ -38,7 +38,7 @@ export const deleteCreator = async (req: Request, res: Response) => {
       res.status(404).json({ error: 'Creator not found' });
     }
   } catch (error) {
-    console.error('Error deleting creator:', error);
+    logger.error('Error deleting creator:', error);
     res.status(500).json({ error: 'Failed to delete creator' });
   }
 };
@@ -54,7 +54,7 @@ export const deleteCreators = async (_req: Request, res: Response) => {
     await batch.commit();
     res.status(200).json({ status: 'all creators deleted' });
   } catch (error) {
-    console.error('Error deleting all creators:', error);
+    logger.error('Error deleting all creators:', error);
     res.status(500).json({ error: 'Failed to delete all creators' });
   }
 };
