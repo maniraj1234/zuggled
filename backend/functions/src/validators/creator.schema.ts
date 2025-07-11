@@ -1,12 +1,16 @@
 import { z } from 'zod';
 
-export const creatorSchema = z.object({
-    name: z.string().min(1, 'Name is required'),
-    gender: z.enum(['male', 'female'], {
-        message: 'Gender must be male or female',
-    }),
-    bio: z.string().optional(),
-    interests: z.array(z.string()).optional(),
-    birthdate: z.string().optional(),
-    profilePicture: z.string().url().optional(),
+export const userSchema = z.object({
+    userName: z.string().min(1, 'Username is required'),
+    bio: z.string().optional().default(''),
+    gender: z.enum(['male', 'female']),
+    birthdate: z.string().min(1, 'Birthdate is required'),
+    profilePictureURL: z.string().url('Must be a valid URL'),
+    interests: z.array(z.string()).optional().default([]),
+    phoneNumber: z
+        .string()
+        .regex(/^\+?[0-9]{10,15}$/, 'Phone number must be valid'),
+    coins: z.number().int().nonnegative().default(0),
 });
+
+export type UserInput = z.infer<typeof userSchema>;

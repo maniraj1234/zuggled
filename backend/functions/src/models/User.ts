@@ -3,7 +3,7 @@ export class User {
   bio: string;
   gender: 'male' | 'female';
   birthdate: string;
-  profilePicture: string;
+  profilePictureURL: string;
   interests: string[];
   phoneNumber: string;
   coins: number;
@@ -13,7 +13,7 @@ export class User {
     this.bio = data.bio ?? '';
     this.gender = data.gender ?? 'male';
     this.birthdate = data.birthdate ?? '';
-    this.profilePicture = data.profilePicture ?? '';
+    this.profilePictureURL = data.profilePictureURL ?? '';
     this.interests = data.interests ?? [];
     this.phoneNumber = data.phoneNumber ?? '';
     this.coins = data.coins ?? 0;
@@ -25,7 +25,7 @@ export class User {
       bio: this.bio,
       gender: this.gender,
       birthdate: this.birthdate,
-      profilePicture: this.profilePicture,
+      profilePictureURL: this.profilePictureURL,
       interests: this.interests,
       phoneNumber: this.phoneNumber,
       coins: this.coins,
