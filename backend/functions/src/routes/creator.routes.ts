@@ -1,4 +1,6 @@
-import { Router } from 'express';
+import {Router} from 'express';
+import { validateRequest } from '../middleware/validateRequest';
+import { creatorSchema } from '../validators/creator.schema';
 import {
   createCreator,
   getCreators,
@@ -8,7 +10,7 @@ import {
 
 const router = Router();
 
-router.post('/creator', createCreator);
+router.post('/creator', validateRequest(creatorSchema), createCreator);
 router.get('/creators', getCreators);
 router.delete('/creator/:id', deleteCreator);
 router.delete('/creators', deleteCreators);
