@@ -1,6 +1,7 @@
 import * as admin from 'firebase-admin';
 // Import the service account credentials for Firebase Admin initialization
 import serviceAccount from '../../serviceAccountKey.json';
+import { logger } from 'firebase-functions';
 
 // Initialize the Firebase Admin app only if it hasn't been initialized yet
 if (!admin.apps.length) {
@@ -9,9 +10,9 @@ if (!admin.apps.length) {
     admin.initializeApp({
       credential: admin.credential.cert(serviceAccount as admin.ServiceAccount),
     });
-    logger.info.log('✅ Firebase initialized with service account');
+    logger.info('✅ Firebase initialized with service account');
   } catch (error) {
-    logger.info.error('❌ Failed to initialize Firebase:', error);
+    logger.error('❌ Failed to initialize Firebase:', error);
     throw error;
   }
 }
