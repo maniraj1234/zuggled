@@ -4,13 +4,13 @@ import 'package:flutter/services.dart';
 class OTPInput extends StatefulWidget {
   final TextEditingController otpController;
 
-  const OTPInput({Key? key, required this.otpController}) : super(key: key);
+  const OTPInput({super.key, required this.otpController});
 
   @override
-  _OTPInputState createState() => _OTPInputState();
+  OTPInputState createState() => OTPInputState();
 }
 
-class _OTPInputState extends State<OTPInput> {
+class OTPInputState extends State<OTPInput> {
   final List<TextEditingController> _controllers = List.generate(
     6,
     (_) => TextEditingController(),

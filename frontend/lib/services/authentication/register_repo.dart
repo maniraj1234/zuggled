@@ -15,6 +15,7 @@ class RegisterRepo {
     String? birthdate,
   }) async {
     try {
+      ///TODO:Replace with user model
       final Map<String, dynamic> body = {
         'userName': username,
         'bio': bio,
@@ -26,7 +27,8 @@ class RegisterRepo {
         'phoneNumber': phoneNumber,
       };
 
-      final endpoint = gender == 'Male' ? 'customer' : 'creator';
+      ///TODO:Change this method of register to a robust one
+      final endpoint = (gender == 'male') ? 'customer' : 'creator';
       final response = await httpService.client.post('/$endpoint', data: body);
       if (response.statusCode == 200 || response.statusCode == 201) {
         debugPrint('User registered: ${response.data}');

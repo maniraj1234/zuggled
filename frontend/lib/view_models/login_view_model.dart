@@ -86,7 +86,6 @@ class LoginViewModel extends ChangeNotifier {
   void loginHandle() async {
     try {
       await authService.verifyOtp(otpverifController.text);
-      debugPrint("user id is :" + authService.currentUser!.uid);
       // _showSnackBar(context, "Login successful");
       // _navService.go(RouteNames.consumerHome);
 

@@ -14,12 +14,12 @@ class RegisterViewModel extends ChangeNotifier {
   String _bio = '';
   String _gender = '';
   List<String> _interests = [];
-  int _coins = 0;
+  final int _coins = 0;
   //TODO: Change the default profile picture to include path of user's profile picture
   String _profilePicture = 'none';
   String _birthdate = '';
   //TODO: Get the phone number from the user
-  String _phoneNumber = '';
+  final String _phoneNumber = '';
 
   // Public getters to access the data from the UI
   String get username => _username;
@@ -56,7 +56,6 @@ class RegisterViewModel extends ChangeNotifier {
     notifyListeners();
   }
 
-
   void setBirthdate(String value) {
     _birthdate = value;
     notifyListeners();
@@ -83,6 +82,8 @@ class RegisterViewModel extends ChangeNotifier {
           .then((val) {
             _isLoading = false;
             notifyListeners();
+
+            ///TODO: Change the routing to role based
             _navService.go(RouteNames.consumerHome);
           });
     } catch (e) {

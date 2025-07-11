@@ -48,7 +48,9 @@ final GoRouter mainRouter = GoRouter(
     }
     SharedPreferences prefs = await SharedPreferences.getInstance();
     bool isLoggedIn = await AuthService().isLoggedIn();
-    //TODO:Check whether the user is customer or creator then navigate
+
+    ///TODO:Check whether the user is customer or creator then navigate
+    ///TODO:Change this conditional logic to a robust one
     if (prefs.getBool('isFirstLaunch') ?? true) {
       return '/onBoarding';
     }
