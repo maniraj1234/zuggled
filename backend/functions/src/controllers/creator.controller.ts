@@ -5,9 +5,11 @@ import { db } from '../config/firebase';
 // CREATE a new creator document in Firestore
 export const createCreator = async (req: Request, res: Response) => {
   try {
+    const uid = (req as any).user.uid; 
     const creator = new Creator(req.body);
-    const docRef = await db.collection('creators').add(creator.toJSON());
-    res.status(201).json({ id: docRef.id, status: 'added' });
+    await db.collection('creators').doc(uid).set(creator.toJSON());
+
+    res.status(201).json({ id: uid, status: 'added' });
   } catch (error) {
     console.error('Error creating creator:', error);
     res.status(500).json({ error: 'Failed to create creator' });

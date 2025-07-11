@@ -3,14 +3,18 @@ import * as logger from 'firebase-functions/logger';
 import express from 'express';
 import creatorRoutes from './routes/creator.routes';
 import customerRoutes from './routes/customer.routes';
+import authRoutes from './routes/auth.routes';
+import { authMiddleware } from './middlewares/auth.middleware';
 
 const app = express();
 
 app.use(express.json());
 
+app.use('/auth', authMiddleware, authRoutes);
+
 // Register creator and customer routes at the root path
-app.use('/', creatorRoutes);
-app.use('/', customerRoutes);
+app.use('/', authMiddleware, creatorRoutes);
+app.use('/', authMiddleware, customerRoutes);
 
 // Test endpoint to verify API is working
 app.get('/testapi', (_req, res) => {

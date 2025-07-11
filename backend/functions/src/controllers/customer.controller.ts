@@ -5,9 +5,10 @@ import { db } from '../config/firebase';
 // CREATE a new customer document in Firestore
 export const createCustomer = async (req: Request, res: Response) => {
   try {
+    const _uid = (req as any).user.uid;
     const customer = new Customer(req.body);
-    const docRef = await db.collection('customers').add(customer.toJSON());
-    res.status(201).json({ id: docRef.id, status: 'added' });
+    await db.collection('customers').doc(_uid).set(customer.toJSON());
+    res.status(201).json({ id: _uid, status: 'added' });
   } catch (error) {
     console.error('Error creating customer:', error);
     res.status(500).json({ error: 'Failed to create customer' });
