@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import { Creator } from '../models/Creator';
 import { db } from '../config/firebase';
+import { logger } from 'firebase-functions';
 
 // CREATE a new creator document in Firestore
 export const createCreator = async (req: Request, res: Response) => {

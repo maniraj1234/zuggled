@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import { Customer } from '../models/Customer';
 import { db } from '../config/firebase';
+import { logger } from 'firebase-functions';
 
 // CREATE a new customer document in Firestore
 export const createCustomer = async (req: Request, res: Response) => {
@@ -29,6 +30,7 @@ export const getCustomers = async (_req: Request, res: Response) => {
 // DELETE a single customer by ID
 export const deleteCustomer = async (req: Request, res: Response) => {
   const { id } = req.params;
+  logger.info(id);
   try {
     const result = await db.collection('customers').doc(id).delete();
     if (result) {
