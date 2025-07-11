@@ -1,4 +1,5 @@
 import * as admin from 'firebase-admin';
+import { logger } from 'firebase-functions';
 import * as fs from 'fs';
 import * as path from 'path';
 
@@ -10,10 +11,10 @@ if (!admin.apps.length) {
     admin.initializeApp({
       credential: admin.credential.cert(serviceAccount),
     });
-    console.log('✅ Firebase initialized with service account');
+    logger.info('✅ Firebase initialized with service account');
   } else {
     admin.initializeApp();
-    console.log('🟡 Firebase initialized with default credentials');
+    logger.info('🟡 Firebase initialized with default credentials');
   }
 }
 // Get a Firestore database instance from the initialized app

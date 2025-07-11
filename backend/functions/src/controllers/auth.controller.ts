@@ -2,7 +2,15 @@ import { Request, Response } from 'express';
 import { db } from '../config/firebase';
 import { logger } from 'firebase-functions';
 
-export const checkIfExists = async (req: Request, res: Response) => {
+/**
+ * check if the given user exists or not , also return userType if exists.
+ *
+ * @async
+ * @param {Request} req 
+ * @param {Response} res 
+ * @returns {Promise<any>} 
+ */
+export const checkIfExists = async (req: Request, res: Response): Promise<any> => {
     try {
         const uid = (req as any).user.uid;
         const isCustomer = (await db.collection('customers').doc(uid).get()).exists;
@@ -18,4 +26,5 @@ export const checkIfExists = async (req: Request, res: Response) => {
         logger.error('Error checking user registration:', error);
         res.status(500).json({ error: 'Internal server error' });
     }
+    return;
 };
