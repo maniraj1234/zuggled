@@ -2,7 +2,17 @@ import { Request, Response, NextFunction } from 'express';
 import { getAuth } from 'firebase-admin/auth';
 import { logger } from 'firebase-functions';
 
-export async function authMiddleware(req: Request, res: Response, next: NextFunction) {
+/**
+ * Description placeholder
+ *
+ * @export
+ * @async
+ * @param {Request} req 
+ * @param {Response} res 
+ * @param {NextFunction} next 
+ * @returns {Promise<any>} 
+ */
+export async function authMiddleware(req: Request, res: Response, next: NextFunction): Promise<any> {
     const authHeader = req.headers.authorization;
 
     if (!authHeader?.startsWith('Bearer ')) {
@@ -19,5 +29,6 @@ export async function authMiddleware(req: Request, res: Response, next: NextFunc
     } catch (error) {
         logger.error('Token verification failed', error);
         res.status(401).json({ error: 'Invalid token' });
+        return;
     }
 }

@@ -1,4 +1,6 @@
 import { Router } from 'express';
+import { validateRequest } from '../middlewares/validateRequest';
+import { customerSchema } from '../validators/customer.schema';
 import {
   createCustomer,
   getCustomers,
@@ -8,7 +10,7 @@ import {
 
 const router = Router();
 
-router.post('/customer', createCustomer);
+router.post('/customer', validateRequest(customerSchema), createCustomer);
 router.get('/customers', getCustomers);
 router.delete('/customer/:id', deleteCustomer);
 router.delete('/customers', deleteCustomers);
