@@ -3,15 +3,11 @@ import { Customer } from '../models/Customer';
 import { db } from '../config/firebase';
 import { logger } from 'firebase-functions';
 
-/**
- * CREATE a new customer document in Firestore
- *
- * @async
- * @param {Request} req 
- * @param {Response} res 
- * @returns { Promise<any>} 
- */
-export const createCustomer = async (req: Request, res: Response): Promise<any> => {
+//CREATE a new customer document in Firestore
+export const createCustomer = async (
+  req: Request,
+  res: Response,
+): Promise<any> => {
   try {
     const _uid = (req as any).user.uid;
     const customer = new Customer(req.body);
@@ -24,16 +20,11 @@ export const createCustomer = async (req: Request, res: Response): Promise<any> 
   return;
 };
 
-
-/**
- * READ all customers from Firestore
- *
- * @async
- * @param {Request} _req 
- * @param {Response} res 
- * @returns { Promise<any>} 
- */
-export const getCustomers = async (_req: Request, res: Response): Promise<any> => {
+//READ all customers from Firestore
+export const getCustomers = async (
+  _req: Request,
+  res: Response,
+): Promise<any> => {
   try {
     const snapshot = await db.collection('customers').get();
     const data = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
@@ -44,16 +35,11 @@ export const getCustomers = async (_req: Request, res: Response): Promise<any> =
   }
 };
 
-
-/**
- * DELETE a single customer by ID
- *
- * @async
- * @param {Request} req 
- * @param {Response} res 
- * @returns { Promise<any>} 
- */
-export const deleteCustomer = async (req: Request, res: Response): Promise<any> => {
+//DELETE a single customer by ID
+export const deleteCustomer = async (
+  req: Request,
+  res: Response,
+): Promise<any> => {
   const { id } = req.params;
   try {
     const result = await db.collection('customers').doc(id).delete();
@@ -68,15 +54,12 @@ export const deleteCustomer = async (req: Request, res: Response): Promise<any> 
   }
 };
 
-/**
- *  DELETE all customers from Firestore
- *
- * @async
- * @param {Request} _req 
- * @param {Response} res 
- * @returns { Promise<any>} 
- */
-export const deleteCustomers = async (_req: Request, res: Response): Promise<any> => {
+//DELETE all customers from Firestore
+
+export const deleteCustomers = async (
+  _req: Request,
+  res: Response,
+): Promise<any> => {
   try {
     const snapshot = await db.collection('customers').get();
     const batch = db.batch();

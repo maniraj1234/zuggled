@@ -8,7 +8,6 @@ import {
   deleteCreators,
 } from '../controllers/creator.controller';
 
-
 const router = Router();
 
 router.post('/creator', validateRequest(creatorSchema), createCreator);

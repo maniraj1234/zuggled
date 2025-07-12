@@ -7,12 +7,9 @@ import * as data from '../data/seedData.json';
 import { logger } from 'firebase-functions';
 
 /**
- * This function seeds the Firestore database with sample data for creators, customers, and call logs.
  *
- * @async
- * @returns {Promise<any>} 
  */
-async function seedData(): Promise<any> {
+async function seedData() {
   logger.info('Seeding Firestore sample data...');
 
   // Seed creators collection

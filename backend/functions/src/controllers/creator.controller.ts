@@ -3,15 +3,11 @@ import { Creator } from '../models/Creator';
 import { db } from '../config/firebase';
 import { logger } from 'firebase-functions';
 
-/**
- * CREATE a new creator document in Firestore
- *
- * @async
- * @param {Request} req 
- * @param {Response} res 
- * @returns {Promise<any>}
- */
-export const createCreator = async (req: Request, res: Response): Promise<any> => {
+//CREATE a new creator document in Firestore
+export const createCreator = async (
+  req: Request,
+  res: Response,
+): Promise<any> => {
   try {
     const uid = (req as any).user.uid;
     const creator = new Creator(req.body);
@@ -25,15 +21,11 @@ export const createCreator = async (req: Request, res: Response): Promise<any> =
   return;
 };
 
-/**
- * READ all creators from Firestore
- *
- * @async
- * @param {Request} _req 
- * @param {Response} res 
- * @returns {Promise<any>} 
- */
-export const getCreators = async (_req: Request, res: Response): Promise<any> => {
+//READ all creators from Firestore
+export const getCreators = async (
+  _req: Request,
+  res: Response,
+): Promise<any> => {
   try {
     const snapshot = await db.collection('creators').get();
     const data = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
@@ -45,15 +37,11 @@ export const getCreators = async (_req: Request, res: Response): Promise<any> =>
   return;
 };
 
-/**
- * DELETE a single creator by ID
- *
- * @async
- * @param {Request} req 
- * @param {Response} res 
- * @returns {Promise<any>}
- */
-export const deleteCreator = async (req: Request, res: Response): Promise<any> => {
+//DELETE a single creator by ID
+export const deleteCreator = async (
+  req: Request,
+  res: Response,
+): Promise<any> => {
   const { id } = req.params;
   try {
     const result = await db.collection('creators').doc(id).delete();
@@ -69,15 +57,11 @@ export const deleteCreator = async (req: Request, res: Response): Promise<any> =
   return;
 };
 
-/**
- * DELETE all creators from Firestore
- *
- * @async
- * @param {Request} _req 
- * @param {Response} res 
- * @returns {Promise<any>}
- */
-export const deleteCreators = async (_req: Request, res: Response): Promise<any> => {
+//DELETE all creators from Firestore
+export const deleteCreators = async (
+  _req: Request,
+  res: Response,
+): Promise<any> => {
   try {
     const snapshot = await db.collection('creators').get();
     const batch = db.batch();

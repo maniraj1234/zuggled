@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import {checkIfExists}  from '../controllers/auth.controller';
+import { checkIfExists } from '../controllers/auth.controller';
 
 const router = Router();
 
