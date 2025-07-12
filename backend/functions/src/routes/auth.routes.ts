@@ -1,9 +1,10 @@
 import { Router } from 'express';
 import { checkIfExists } from '../controllers/auth.controller';
+import { authMiddleware } from '../middlewares/auth.middleware';
 
 const router = Router();
 
-//check-user to check the current user is already registered or not
-router.get('/checkIfExists', checkIfExists);
+//checkIfExists returns register status of current user with user role
+router.get('/checkIfExists', authMiddleware, checkIfExists);
 
 export default router;
