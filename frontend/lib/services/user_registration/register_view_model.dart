@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/constants/route_names.dart';
-import 'package:frontend/services/authentication/register_repo.dart';
+import 'package:frontend/services/user_registration/register_repo.dart';
 import 'package:frontend/services/navigation/navigation_service.dart';
 
 class RegisterViewModel extends ChangeNotifier {
@@ -84,6 +84,10 @@ class RegisterViewModel extends ChangeNotifier {
             notifyListeners();
 
             ///TODO: Change the routing to role based
+            if (gender == 'creator') {
+              _navService.go(RouteNames.creatorHome);
+              return;
+            }
             _navService.go(RouteNames.consumerHome);
           });
     } catch (e) {

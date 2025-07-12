@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:frontend/core/network/http_client.dart';
+import 'package:http_status_code/http_status_code.dart';
 
 class RegisterRepo {
   HttpService httpService = HttpService();
@@ -28,9 +29,10 @@ class RegisterRepo {
       };
 
       ///TODO:Change this method of register to a robust one
-      final endpoint = (gender == 'male') ? 'customer' : 'creator';
-      final response = await httpService.client.post('/$endpoint', data: body);
-      if (response.statusCode == 200 || response.statusCode == 201) {
+      final userRole = (gender == 'male') ? 'customer' : 'creator';
+      final response = await httpService.client.post('/$userRole', data: body);
+      if (response.statusCode == StatusCode.OK ||
+          response.statusCode == StatusCode.CREATED) {
         debugPrint('User registered: ${response.data}');
       } else {
         debugPrint('Failed to register user: ${response.statusCode}');

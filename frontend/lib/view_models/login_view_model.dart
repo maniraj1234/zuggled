@@ -46,8 +46,11 @@ class LoginViewModel extends ChangeNotifier {
   void onLoinPress() {
     if (phoneNumberController.text != "") {
       /// TODO: Enable OTP for all mobile number
-      /// Tesing Mobile number: +10123456789
+      /// Tesing Mobile number: +10123456789 (customer)
       /// Testing OTP : 111111
+      /// number2: +919999999999 (creator)
+      /// OTP 2:777777
+      ///
       authService.sendOtp(countryCode.dialCode! + phoneNumberController.text);
     }
     animateWidgetIndex = OTP_WIDGET;
@@ -91,13 +94,13 @@ class LoginViewModel extends ChangeNotifier {
 
       //Navigate to Register page if user is not registered to take profile details.
       //If user is already registerd, then navigate to HomeScreen
-      final [_isRegistered, _userType] =
-          await _authRepository.checkUserRegistration();
+      final [_isRegistered, _userRole] =
+          await _authRepository.checkIfUserRegisteredAndReturnRole();
       if (_isRegistered) {
-        if (_userType == "customer") {
+        if (_userRole == "customer") {
           _navService.go(RouteNames.consumerHome);
           return;
-        } else if (_userType == "creator") {
+        } else if (_userRole == "creator") {
           _navService.go(RouteNames.creatorHome);
           return;
         }

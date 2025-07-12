@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:frontend/services/authentication/register_view_model.dart';
+import 'package:frontend/services/user_registration/register_view_model.dart';
 
 class RegisterView extends StatefulWidget {
   const RegisterView({super.key});

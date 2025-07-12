@@ -1,13 +1,16 @@
 import 'package:frontend/constants/route_names.dart';
-import 'package:frontend/services/authentication/register_view.dart';
-import 'package:frontend/services/authentication/register_view_model.dart';
+import 'package:frontend/services/user_registration/register_view.dart';
+import 'package:frontend/services/user_registration/register_view_model.dart';
+import 'package:frontend/services/auth_service/auth_repository.dart';
 import 'package:frontend/services/backend_test/view/backend_test_view.dart';
 import 'package:frontend/services/navigation/navigation_service.dart';
+import 'package:frontend/view_models/creator_home_vm.dart';
 import 'package:frontend/view_models/home_view_model.dart';
 import 'package:frontend/view_models/login_view_model.dart';
 import 'package:frontend/view_models/search_view_model.dart';
 import 'package:frontend/view_models/shell_view_model.dart';
 import 'package:frontend/view_models/sign_up_view_model.dart';
+import 'package:frontend/views/creator_view.dart';
 import 'package:frontend/views/search_view.dart';
 import 'package:frontend/views/shell_view.dart';
 import 'package:frontend/services/auth_service/auth_service.dart';
@@ -57,6 +60,11 @@ final GoRouter mainRouter = GoRouter(
     if (!isLoggedIn) {
       return '/login';
     } else {
+      final [_isRegistered, _userRole] =
+          await AuthRepository().checkIfUserRegisteredAndReturnRole();
+      if (_userRole == 'creator') {
+        return '/creator_home';
+      }
       return '/home';
     }
   },
@@ -163,7 +171,16 @@ final GoRouter mainRouter = GoRouter(
         ),
       ],
     ),
-
+    GoRoute(
+      path: '/creator_home',
+      name: RouteNames.creatorHome,
+      builder:
+          (context, state) => ChangeNotifierProvider<CreatorHomeViewModel>(
+            create:
+                (_) => CreatorHomeViewModel(context.read<NavigationService>()),
+            child: CreatorHomeView(),
+          ),
+    ),
     GoRoute(
       path: '/search_screen',
       name: RouteNames.searchScreen,
