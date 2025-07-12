@@ -1,6 +1,4 @@
 // auth_repository.dart
-import 'package:dio/dio.dart';
-import 'package:flutter/material.dart';
 import 'package:frontend/core/network/http_client.dart';
 import 'package:http_status_code/http_status_code.dart';
 import 'auth_service.dart';
