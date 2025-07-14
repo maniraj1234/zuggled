@@ -74,3 +74,31 @@ This installs Firebase tools, links the project, installs dependencies, builds t
 ./deploy.sh
 ```
 Builds the functions and deploys them to Firebase Cloud Functions.
+
+
+### **🌱8️⃣ Firestore Seeding for Sample Data**
+To populate Firestore with sample data (creators, customers, call logs), you can run the seed script locally using the Firebase Admin SDK and a service account.
+
+🔐 Step 1: Setup Service Account Key
+To run Firestore seeding locally, you need to authenticate using a Firebase Admin SDK key.
+1. Go to your Firebase console → Project settings → Service accounts
+2. Click "Generate new private key" and save it
+3. Rename the file to serviceAccountKey.json
+4. Place it inside the *functions/* directory
+
+🏃‍♂️ Step 2: Run Seeder Script
+Use the provided shell script to run the seeder:
+
+```sh
+./seed.sh
+```
+This script will compile and run seed.ts located at *functions/src/scripts/* directory
+Alternatively, you can run it manually
+```sh
+npx ts-node src/scripts/seed.ts
+```
+🧪9️⃣ Verify Seeded Data (Debug Route)
+You can verify seeded data by hitting your local emulator endpoint:
+```sh
+GET http://localhost:5001/<your-project-id>/us-central1/api/creators
+```

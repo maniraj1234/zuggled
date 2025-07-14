@@ -11,3 +11,4 @@ lib/
 package-lock.json
 *.local
 firebase-debug.log
+serviceAccountKey.json
