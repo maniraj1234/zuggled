@@ -11,7 +11,7 @@ class AuthRepository {
   Future<List<dynamic>> checkIfUserRegisteredAndReturnRole() async {
     final bool isLogged = await _authService.isLoggedIn();
     if (isLogged == false) throw Exception('User not logged in');
-    final response = await _httpService.client.get('/auth/checkIfExists');
+    final response = await _httpService.client.get('/user/checkIfExistsandReturnRole');
     if (response.statusCode != StatusCode.OK) {
       throw Exception('Failed to check registration');
     }

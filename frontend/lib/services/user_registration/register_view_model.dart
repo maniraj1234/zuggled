@@ -16,10 +16,10 @@ class RegisterViewModel extends ChangeNotifier {
   List<String> _interests = [];
   final int _coins = 0;
   //TODO: Change the default profile picture to include path of user's profile picture
-  String _profilePicture = 'none';
+  String _profilePicture = 'https://exampleimgurl.com/testpic.jpg';
   String _birthdate = '';
   //TODO: Get the phone number from the user
-  final String _phoneNumber = '';
+  final String _phoneNumber = "1234567890";
 
   // Public getters to access the data from the UI
   String get username => _username;
@@ -84,7 +84,7 @@ class RegisterViewModel extends ChangeNotifier {
             notifyListeners();
 
             ///TODO: Change the routing to role based
-            if (gender == 'creator') {
+            if (gender == 'female') {
               _navService.go(RouteNames.creatorHome);
               return;
             }

@@ -24,13 +24,12 @@ class RegisterRepo {
         'coins': coins,
         'gender': gender,
         'interests': interests,
-        'profilePicture': profilePicture,
+        'profilePictureURL': profilePicture,
         'phoneNumber': phoneNumber,
       };
 
       ///TODO:Change this method of register to a robust one
-      final userRole = (gender == 'male') ? 'customer' : 'creator';
-      final response = await httpService.client.post('/$userRole', data: body);
+        final response = await httpService.client.post('/user/register', data: body);
       if (response.statusCode == StatusCode.OK ||
           response.statusCode == StatusCode.CREATED) {
         debugPrint('User registered: ${response.data}');

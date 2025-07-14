@@ -2,13 +2,13 @@ import { Request, Response, NextFunction } from 'express';
 import { DecodedIdToken, getAuth } from 'firebase-admin/auth';
 import { logger } from 'firebase-functions';
 
-/**
+/**auth middleware for authenticating requesting
  *
  * @param req Express Request
  * @param res Express Response
  * @param next Next Function to Execute
  */
-export async function authMiddleware(
+export async function authenticate(
   req: Request,
   res: Response,
   next: NextFunction,
