@@ -15,18 +15,6 @@ export const createCreator = async (req: Request, res: Response) => {
   }
 };
 
-// READ all creators from Firestore
-export const getCreators = async (_req: Request, res: Response) => {
-  try {
-    const snapshot = await db.collection('creators').get();
-    const data = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
-    res.status(200).json(data);
-  } catch (error) {
-    logger.error('Error fetching creators:', error);
-    res.status(500).json({ error: 'Failed to fetch creators' });
-  }
-};
-
 // DELETE a single creator by ID
 export const deleteCreator = async (req: Request, res: Response) => {
   const { id } = req.params;
@@ -42,21 +30,4 @@ export const deleteCreator = async (req: Request, res: Response) => {
     res.status(500).json({ error: 'Failed to delete creator' });
   }
 };
-
-// DELETE all creators from Firestore
-export const deleteCreators = async (_req: Request, res: Response) => {
-  try {
-    const snapshot = await db.collection('creators').get();
-    const batch = db.batch();
-    snapshot.docs.forEach((doc) => {
-      batch.delete(doc.ref);
-    });
-    await batch.commit();
-    res.status(200).json({ status: 'all creators deleted' });
-  } catch (error) {
-    logger.error('Error deleting all creators:', error);
-    res.status(500).json({ error: 'Failed to delete all creators' });
-  }
-};
-
 // TODO: Implement updateCreator function
