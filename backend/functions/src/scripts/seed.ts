@@ -7,6 +7,7 @@ import * as data from '../data/seedData.json';
 import { logger } from 'firebase-functions';
 
 /**
+
  *
  */
 async function seedData() {
@@ -27,6 +28,7 @@ async function seedData() {
 
   // Seed customers collection
   for (const c of data.customers) {
+
     const { id, ...customerData } = c; // Extract id and keep the rest
 
     const customer = new Customer({

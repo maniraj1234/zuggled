@@ -1,6 +1,7 @@
 import { z } from 'zod';
 
 export const userSchema = z.object({
+
   userName: z.string().min(1, 'Username is required'),
   bio: z.string().optional().default(''),
   gender: z.enum(['male', 'female']),
@@ -14,3 +15,4 @@ export const userSchema = z.object({
 });
 
 export type UserInput = z.infer<typeof userSchema>;
+
