@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:frontend/services/auth_service/auth_service.dart';
-
+import 'package:frontend/services/navigation/main_router.dart';
 class HttpService {
   static final HttpService _instance = HttpService._internal();
 
@@ -26,6 +26,12 @@ class HttpService {
           if (_token != null) {
             options.headers['Authorization'] =
                 'Bearer $_token'; //pass token for each request
+          }else {
+            // Token is missing — force redirect to login
+            rootNavigatorKey.currentState?.pushNamedAndRemoveUntil(
+              '/login',
+              (route) => false,
+            );
           }
           return handler.next(
             options,
@@ -33,7 +39,7 @@ class HttpService {
         },
       ),
     );
-    _dio.interceptors.add(
+    _dio.interceptors.add( 
       LogInterceptor(
         responseBody: true,
       ), //logs the response body for each req, res from backend

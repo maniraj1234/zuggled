@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:frontend/constants/route_names.dart';
 import 'package:frontend/services/user_registration/register_view.dart';
 import 'package:frontend/services/user_registration/register_view_model.dart';
@@ -16,7 +17,6 @@ import 'package:frontend/services/auth_service/auth_service.dart';
 import 'package:frontend/views/login_view.dart';
 import 'package:frontend/services/calling/pages/call_feature.dart';
 import 'package:frontend/views/navigation_error_view.dart';
-// ignore: unused_import
 import 'package:frontend/views/onboarding_view.dart';
 import 'package:frontend/views/coins_view.dart';
 import 'package:frontend/views/history_view.dart';
@@ -36,7 +36,11 @@ import 'package:shared_preferences/shared_preferences.dart';
 /// To check is this is app's first launch
 bool isAppLaunch = true;
 
+final GlobalKey<NavigatorState> rootNavigatorKey = GlobalKey<NavigatorState>();
+
 final GoRouter mainRouter = GoRouter(
+   
+  navigatorKey: rootNavigatorKey,
   /// [debugLogDiagnostics] set to true for showing debug logs
   debugLogDiagnostics: true,
 
@@ -216,3 +220,4 @@ final GoRouter mainRouter = GoRouter(
   },
 );
 //TODO: Modify the initial route when splash screen is implemented.
+//TODO: Implement auth guards and registration guards for login routes
