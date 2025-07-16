@@ -4,7 +4,6 @@ import 'package:country_code_picker/country_code_picker.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:frontend/constants/route_names.dart';
-import 'package:frontend/services/auth_service/auth_repository.dart';
 import 'package:frontend/services/auth_service/auth_service.dart';
 import 'package:frontend/services/navigation/navigation_service.dart';
 import 'package:frontend/widgets/login_sub_views.dart';
@@ -71,9 +70,6 @@ class LoginViewModel extends ChangeNotifier {
   /// AuthService Service Instance for Authorization
   final AuthService authService = AuthService();
 
-  ///AuthRepository instance for checking user registration
-  final AuthRepository _authRepository = AuthRepository();
-
   /// SnackBar Template
   // void _showSnackBar(BuildContext context, String message) {
   //   ScaffoldMessenger.of(
@@ -94,8 +90,9 @@ class LoginViewModel extends ChangeNotifier {
 
       //Navigate to Register page if user is not registered to take profile details.
       //If user is already registerd, then navigate to HomeScreen
-      final [_isRegistered, _userRole] =
-          await _authRepository.checkIfUserRegisteredAndReturnRole();
+      final _isRegistered =
+          await authService.isRegistered();
+          final _userRole=await authService.getUserRole();
       if (_isRegistered) {
         if (_userRole == "customer") {
           _navService.go(RouteNames.consumerHome);

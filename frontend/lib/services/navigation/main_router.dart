@@ -1,7 +1,6 @@
 import 'package:frontend/constants/route_names.dart';
 import 'package:frontend/services/user_registration/register_view.dart';
 import 'package:frontend/services/user_registration/register_view_model.dart';
-import 'package:frontend/services/auth_service/auth_repository.dart';
 import 'package:frontend/services/backend_test/view/backend_test_view.dart';
 import 'package:frontend/services/navigation/navigation_service.dart';
 import 'package:frontend/view_models/creator_home_vm.dart';
@@ -60,8 +59,8 @@ final GoRouter mainRouter = GoRouter(
     if (!isLoggedIn) {
       return '/login';
     } else {
-      final [_isRegistered, _userRole] =
-          await AuthRepository().checkIfUserRegisteredAndReturnRole();
+      final _userRole=
+          await AuthService().getUserRole();
       if (_userRole == 'creator') {
         return '/creator_home';
       }

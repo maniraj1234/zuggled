@@ -32,6 +32,26 @@ class AuthService {
     return user != null;
   }
 
+  Future<bool> isRegistered()async{ 
+    final idTokenResult=await _firebaseAuth.currentUser?.getIdTokenResult(true); //force refresh the token 
+    final _claims=idTokenResult?.claims; //get user claims with idToken
+
+  if (_claims != null && _claims.containsKey('role')) {
+    return true; // 'creator' or 'customer'
+  } else {
+    return false;
+  }
+
+  }
+  Future<String> getUserRole()async{
+    if(!await isLoggedIn()){
+      throw Exception("user not logged in");
+    }
+    final idTokenResult=await _firebaseAuth.currentUser?.getIdTokenResult(true);
+    final _claims=idTokenResult?.claims;
+    return _claims?['role'];
+  }
+
   Future<bool> sendOtp(String phoneNumber) async {
     _phoneNumberBeingVerified = phoneNumber;
     try {

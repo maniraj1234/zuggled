@@ -36,28 +36,4 @@ export const registerUser = async (req: Request, res: Response): Promise<void> =
     res.status(500).json({ error: 'Internal server error during registration.' });
   }
 };
-
-
-//check if the given user exists or not , also return userType if exists.
-export const checkIfExists = async (
-  req: Request,
-  res: Response,
-): Promise<void> => {
-  try {
-    const decodedToken = (req as any).user;
-    const uid = decodedToken?.uid;
-    const role = decodedToken?.role || null; //getting users role via decodedtoken
-
-    if (!uid) {
-      res.status(400).json({ error: 'Missing UID in token.' });
-      return;
-    }
-
-    const registered = !!role; // user is "registered" if a role is set
-
-    res.status(200).json({ registered, userType: role });
-  } catch (error) {
-    logger.error('Error checking user registration:', error);
-    res.status(500).json({ error: 'Internal server error' });
-  }
-};
+//TODO: Create enums for user model , checking unauthenticated, unregistered, creator and customer.
