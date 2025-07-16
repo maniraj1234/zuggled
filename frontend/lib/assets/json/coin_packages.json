@@ -1,0 +1,17 @@
+[
+  { "label": "Promo Trial", "coins": 20, "price": 10 },
+  { "label": "Starter Pack", "coins": 50, "price": 25 },
+  { "label": "Super Saver", "coins": 100, "price": 45 },
+  { "label": "Mega Deal", "coins": 250, "price": 99 },
+  { "label": "Ultimate Pack", "coins": 500, "price": 199 },
+  { "label": "Festive Offer", "coins": 1000, "price": 349 },
+  { "label": "Mini Boost", "coins": 30, "price": 12 },
+  { "label": "Daily Coins", "coins": 15, "price": 5 },
+  { "label": "Bonus Pack", "coins": 75, "price": 35 },
+  { "label": "Top Up", "coins": 120, "price": 55 },
+  { "label": "Quick Refill", "coins": 60, "price": 22 },
+  { "label": "Power Pack", "coins": 300, "price": 120 },
+  { "label": "Flash Sale", "coins": 80, "price": 30 },
+  { "label": "Weekend Boost", "coins": 180, "price": 70 },
+  { "label": "Trial Bonus", "coins": 10, "price": 3 }
+]
