@@ -7,8 +7,9 @@ import * as data from '../data/seedData.json';
 import { logger } from 'firebase-functions';
 
 /**
-
- *
+ * seedData function
+ * Seeds the Firestore database with sample data for creators, customers, and call logs.
+ * data is loaded from seedData.json
  */
 async function seedData() {
   logger.info('Seeding Firestore sample data...');
@@ -28,7 +29,6 @@ async function seedData() {
 
   // Seed customers collection
   for (const c of data.customers) {
-
     const { id, ...customerData } = c; // Extract id and keep the rest
 
     const customer = new Customer({

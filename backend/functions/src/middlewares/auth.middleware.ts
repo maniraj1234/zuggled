@@ -2,11 +2,11 @@ import { Request, Response, NextFunction } from 'express';
 import { DecodedIdToken, getAuth } from 'firebase-admin/auth';
 import { logger } from 'firebase-functions';
 
-/**auth middleware for authenticating requesting
- *
- * @param req Express Request
- * @param res Express Response
- * @param next Next Function to Execute
+/**
+ * Middleware to authenticate and decode Firebase ID token.
+ * @param req - Express request object containing the authorization header.
+ * @param res - Express response object used to return errors if needed.
+ * @param next - Callback to pass control to the next middleware.
  */
 export async function authenticate(
   req: Request,

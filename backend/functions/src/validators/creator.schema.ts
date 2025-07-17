@@ -8,4 +8,3 @@ export const creatorSchema = userSchema.extend({
 });
 
 export type CreatorInput = z.infer<typeof creatorSchema>;
-
