@@ -8,29 +8,38 @@ import { logger } from 'firebase-functions';
 
 /**
  * seedData function
- * This function seeds the Firestore database with sample data for creators, customers, and call logs.
+ * Seeds the Firestore database with sample data for creators, customers, and call logs.
+ * data is loaded from seedData.json
  */
 async function seedData() {
   logger.info('Seeding Firestore sample data...');
 
   // Seed creators collection
   for (const c of data.creators) {
+    const { id, ...creatorData } = c; //  Extract id and remove it from data
     const creator = new Creator({
-      ...c,
+      ...creatorData,
       gender:
-        c.gender === 'male' || c.gender === 'female' ? c.gender : undefined,
+        creatorData.gender === 'male' || creatorData.gender === 'female'
+          ? creatorData.gender
+          : undefined,
     });
-    await db.collection('creators').add(creator.toJSON());
+    await db.collection('creators').doc(id).set(creator.toJSON());
   }
 
   // Seed customers collection
   for (const c of data.customers) {
+    const { id, ...customerData } = c; // Extract id and keep the rest
+
     const customer = new Customer({
-      ...c,
+      ...customerData,
       gender:
-        c.gender === 'male' || c.gender === 'female' ? c.gender : undefined,
+        customerData.gender === 'male' || customerData.gender === 'female'
+          ? customerData.gender
+          : undefined,
     });
-    await db.collection('customers').add(customer.toJSON());
+
+    await db.collection('customers').doc(id).set(customer.toJSON());
   }
 
   // Seed call logs collection
