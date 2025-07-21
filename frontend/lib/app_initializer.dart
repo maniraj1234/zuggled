@@ -8,7 +8,7 @@ import 'package:stream_video_flutter/stream_video_flutter.dart';
 import 'package:stream_video_push_notification/stream_video_push_notification.dart';
 
 class AppInitializer {
-  static const storedUserKey = 'zK8Y4fTYAOXa2WDDVjekzXzHJO92';
+  static const storedUserKey = '6OLq7ZaPmKUZpsQYsqL67lfl83p2';
 
   static Future<TutorialUser?> getStoredUser() async {
     final storage = FlutterSecureStorage();

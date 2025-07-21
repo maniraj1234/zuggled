@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:frontend/app_keys.dart';
 import 'package:frontend/firebase_options.dart';
 import 'package:frontend/models/creator.dart';
-import 'package:frontend/call_screen.dart';
 import 'package:frontend/tutorial_user.dart';
 import 'package:go_router/go_router.dart';
 import 'package:stream_video/stream_video.dart';
