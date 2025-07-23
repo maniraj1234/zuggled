@@ -1,5 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
+import 'package:frontend/services/navigation/main_router.dart';
+import 'package:frontend/services/navigation/navigation_service.dart';
 
 class AuthService {
   /// This will give an instance of AuthService
@@ -45,7 +47,8 @@ class AuthService {
   }
   Future<String> getUserRole()async{
     if(!await isLoggedIn()){
-      throw Exception("user not logged in");
+      //navigating to login view for users who are not logged in
+      NavigationService(mainRouter).go('/login');
     }
     final idTokenResult=await _firebaseAuth.currentUser?.getIdTokenResult(true);
     final _claims=idTokenResult?.claims;

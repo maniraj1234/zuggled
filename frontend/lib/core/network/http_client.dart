@@ -52,3 +52,5 @@ class HttpService {
   /// Getter to access Dio client
   Dio get client => _dio;
 }
+//a getter for accessing 
+HttpService get http => HttpService();

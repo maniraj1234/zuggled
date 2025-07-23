@@ -4,7 +4,6 @@ import 'package:frontend/core/network/http_client.dart';
 import 'package:http_status_code/http_status_code.dart';
 
 class RegisterRepo {
-  HttpService httpService = HttpService();
   Future<void> registerUser({
     required String username,
     required String bio,
@@ -29,7 +28,7 @@ class RegisterRepo {
       };
 
       ///TODO:Change this method of register to a robust one
-        final response = await httpService.client.post('/user/register', data: body);
+        final response = await http.client.post('/user/register', data: body);
       if (response.statusCode == StatusCode.OK ||
           response.statusCode == StatusCode.CREATED) {
         debugPrint('User registered: ${response.data}');

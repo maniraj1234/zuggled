@@ -7,9 +7,6 @@ import 'package:http_status_code/http_status_code.dart';
 /// This class handles the network call to retrieve a simple message
 /// and converts the response into a [MessageModel] object.
 class MessageService {
-  /// An instance of [HttpService] that handles the HTTP requests.
-  final HttpService httpService = HttpService();
-
   /// Fetches a message from the backend API.
   ///
   /// Sends a GET request to the root (`'/'`) endpoint.
@@ -17,7 +14,7 @@ class MessageService {
   /// Throws an [Exception] if the request fails or returns any other status code.
   Future<MessageModel> getMessage() async {
     try {
-      final response = await httpService.client.get('testapi');
+      final response = await http.client.get('/testapi');
       if (response.statusCode == StatusCode.OK) {
         // If the server returns a 200 OK response, parse the JSON
         return MessageModel.fromJson(response.data);
