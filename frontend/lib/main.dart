@@ -2,16 +2,20 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:frontend/app_initializer.dart';
 // import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:frontend/app_root.dart';
 import 'package:frontend/services/navigation/main_router.dart';
 import 'package:frontend/services/navigation/navigation_service.dart';
+import 'package:frontend/tutorial_user.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await AppInitializer.init(TutorialUser.user1());
+
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
   /// This is to make status bar adjust according to app's theme.

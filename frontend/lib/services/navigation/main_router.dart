@@ -15,7 +15,7 @@ import 'package:frontend/views/search_view.dart';
 import 'package:frontend/views/shell_view.dart';
 import 'package:frontend/services/auth_service/auth_service.dart';
 import 'package:frontend/views/login_view.dart';
-import 'package:frontend/services/calling/pages/call_feature.dart';
+// import 'package:frontend/services/calling/pages/call_feature.dart';
 import 'package:frontend/views/navigation_error_view.dart';
 import 'package:frontend/views/onboarding_view.dart';
 import 'package:frontend/views/coins_view.dart';
@@ -27,6 +27,8 @@ import 'package:frontend/widgets/transition_page.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:frontend/call_screen.dart';
+import 'package:stream_video_flutter/stream_video_flutter.dart';
 
 /// Defines the main **Application router**
 ///
@@ -158,6 +160,15 @@ final GoRouter mainRouter = GoRouter(
         ),
 
         GoRoute(
+          path: '/call',
+          name: 'call_screen',
+          builder: (context, state) {
+            final call = state.extra as Call;
+            return CallScreen(call: call);
+          },
+        ),
+
+        GoRoute(
           name: RouteNames.coinStore,
           path: '/coin_store',
           pageBuilder:
@@ -200,11 +211,11 @@ final GoRouter mainRouter = GoRouter(
 
     // TODO: Redesign Call View UI
     /// CallView
-    GoRoute(
-      name: RouteNames.callScreen,
-      path: '/call_screen',
-      builder: (context, state) => CallScreen(title: "call home screen"),
-    ),
+    // GoRoute(
+    //   name: RouteNames.callScreen,
+    //   path: '/call_screen',
+    //   builder: (context, state) => CallScreen(title: "call home screen"),
+    // ),
     GoRoute(
       name: RouteNames.networkTest,
       path: '/network_test',

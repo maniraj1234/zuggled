@@ -9,6 +9,7 @@ import 'package:provider/provider.dart';
 /// 2. Favorites View Button
 /// 3. Account View Button
 /// 4. List of other user's profiles in feed
+
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
 
@@ -17,6 +18,11 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
+  @override
+  void init() async {
+    super.initState();
+  }
+
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();

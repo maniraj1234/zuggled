@@ -8,3 +8,5 @@
 }
 -keepnames class com.fasterxml.jackson.** { *; }
 -dontwarn com.fasterxml.jackson.databind.**
+
+ -keep class com.hiennv.flutter_callkit_incoming.** { *; }
