@@ -1,18 +1,22 @@
+import 'package:flutter/material.dart';
 import 'package:frontend/constants/route_names.dart';
+import 'package:frontend/services/user_registration/register_view.dart';
+import 'package:frontend/services/user_registration/register_view_model.dart';
 import 'package:frontend/services/backend_test/view/backend_test_view.dart';
 import 'package:frontend/services/navigation/navigation_service.dart';
+import 'package:frontend/view_models/creator_home_vm.dart';
 import 'package:frontend/view_models/home_view_model.dart';
 import 'package:frontend/view_models/login_view_model.dart';
 import 'package:frontend/view_models/search_view_model.dart';
 import 'package:frontend/view_models/shell_view_model.dart';
 import 'package:frontend/view_models/sign_up_view_model.dart';
+import 'package:frontend/views/creator_view.dart';
 import 'package:frontend/views/search_view.dart';
 import 'package:frontend/views/shell_view.dart';
 import 'package:frontend/services/auth_service/auth_service.dart';
 import 'package:frontend/views/login_view.dart';
 // import 'package:frontend/services/calling/pages/call_feature.dart';
 import 'package:frontend/views/navigation_error_view.dart';
-// ignore: unused_import
 import 'package:frontend/views/onboarding_view.dart';
 import 'package:frontend/views/coins_view.dart';
 import 'package:frontend/views/history_view.dart';
@@ -34,7 +38,11 @@ import 'package:stream_video_flutter/stream_video_flutter.dart';
 /// To check is this is app's first launch
 bool isAppLaunch = true;
 
+final GlobalKey<NavigatorState> rootNavigatorKey = GlobalKey<NavigatorState>();
+
 final GoRouter mainRouter = GoRouter(
+   
+  navigatorKey: rootNavigatorKey,
   /// [debugLogDiagnostics] set to true for showing debug logs
   debugLogDiagnostics: true,
 
@@ -48,12 +56,20 @@ final GoRouter mainRouter = GoRouter(
     }
     SharedPreferences prefs = await SharedPreferences.getInstance();
     bool isLoggedIn = await AuthService().isLoggedIn();
+
+    ///TODO:Check whether the user is customer or creator then navigate
+    ///TODO:Change this conditional logic to a robust one
     if (prefs.getBool('isFirstLaunch') ?? true) {
       return '/onBoarding';
     }
     if (!isLoggedIn) {
       return '/login';
     } else {
+      final _userRole=
+          await AuthService().getUserRole();
+      if (_userRole == 'creator') {
+        return '/creator_home';
+      }
       return '/home';
     }
   },
@@ -95,6 +111,17 @@ final GoRouter mainRouter = GoRouter(
             child: SignUpView(),
           ),
     ),
+    GoRoute(
+      path: '/register',
+      name: RouteNames.register,
+      builder:
+          (context, state) => ChangeNotifierProvider<RegisterViewModel>(
+            create:
+                (context) =>
+                    RegisterViewModel(context.read<NavigationService>()),
+            child: RegisterView(),
+          ),
+    ),
     ShellRoute(
       pageBuilder:
           (context, state, child) => NoTransitionPage(
@@ -106,6 +133,7 @@ final GoRouter mainRouter = GoRouter(
             ),
           ),
       routes: [
+        ///TODO:Update home route based on the current user role (implement dynamic routing)
         /// HomeView
         GoRoute(
           path: '/home',
@@ -157,7 +185,16 @@ final GoRouter mainRouter = GoRouter(
         ),
       ],
     ),
-
+    GoRoute(
+      path: '/creator_home',
+      name: RouteNames.creatorHome,
+      builder:
+          (context, state) => ChangeNotifierProvider<CreatorHomeViewModel>(
+            create:
+                (_) => CreatorHomeViewModel(context.read<NavigationService>()),
+            child: CreatorHomeView(),
+          ),
+    ),
     GoRoute(
       path: '/search_screen',
       name: RouteNames.searchScreen,
@@ -194,3 +231,4 @@ final GoRouter mainRouter = GoRouter(
   },
 );
 //TODO: Modify the initial route when splash screen is implemented.
+//TODO: Implement auth guards and registration guards for login routes

@@ -14,8 +14,7 @@ import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await AppInitializer.init(TutorialUser.user1());
-
+  AppInitializer.init(TutorialUser.user2());
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
   /// This is to make status bar adjust according to app's theme.

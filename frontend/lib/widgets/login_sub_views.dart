@@ -2,6 +2,7 @@ import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:frontend/view_models/login_view_model.dart';
 import 'package:frontend/widgets/auth_button.dart';
+import 'package:frontend/widgets/otp_verify_text_field.dart';
 import 'package:provider/provider.dart';
 
 class LoginWidget extends StatelessWidget {
@@ -91,15 +92,7 @@ class OTPVerificationWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             key: const ValueKey('otpwidget'),
             children: [
-              TextField(
-                controller: viewModel.otpverifController,
-                keyboardType: TextInputType.numberWithOptions(),
-                style: TextStyle(fontSize: 16),
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  label: Text("Enter the OTP"),
-                ),
-              ),
+              OTPInput(otpController: viewModel.otpverifController),
               const SizedBox(height: 40),
 
               /// Login Button

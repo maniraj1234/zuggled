@@ -28,8 +28,5 @@ class TutorialUser {
         'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNk9McTdaYVBtS1VacHNRWXNxTDY3bGZsODNwMiJ9.GN8yDGWMEd8yfFdt7RNYuJDxVYpxoYI44ctWZF5ROgE',
   );
 
-  static List<TutorialUser> get users => [
-    TutorialUser.user1(),
-    TutorialUser.user2(),
-  ];
+  static List<TutorialUser> get users => [TutorialUser.user2()];
 }

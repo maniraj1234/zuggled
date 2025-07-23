@@ -1,17 +1,17 @@
 import { onRequest } from 'firebase-functions/v2/https';
 import * as logger from 'firebase-functions/logger';
 import express from 'express';
-import creatorRoutes from './routes/creator.routes';
-import customerRoutes from './routes/customer.routes';
+import authRoutes from './routes/user.routes';
+import streamRoutes from './routes/stream.routes';
+import { authenticate } from './middlewares/auth.middleware';
 
 const app = express();
 
 app.use(express.json());
 
-// Register creator and customer routes at the root path
-app.use('/', creatorRoutes);
-app.use('/', customerRoutes);
+app.use('/user', authenticate, authRoutes);
 
+app.use('/stream', authenticate, streamRoutes);
 // Test endpoint to verify API is working
 app.get('/testapi', (_req, res) => {
   logger.info('Test API called!');
