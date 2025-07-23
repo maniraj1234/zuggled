@@ -1,21 +1,28 @@
 import * as admin from 'firebase-admin';
-// Import the service account credentials for Firebase Admin initialization
-import serviceAccount from '../../serviceAccountKey.json';
 import { logger } from 'firebase-functions';
+import * as fs from 'fs';
+import * as path from 'path';
 
-// Initialize the Firebase Admin app only if it hasn't been initialized yet
-if (!admin.apps.length) {
-  try {
-    // Initialize the app with the service account credentials
-    admin.initializeApp({
-      credential: admin.credential.cert(serviceAccount as admin.ServiceAccount),
-    });
-    logger.info('✅ Firebase initialized with service account');
-  } catch (error) {
-    logger.error('❌ Failed to initialize Firebase:', error);
-    throw error;
+const keyPath = path.resolve(__dirname, '../../serviceAccountKey.json');
+
+/** Function for initialising credentials with service account */
+function initializeFirebase(): void {
+  if (!admin.apps.length) {
+    if (fs.existsSync(keyPath)) {
+      const serviceAccount = JSON.parse(fs.readFileSync(keyPath, 'utf-8'));
+
+      admin.initializeApp({
+        credential: admin.credential.cert(serviceAccount),
+      });
+      logger.info('✅ Firebase initialized with service account');
+    } else {
+      admin.initializeApp();
+      logger.info('🟡 Firebase initialized with default credentials');
+    }
   }
 }
-// Get a Firestore database instance from the initialized app
+
+initializeFirebase();
+
 const db = admin.firestore();
 export { admin, db };
