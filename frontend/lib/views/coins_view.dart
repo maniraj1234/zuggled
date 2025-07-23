@@ -4,15 +4,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:frontend/widgets/coin_card.dart';
 
-/// This is CoinsView, for buying coins from store
+/// A view that displays coin packages in a grid layout for users to purchase.
+/// 
+/// Loads coin package data from a local JSON file (`coin_packages.json`)
+/// and displays each package using [CoinCard] widgets
 class CoinsView extends StatefulWidget {
-  const CoinsView({super.key});
-
+  const CoinsView({super.key});  
+   
   @override
   State<CoinsView> createState() => _CoinsViewState();
 }
 
 class _CoinsViewState extends State<CoinsView> {
+  /// A list of coin package maps loaded from a local JSON asset.
   List<Map<String, dynamic>> coinPackages = [];
 
   @override
@@ -21,6 +25,14 @@ class _CoinsViewState extends State<CoinsView> {
     loadCoinPackages();
   }
 
+  /// Loads coin package data from a local JSON file located in
+  /// `lib/assets/json/coin_packages.json`.
+  ///
+  /// The JSON should be an array of objects, each containing:
+  /// `label` (String), `coins` (int), and `price` (double).
+  ///
+  /// This function updates the [coinPackages] list via [setState].
+  /// 
   ///TODO: Config a file in firestore and fetch the packages prices
   Future<void> loadCoinPackages() async {
     final String jsonString =

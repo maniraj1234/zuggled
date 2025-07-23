@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+/// A card widget representing a coin package with label, count, and price.
+///
+/// Used in the Coin Store grid to show purchase options.
 class CoinCard extends StatelessWidget {
   final String label;
   final int coinCount;
